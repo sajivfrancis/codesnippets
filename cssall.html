@@ -1,0 +1,3041 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Css - CodeSnippets</title>
+        <meta name="description" content="Css">
+        <meta name="og:title" property="og:title" content="Css">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://codesnippets.sajivfrancis.com/cssall.html" />
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.ico">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html5all.html"><strong aria-hidden="true">1.</strong> HTML5</a></li><li class="chapter-item expanded "><a href="cssall.html" class="active"><strong aria-hidden="true">2.</strong> CSS</a></li><li class="chapter-item expanded "><a href="javascriptall.html"><strong aria-hidden="true">3.</strong> JAVASCRIPT</a></li><li class="chapter-item expanded "><a href="reactall.html"><strong aria-hidden="true">4.</strong> REACT</a></li><li class="chapter-item expanded "><a href="phpall.html"><strong aria-hidden="true">5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="pythonall.html"><strong aria-hidden="true">6.</strong> PYTHON</a></li><li class="chapter-item expanded "><a href="csharpall.html"><strong aria-hidden="true">7.</strong> CSHARP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title" style="text-align:center">CSS</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                      <ul>
+                        <p align="center">
+                            <a href="https://sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-HOME-red"></a>
+                            <a href="https://docs.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-DOCS-brightgreen"></a>
+                            <a href="https://sajivfrancis.github.io/blog/"><img alt="npm" src="https://img.shields.io/badge/-BLOG-orange"></a>
+                            <a href="https://codesnippets.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-CODESNIPPETS-greenOh"></a>
+                            </p>
+                    </ul>
+                        <h2><a class="header" href="#border-with-top-triangle" id="border-with-top-triangle">border-with-top-triangle</a></h2>
+<hr />
+<ul>
+<li>title: Border with top triangle</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a content container with a triangle at the top.</p>
+<ul>
+<li>Use the <code>:before</code> and <code>:after</code> pseudo-elements to create two triangles.</li>
+<li>The colors of the two triangles should be the same as the container's <code>border-color</code> and the container's <code>background-color</code> respectively.</li>
+<li>The <code>border-width</code> of the one triangle (<code>:before</code>) should be <code>1px</code> wider than the other one (<code>:after</code>), in order to act as the border.</li>
+<li>The smaller triangle (<code>:after</code>) should be <code>1px</code> to the right of the larger triangle (<code>:before</code>) to allow for its left border to be shown.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;Border with top triangle&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  position: relative;
+  background: ##ffffff;
+  padding: 15px;
+  border: 1px solid ##dddddd;
+  margin-top: 20px;
+}
+
+.container:before,
+.container:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 19px;
+  border: 11px solid transparent;
+  border-bottom-color: ##dddddd;
+}
+
+.container:after {
+  left: 20px;
+  border: 10px solid transparent;
+  border-bottom-color: ##ffffff;
+}
+</code></pre>
+<h2><a class="header" href="#bouncing-loader" id="bouncing-loader">bouncing-loader</a></h2>
+<hr />
+<ul>
+<li>title: Bouncing loader</li>
+<li>tags: animation,intermediate</li>
+</ul>
+<hr />
+<p>Creates a bouncing loader animation.</p>
+<ul>
+<li>Use <code>@keyframes</code> to define an animation with two states, where the element changes <code>opacity</code> and is translated up on the 2D plane using <code>transform: translate3d()</code>. Use a single axis translation on <code>transform: translate3d()</code> to achieve better animation performance.</li>
+<li>Create a parent container, <code>.bouncing-loader</code>, for the bouncing circles and use <code>display: flex</code> and <code>justify-content: center</code> to position them in the center.</li>
+<li>Give the three bouncing circle <code>&lt;div&gt;</code> elements a <code>width</code> and <code>height</code> of <code>16px</code> and use <code>border-radius: 50%</code> to make them circular.</li>
+<li>Apply the <code>bouncing-loader</code> animation to each of the three bouncing circles, using a different <code>animation-delay</code> for each one and <code>animation-direction: alternate</code> to create the appropriate effect.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;bouncing-loader&quot;&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -16px, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader &gt; div {
+  width: 16px;
+  height: 16px;
+  margin: 3rem 0.2rem;
+  background: ##8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader &gt; div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader &gt; div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+</code></pre>
+<h2><a class="header" href="#box-sizing-reset" id="box-sizing-reset">box-sizing-reset</a></h2>
+<hr />
+<ul>
+<li>title: Box-sizing reset</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Resets the box-model so that <code>width</code> and <code>height</code> are not affected by <code>border</code> or <code>padding</code>.</p>
+<ul>
+<li>Use <code>box-sizing: border-box</code> to include the width and height of <code>padding</code> and <code>border</code> when calculating the element's <code>width</code> and <code>height</code>.</li>
+<li>Use <code>box-sizing: inherit</code> to pass down the <code>box-sizing</code> property from parent to child elements.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;box&quot;&gt;border-box&lt;/div&gt;
+&lt;div class=&quot;box content-box&quot;&gt;content-box&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">div {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.box {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  padding: 8px;
+  margin: 8px;
+  background: ##F24333;
+  color: white;
+  border: 1px solid ##BA1B1D;
+  border-radius: 4px;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+</code></pre>
+<h2><a class="header" href="#button-border-animation" id="button-border-animation">button-border-animation</a></h2>
+<hr />
+<ul>
+<li>title: Button border animation</li>
+<li>tags: animation,intermediate</li>
+</ul>
+<hr />
+<p>Creates a border animation on hover.</p>
+<ul>
+<li>Use the <code>:before</code> and <code>:after</code> pseudo-elements to create two boxes <code>24px</code> wide opposite each other above and below the box.</li>
+<li>Use the <code>:hover</code> pseudo-class to extend the <code>width</code> of those elements to <code>100%</code> on hover and animate the change using <code>transition</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;button class=&quot;animated-border-button&quot;&gt;Submit&lt;/button&gt;
+</code></pre>
+<pre><code class="language-css">.animated-border-button {
+  background-color: ##141414;
+  border: none;
+  color: ##ffffff;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+}
+
+.animated-border-button:before,
+.animated-border-button:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+.animated-border-button:before {
+  border-top: 2px solid ##141414;
+  right: 0;
+  top: -4px;
+}
+
+.animated-border-button:after {
+  border-bottom: 2px solid ##141414;
+  bottom: -4px;
+  left: 0;
+}
+
+.animated-border-button:hover:before,
+.animated-border-button:hover:after {
+  width: 100%;
+}
+</code></pre>
+<h2><a class="header" href="#checkerboard-pattern" id="checkerboard-pattern">checkerboard-pattern</a></h2>
+<hr />
+<ul>
+<li>title: Checkerboard background pattern</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a checkerboard background pattern.</p>
+<ul>
+<li>Use <code>background-color</code> to set a white background.</li>
+<li>Use <code>background-image</code> with two <code>linear-gradient()</code> values, each one with a different angle to create the checkerboard pattern.</li>
+<li>Use <code>background-size</code> to specify the pattern's size.</li>
+<li><strong>Note:</strong> The fixed <code>height</code> and <code>width</code> of the element is for demonstration purposes only.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;checkerboard&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.checkerboard {
+  width: 240px;
+  height: 240px;
+  background-color: ##fff;
+  background-image: linear-gradient(
+      45deg,
+      ##000 25%,
+      transparent 25%,
+      transparent 75%,
+      ##000 75%,
+      ##000
+    ),
+    linear-gradient(
+      -45deg,
+      ##000 25%,
+      transparent 25%,
+      transparent 75%,
+      ##000 75%,
+      ##000
+    );
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+</code></pre>
+<h2><a class="header" href="#circle" id="circle">circle</a></h2>
+<hr />
+<ul>
+<li>title: Circle</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a circular shape with pure CSS.</p>
+<ul>
+<li>Use <code>border-radius: 50%</code> to curve the borders of the element to create a circle.</li>
+<li>Since a circle has the same radius at any given point, the <code>width</code> and <code>height</code> must be the same. Differing values will create an ellipse.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: ##9C27B0;
+}
+</code></pre>
+<h2><a class="header" href="#clearfix" id="clearfix">clearfix</a></h2>
+<hr />
+<ul>
+<li>title: Clearfix</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Ensures that an element self-clears its children.</p>
+<ul>
+<li>Use the <code>:after</code> pseudo-element and apply <code>content: ''</code> to allow it to affect layout.</li>
+<li>Use <code>clear: both</code> to make the element clear past both left and right floats.</li>
+<li>For this technique to work properly, make sure there are no non-floating children in the container and that there are no tall floats before the clearfixed container but in the same formatting context (e.g. floated columns).</li>
+<li><strong>Note:</strong> This is only useful if you are using <code>float</code> to build layouts. Consider using a more modern approach, such as the flexbox or grid layout.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;div class=&quot;floated&quot;&gt;float a&lt;/div&gt;
+  &lt;div class=&quot;floated&quot;&gt;float b&lt;/div&gt;
+  &lt;div class=&quot;floated&quot;&gt;float c&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.floated {
+  float: left;
+  padding: 4px;
+}
+</code></pre>
+<h2><a class="header" href="#constant-width-to-height-ratio" id="constant-width-to-height-ratio">constant-width-to-height-ratio</a></h2>
+<hr />
+<ul>
+<li>title: Constant width to height ratio</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Ensures that an element with variable <code>width</code> will retain a proportionate <code>height</code> value.</p>
+<ul>
+<li>Apply <code>padding-top</code> on the <code>:before</code> pseudo-element, making the <code>height</code> of the element equal to a percentage of its <code>width</code>.</li>
+<li>The proportion of <code>height</code> to <code>width</code> can be altered as necessary. For example a <code>padding-top</code> of <code>100%</code> will create a responsive square (1:1 ratio).</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;constant-width-to-height-ratio&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.constant-width-to-height-ratio {
+  background: ##9C27B0;
+  width: 50%;
+}
+
+.constant-width-to-height-ratio:before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.constant-width-to-height-ratio:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+</code></pre>
+<h2><a class="header" href="#counter" id="counter">counter</a></h2>
+<hr />
+<ul>
+<li>title: Counter</li>
+<li>tags: visual,advanced</li>
+</ul>
+<hr />
+<p>Creates a custom list counter that accounts for nested list elements.</p>
+<ul>
+<li>Use <code>counter-reset</code> to initialize a variable counter (default <code>0</code>), the name of which is the value of the attribute (i.e. <code>counter</code>).</li>
+<li>Use <code>counter-increment</code> on the variable counter for each countable element (i.e. each <code>&lt;li&gt;</code>).</li>
+<li>Use <code>counters()</code> to display the value of each variable counter as part of the <code>content</code> of the <code>:before</code> pseudo-element for each countable element (i.e. each <code>&lt;li&gt;</code>). The second value passed to it (<code>'.'</code>) acts as the delimiter for nested counters.</li>
+</ul>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;
+    List item
+    &lt;ul&gt;
+      &lt;li&gt;List item&lt;/li&gt;
+      &lt;li&gt;List item&lt;/li&gt;
+      &lt;li&gt;List item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre><code class="language-css">ul {
+  counter-reset: counter;
+  list-style: none;
+}
+
+li:before {
+  counter-increment: counter;
+  content: counters(counter, '.') ' ';
+}
+</code></pre>
+<h2><a class="header" href="#custom-scrollbar" id="custom-scrollbar">custom-scrollbar</a></h2>
+<hr />
+<ul>
+<li>title: Custom scrollbar</li>
+<li>tags: visual,advanced</li>
+</ul>
+<hr />
+<p>Customizes the scrollbar style for the an elements with scrollable overflow.</p>
+<ul>
+<li>Use <code>::-webkit-scrollbar</code> to style the scrollbar element.</li>
+<li>Use <code>::-webkit-scrollbar-track</code> to style the scrollbar track (the background of the scrollbar).</li>
+<li>Use <code>::-webkit-scrollbar-thumb</code> to style the scrollbar thumb (the draggable element).</li>
+<li><strong>Note:</strong> Scrollbar styling doesn't appear to be on any standards track. This technique only works on WebKit-based browsers.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;custom-scrollbar&quot;&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;br /&gt;
+    Iure id exercitationem nulla qui repellat laborum vitae, &lt;br /&gt;
+    molestias tempora velit natus. Quas, assumenda nisi. &lt;br /&gt;
+    Quisquam enim qui iure, consequatur velit sit?
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.custom-scrollbar {
+  height: 70px;
+  overflow-y: scroll;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: ##1E3F20;
+  border-radius: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: ##4A7856;
+  border-radius: 12px;
+}
+</code></pre>
+<h2><a class="header" href="#custom-text-selection" id="custom-text-selection">custom-text-selection</a></h2>
+<hr />
+<ul>
+<li>title: Custom text selection</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Changes the styling of text selection.</p>
+<ul>
+<li>Use the <code>::selection</code> pseudo-selector to style text within it when selected.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;custom-text-selection&quot;&gt;Select some of this text.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">::selection {
+  background: aquamarine;
+  color: black;
+}
+
+.custom-text-selection::selection {
+  background: deeppink;
+  color: white;
+}
+</code></pre>
+<h2><a class="header" href="#disable-selection" id="disable-selection">disable-selection</a></h2>
+<hr />
+<ul>
+<li>title: Disable selection</li>
+<li>tags: interactivity,beginner</li>
+</ul>
+<hr />
+<p>Makes the content unselectable.</p>
+<ul>
+<li>Use <code>user-select: none</code> to make the content of the element not selectable.</li>
+<li><strong>Note:</strong> This is not a secure method to prevent users from copying content.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;You can select me.&lt;/p&gt;
+&lt;p class=&quot;unselectable&quot;&gt;You can't select me!&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.unselectable {
+  user-select: none;
+}
+</code></pre>
+<h2><a class="header" href="#display-table-centering" id="display-table-centering">display-table-centering</a></h2>
+<hr />
+<ul>
+<li>title: Display table centering</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Vertically and horizontally centers a child element within its parent element, using <code>display: table</code>.</p>
+<ul>
+<li>Use <code>display: table</code> to make the <code>.center</code> element behave like a <code>&lt;table&gt;</code> element.</li>
+<li>Set <code>height</code> and <code>width</code> to <code>100%</code> to make the element fill the available space within its parent element.</li>
+<li>Use <code>display: table-cell</code> on the child element to make it behave like a <code>&lt;td&gt;</code> elements.</li>
+<li>Use <code>text-align: center</code> and <code>vertical-align: middle</code> on the child element to center it horizontally and vertically.</li>
+<li>The outer parent (<code>.container</code>) must have a fixed <code>width</code> and <code>height</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;center&quot;&gt;&lt;span&gt;Centered content&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  border: 1px solid ##9C27B0;
+  height: 250px;
+  width: 250px;
+}
+
+.center {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.center &gt; span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+</code></pre>
+<h2><a class="header" href="#donut-spinner" id="donut-spinner">donut-spinner</a></h2>
+<hr />
+<ul>
+<li>title: Donut spinner</li>
+<li>tags: animation,intermediate</li>
+</ul>
+<hr />
+<p>Creates a donut spinner that can be used to indicate the loading of content.</p>
+<ul>
+<li>Use a semi-transparent <code>border</code> for the whole element, except one side that will serve as the loading indicator for the donut.</li>
+<li>Define and use an appropriate animation, using <code>transform: rotate()</code> to rotate the element.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;donut&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.donut {
+  display: inline-block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: ##7983ff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+}
+</code></pre>
+<h2><a class="header" href="#drop-cap" id="drop-cap">drop-cap</a></h2>
+<hr />
+<ul>
+<li>title: Drop cap</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Makes the first letter of the first paragraph bigger than the rest of the text.</p>
+<ul>
+<li>Use the <code>:first-child</code> selector to select only the first paragraph.</li>
+<li>Use the <code>::first-letter</code> pseudo-element to style the first element of the paragraph.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo ligula quis tincidunt cursus. Integer consectetur tempor ex eget hendrerit. Cras facilisis sodales odio nec maximus. Pellentesque lacinia convallis libero, rhoncus tincidunt ante dictum at. Nullam facilisis lectus tellus, sit amet congue erat sodales commodo.&lt;/p&gt;
+&lt;p&gt;Donec magna erat, imperdiet non odio sed, sodales tempus magna. Integer vitae orci lectus. Nullam consectetur orci at pellentesque efficitur.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">p:first-child::first-letter {
+  color: ##5f79ff;
+  float: left;
+  margin: 0 8px 0 4px;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+</code></pre>
+<h2><a class="header" href="#dynamic-shadow" id="dynamic-shadow">dynamic-shadow</a></h2>
+<hr />
+<ul>
+<li>title: Dynamic shadow</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a shadow similar to <code>box-shadow</code> but based on the colors of the element itself.</p>
+<ul>
+<li>Use the <code>:after</code> pseudo-element with <code>position: absolute</code> and <code>width</code> and <code>height</code> equal to <code>100%</code> to fill the available space in the parent element.</li>
+<li>Use <code>background: inherit</code> to inherit the <code>background</code> of the parent element.</li>
+<li>Use <code>top</code> to slightly offset the pseudo-element, <code>filter: blur()</code> to create a shadow and <code>opacity</code> to make it semi-transparent.</li>
+<li>Use <code>z-index: 1</code> on the parent and <code>z-index: -1</code> on the pseudo-element to position it behind its parent.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;dynamic-shadow&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.dynamic-shadow {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: linear-gradient(75deg, ##6d78ff, ##00ffb8);
+  z-index: 1;
+}
+
+.dynamic-shadow:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  top: 0.5rem;
+  filter: blur(0.4rem);
+  opacity: 0.7;
+  z-index: -1;
+}
+</code></pre>
+<h2><a class="header" href="#etched-text" id="etched-text">etched-text</a></h2>
+<hr />
+<ul>
+<li>title: Etched text</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates an effect where text appears to be &quot;etched&quot; or engraved into the background.</p>
+<ul>
+<li>Use <code>text-shadow</code> to create a white shadow offset <code>0px</code> horizontally and <code>2px</code> vertically from the origin position.</li>
+<li>The background must be darker than the shadow for the effect to work.</li>
+<li>The text color should be slightly faded to make it look like it's engraved/carved out of the background.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;etched-text&quot;&gt;I appear etched into the background.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.etched-text {
+  text-shadow: 0 2px white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ##b8bec5;
+}
+</code></pre>
+<h2><a class="header" href="#evenly-distributed-children" id="evenly-distributed-children">evenly-distributed-children</a></h2>
+<hr />
+<ul>
+<li>title: Evenly distributed children</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Evenly distributes child elements within a parent element.</p>
+<ul>
+<li>Use <code>display: flex</code> to use the flexbox layout.</li>
+<li>Use <code>justify-content: space-between</code> to evenly distributes child elements horizontally. The first item is positioned at the left edge, while the last item is positioned at the right edge.</li>
+<li>Alternatively, you can use <code>justify-content: space-around</code> to distribute the children with space around them, rather than between them.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;evenly-distributed-children&quot;&gt;
+  &lt;p&gt;Item1&lt;/p&gt;
+  &lt;p&gt;Item2&lt;/p&gt;
+  &lt;p&gt;Item3&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.evenly-distributed-children {
+  display: flex;
+  justify-content: space-between;
+}
+</code></pre>
+<h2><a class="header" href="#fit-image-in-container" id="fit-image-in-container">fit-image-in-container</a></h2>
+<hr />
+<ul>
+<li>title: Fit image in container</li>
+<li>tags: layout,visual,intermediate</li>
+</ul>
+<hr />
+<p>Fits an positions an image appropriately inside its container while preserving its aspect ratio.</p>
+<ul>
+<li>Use <code>object-fit: contain</code> to fit the entire image within the container while preserving its aspect ratio.</li>
+<li>Use <code>object-fit: cover</code> to fill the container with the image while preserving its aspect ratio.</li>
+<li>Use <code>object-position: center</code> to position the image at the center of the container.</li>
+</ul>
+<pre><code class="language-html">&lt;img class=&quot;image image-contain&quot; src=&quot;https://picsum.photos/600/200&quot; /&gt;
+&lt;img class=&quot;image image-cover&quot; src=&quot;https://picsum.photos/600/200&quot; /&gt;
+</code></pre>
+<pre><code class="language-css">.image {
+  background: ##34495e;
+  border: 1px solid ##34495e;
+  width: 200px;
+  height: 200px;
+}
+
+.image-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.image-cover {
+  object-fit: cover;
+  object-position: right top;
+}
+</code></pre>
+<h2><a class="header" href="#flexbox-centering" id="flexbox-centering">flexbox-centering</a></h2>
+<hr />
+<ul>
+<li>title: Flexbox centering</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Horizontally and vertically centers a child element within a parent element using flexbox.</p>
+<ul>
+<li>Use <code>display: flex</code> to create a flexbox layout.</li>
+<li>Use <code>justify-content: center</code> to center the child horizontally.</li>
+<li>Use <code>align-items: center</code> to center the child vertically.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;flexbox-centering&quot;&gt;
+  &lt;div&gt;Centered content.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.flexbox-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+</code></pre>
+<h2><a class="header" href="#floating-list-titles" id="floating-list-titles">floating-list-titles</a></h2>
+<hr />
+<ul>
+<li>title: List with floating section headings</li>
+<li>tags: visual,advanced</li>
+</ul>
+<hr />
+<p>Creates a list with floating headings for each section.</p>
+<ul>
+<li>Use <code>overflow-y: auto</code> to allow the list container to overflow vertically.</li>
+<li>Use <code>display: grid</code> on the inner container (<code>&lt;dl&gt;</code>) to create a layout with two columns.</li>
+<li>Set headings (<code>&lt;dt&gt;</code>) to <code>grid-column: 1</code> and content (<code>&lt;dd&gt;</code>) to <code>grid-column: 2</code></li>
+<li>Finally, apply <code>position: sticky</code> and <code>top: 0.5rem</code> to headings to create a floating effect.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;floating-stack&quot;&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;A&lt;/dt&gt;
+      &lt;dd&gt;Algeria&lt;/dd&gt;
+      &lt;dd&gt;Angola&lt;/dd&gt;
+
+      &lt;dt&gt;B&lt;/dt&gt;
+      &lt;dd&gt;Benin&lt;/dd&gt;
+      &lt;dd&gt;Botswana&lt;/dd&gt;
+      &lt;dd&gt;Burkina Faso&lt;/dd&gt;
+      &lt;dd&gt;Burundi&lt;/dd&gt;
+
+      &lt;dt&gt;C&lt;/dt&gt;
+      &lt;dd&gt;Cabo Verde&lt;/dd&gt;
+      &lt;dd&gt;Cameroon&lt;/dd&gt;
+      &lt;dd&gt;Central African Republic&lt;/dd&gt;
+      &lt;dd&gt;Chad&lt;/dd&gt;
+      &lt;dd&gt;Comoros&lt;/dd&gt;
+      &lt;dd&gt;Congo, Democratic Republic of the&lt;/dd&gt;
+      &lt;dd&gt;Congo, Republic of the&lt;/dd&gt;
+      &lt;dd&gt;Cote d'Ivoire&lt;/dd&gt;
+
+      &lt;dt&gt;D&lt;/dt&gt;
+      &lt;dd&gt;Djibouti&lt;/dd&gt;
+
+      &lt;dt&gt;E&lt;/dt&gt;
+      &lt;dd&gt;Egypt&lt;/dd&gt;
+      &lt;dd&gt;Equatorial Guinea&lt;/dd&gt;
+      &lt;dd&gt;Eritrea&lt;/dd&gt;
+      &lt;dd&gt;Eswatini (formerly Swaziland)&lt;/dd&gt;
+      &lt;dd&gt;Ethiopia&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+}
+
+.floating-stack {
+  background: ##455A64;
+  color: ##fff;
+  height: 80vh;
+  height: 320px;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.floating-stack &gt; dl {
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: center;
+}
+
+.floating-stack dt {
+  position: sticky;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: bold;
+  background: ##263238;
+  color: ##cfd8dc;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 0.25rem 1rem;
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.floating-stack dd {
+  grid-column: 2;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.floating-stack &gt; dl:first-of-type &gt; dd:first-of-type {
+  margin-top: 0.25rem;
+}
+</code></pre>
+<h2><a class="header" href="#focus-within" id="focus-within">focus-within</a></h2>
+<hr />
+<ul>
+<li>title: Focus Within</li>
+<li>tags: visual,interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Changes the appearance of a form if any of its children are focused.</p>
+<ul>
+<li>Use the pseudo-class <code>:focus-within</code> to apply styles to a parent element if any child element gets focused.</li>
+</ul>
+<pre><code class="language-html">&lt;form&gt;
+  &lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;
+  &lt;input id=&quot;username&quot; type=&quot;text&quot; /&gt;
+  &lt;br /&gt;
+  &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+  &lt;input id=&quot;password&quot; type=&quot;text&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<pre><code class="language-css">form {
+  border: 2px solid ##52B882;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+form:focus-within {
+  background: ##7CF0BD;
+}
+
+label {
+  display: inline-block;
+  width: 72px;
+}
+
+input {
+  margin: 4px 12px;
+}
+</code></pre>
+<h2><a class="header" href="#full-width" id="full-width">full-width</a></h2>
+<hr />
+<ul>
+<li>title: Full-width image</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Creates a full-width image.</p>
+<ul>
+<li>Use <code>left: 50%</code> and <code>right: 50%</code> to position the image in the middle of the parent element.</li>
+<li>Use <code>margin-left: -50vw</code> and <code>margin-right: -50vw</code> to offset the image on both sides relative to the size of the viewport.</li>
+<li>Use <code>width: 100vw</code> and <code>max-width: 100vw</code> to size the image relative to the viewport.</li>
+</ul>
+<pre><code class="language-html">&lt;main&gt;
+  &lt;h4&gt;Lorem ipsum dolor sit amet&lt;/h4&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris molestie
+    lobortis sapien, sit amet iaculis est interdum tincidunt. Nunc egestas nibh
+    ut metus elementum consequat. Integer elit orci, rhoncus efficitur lectus
+    eu, faucibus interdum felis.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;img class=&quot;full-width&quot; src=&quot;https://picsum.photos/id/257/2560/1440.jpg&quot; /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+    ridiculus mus. Nullam pretium lectus sed ex efficitur, ac varius sapien
+    gravida. Sed facilisis elit quis sem sollicitudin, ut aliquam neque
+    eleifend. Maecenas sagittis neque sapien, ac tempus nulla tempus nec.
+    Curabitur tellus est, convallis id dolor ut, porta hendrerit quam.
+  &lt;/p&gt;
+&lt;/main&gt;
+</code></pre>
+<pre><code class="language-css">main {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.full-width {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  width: 100vw;
+}
+</code></pre>
+<h2><a class="header" href="#fullscreen" id="fullscreen">fullscreen</a></h2>
+<hr />
+<ul>
+<li>title: Fullscreen</li>
+<li>tags: visual,advanced</li>
+</ul>
+<hr />
+<p>Applies styles to an element when in fullscreen mode.</p>
+<p>The <code>:fullscreen</code> CSS pseudo-element represents an element that's displayed when the browser is in fullscreen mode.</p>
+<ul>
+<li>Use the <code>:fullscreen</code> CSS pseudo-element selector to select and style an element that is displayed in fullscreen mode.</li>
+<li>Use a <code>&lt;button&gt;</code> and <code>Element.requestFullscreen()</code> to create a button that makes the element fullscreen for the purposes of previewing the style.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;p&gt;&lt;em&gt;Click the button below to enter the element into fullscreen mode. &lt;/em&gt;&lt;/p&gt;
+  &lt;div class=&quot;element&quot; id=&quot;element&quot;&gt;&lt;p&gt;I change color in fullscreen mode!&lt;/p&gt;&lt;/div&gt;
+  &lt;br /&gt;
+  &lt;button onclick=&quot;var el = document.getElementById('element'); el.requestFullscreen();&quot;&gt;
+    Go Full Screen!
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.element {
+  padding: 20px;
+  height: 300px;
+  width: 100%;
+  background-color: skyblue;
+  box-sizing: border-box;
+}
+
+.element p {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+
+.element:-ms-fullscreen p {
+  visibility: visible;
+}
+
+.element:fullscreen {
+  background-color: ##e4708a;
+  width: 100vw;
+  height: 100vh;
+}
+</code></pre>
+<h2><a class="header" href="#gradient-text" id="gradient-text">gradient-text</a></h2>
+<hr />
+<ul>
+<li>title: Gradient text</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Gives text a gradient color.</p>
+<ul>
+<li>Use <code>background</code> with a <code>linear-gradient</code> value to give the text element a gradient background.</li>
+<li>Use <code>webkit-text-fill-color: transparent</code> to fill the text with a transparent color.</li>
+<li>Use <code>webkit-background-clip: text</code> to clip the background with the text, filling the text with the gradient background as the color.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;gradient-text&quot;&gt;Gradient text&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.gradient-text {
+  background: linear-gradient(##70D6FF, ##00072D);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 32px;
+}
+</code></pre>
+<h2><a class="header" href="#grid-centering" id="grid-centering">grid-centering</a></h2>
+<hr />
+<ul>
+<li>title: Grid centering</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Horizontally and vertically centers a child element within a parent element using <code>grid</code>.</p>
+<ul>
+<li>Use <code>display: grid</code> to create a grid layout.</li>
+<li>Use <code>justify-content: center</code> to center the child horizontally.</li>
+<li>Use <code>align-items: center</code> to center the child vertically.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;grid-centering&quot;&gt;
+  &lt;div class=&quot;child&quot;&gt;Centered content.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.grid-centering {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+</code></pre>
+<h2><a class="header" href="#hamburger-button" id="hamburger-button">hamburger-button</a></h2>
+<hr />
+<ul>
+<li>title: Hamburger Button</li>
+<li>tags: interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Displays a hamburger menu which transitions to a cross button on hover.</p>
+<ul>
+<li>Use a <code>.hamburger-menu</code> container <code>div</code> which contains the top, bottom, and middle bars.</li>
+<li>Set the container to <code>display: flex</code> with <code>flex-flow: column wrap</code>.</li>
+<li>Add distance between the bars using <code>justify-content: space-between</code>.</li>
+<li>Use <code>transform: rotate()</code> to rotate the top and bottom bars by 45 degrees and <code>opacity: 0</code> to fade the middle bar on hover.</li>
+<li>Use <code>transform-origin: left</code> so that the bars rotate around the left point.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;hamburger-menu&quot;&gt;
+  &lt;div class=&quot;bar top&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;bar middle&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;bar bottom&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.hamburger-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+  margin: 3px 0px;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.hamburger-menu:hover .top {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu:hover .middle {
+  opacity: 0;
+}
+
+.hamburger-menu:hover .bottom {
+  transform: rotate(-45deg);
+}
+</code></pre>
+<h2><a class="header" href="#height-transition" id="height-transition">height-transition</a></h2>
+<hr />
+<ul>
+<li>title: Height transition</li>
+<li>tags: animation,intermediate</li>
+</ul>
+<hr />
+<p>Transitions an element's height from <code>0</code> to <code>auto</code> when its height is unknown.</p>
+<ul>
+<li>Use <code>transition</code> to specify that changes to <code>max-height</code> should be transitioned over.</li>
+<li>Use <code>overflow: hidden</code> to prevent the contents of the hidden element from overflowing its container.</li>
+<li>Use <code>max-height</code> to specify an initial height of <code>0</code>.</li>
+<li>Use the <code>:hover</code> pseudo-class to change the <code>max-height</code> to the value of the <code>--max-height</code> variable set by JavaScript.</li>
+<li>Use <code>Element.scrollHeight</code> and <code>CSSStyleDeclaration.setProperty()</code> to set the value of <code>--max-height</code> to the current height of the element.</li>
+<li><strong>Note:</strong> Causes reflow on each animation frame, which will be laggy if there are a large number of elements beneath the element that is transitioning in height.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;trigger&quot;&gt;
+  Hover me to see a height transition.
+  &lt;div class=&quot;el&quot;&gt;Additional content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.el {
+  transition: max-height 0.3s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.trigger:hover &gt; .el {
+  max-height: var(--max-height);
+}
+</code></pre>
+<pre><code class="language-js">let el = document.querySelector('.el');
+let height = el.scrollHeight;
+el.style.setProperty('--max-height', height + 'px');
+</code></pre>
+<h2><a class="header" href="#horizontal-scroll-snap" id="horizontal-scroll-snap">horizontal-scroll-snap</a></h2>
+<hr />
+<ul>
+<li>title: Horizontal scroll snap</li>
+<li>tags: interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Creates a horizontally scrollable container that will snap on elements when scrolling.</p>
+<ul>
+<li>Use <code>display: grid</code> and <code>grid-auto-flow: column</code> to create a horizontal layout.</li>
+<li>Use <code>scroll-snap-type: x mandatory</code> and <code>overscroll-behavior-x: contain</code> to create a snap effect on horizontal scroll.</li>
+<li>You can use <code>scroll-snap-align</code> with either <code>start</code>, <code>stop</code> or <code>center</code> to change the snap alignment.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;horizontal-snap&quot;&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/1067/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/122/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/188/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/249/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/257/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/259/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/283/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/288/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/299/640/640&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.horizontal-snap {
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  height: calc(180px + 1rem);
+  padding: 1rem;
+  width: 480px;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-snap &gt; a {
+  scroll-snap-align: center;
+}
+
+.horizontal-snap img {
+  width: 180px;
+  max-width: none;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+</code></pre>
+<h2><a class="header" href="#hover-additional-content" id="hover-additional-content">hover-additional-content</a></h2>
+<hr />
+<ul>
+<li>title: Show additional content on hover</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a card that displays additional content on hover.</p>
+<ul>
+<li>Use <code>overflow: hidden</code> on the card to hide elements that overflow vertically.</li>
+<li>Use the <code>:hover</code> and <code>:focus-within</code> pseudo-class selectors to change the card's styling as necessary when it's hovered or it or its contents are focused.</li>
+<li>Set <code>transition: 0.3s ease all</code> to create a transition effect on hover/focus.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
+  &lt;img src=&quot;https://picsum.photos/id/404/367/267&quot;/&gt;
+  &lt;h3&gt;Lorem ipsum&lt;/h3&gt;
+  &lt;div class=&quot;focus-content&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;br/&gt; &lt;a href=&quot;##&quot;&gt;Link to source&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.card {
+  width: 300px;
+  height: 280px;
+  padding: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card * {
+  transition: 0.3s ease all;
+}
+
+.card img {
+  margin: 0;
+  width: 300px;
+  height: 224px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 12px 12px 48px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card .focus-content {
+  display: block;
+  padding: 8px 12px;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card:hover img, .card:focus-within img {
+  margin-top: -80px;
+}
+
+.card:hover h3, .card:focus-within h3 {
+  padding: 8px 12px 0;
+}
+</code></pre>
+<h2><a class="header" href="#hover-shadow-box-animation" id="hover-shadow-box-animation">hover-shadow-box-animation</a></h2>
+<hr />
+<ul>
+<li>title: Hover shadow box animation</li>
+<li>tags: animation,intermediate
+unlisted: true</li>
+</ul>
+<hr />
+<p>Creates a shadow box around the text when it is hovered.</p>
+<ul>
+<li>Set <code>transform: perspective(1px)</code> to give element a 3D space by affecting the distance between the Z plane and the user and <code>translate(0)</code> to reposition the <code>p</code> element along z-axis in 3D space.</li>
+<li>Use <code>box-shadow</code> to make the box transparent.</li>
+<li>Use <code>transition-property</code> to enable transitions for both <code>box-shadow</code> and <code>transform</code>.</li>
+<li>Use the <code>:hover</code>, <code>:active</code> and <code>:focus</code> pseudo-class selectors to apply a new <code>box-shadow</code> and <code>transform: scale(1.2)</code> to change the scale of the text.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;hover-shadow-box-animation&quot;&gt;Box it!&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.hover-shadow-box-animation {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  margin: 10px;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+
+.hover-shadow-box-animation:hover,
+.hover-shadow-box-animation:focus,
+.hover-shadow-box-animation:active {
+  box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+  transform: scale(1.2);
+}
+</code></pre>
+<h2><a class="header" href="#hover-underline-animation" id="hover-underline-animation">hover-underline-animation</a></h2>
+<hr />
+<ul>
+<li>title: Hover underline animation</li>
+<li>tags: animation,advanced</li>
+</ul>
+<hr />
+<p>Creates an animated underline effect when the text is hovered over.</p>
+<ul>
+<li>Use <code>display: inline-block</code> to prevent the underline from spanning the entire parent width rather than just the text content.</li>
+<li>Use the <code>:after</code> pseudo-element with a <code>width</code> of <code>100%</code> and <code>position: absolute</code>, placing it below the content.</li>
+<li>Use <code>transform: scaleX(0)</code> to initially hide the pseudo-element.</li>
+<li>Use the <code>:hover</code> pseudo-class selector to apply <code>transform: scaleX(1)</code> and display the pseudo-element on hover.</li>
+<li>Animate <code>transform</code> using <code>transform-origin: left</code> and an appropriate <code>transition</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;hover-underline-animation&quot;&gt;Hover this text to see the effect!&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: ##0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: ##0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+</code></pre>
+<h2><a class="header" href="#image-hover-menu" id="image-hover-menu">image-hover-menu</a></h2>
+<hr />
+<ul>
+<li>title: Menu on image hover</li>
+<li>tags: layout,animation,intermediate</li>
+</ul>
+<hr />
+<p>Displays a menu overlay when the image is hovered.</p>
+<ul>
+<li>Use a <code>&lt;figure&gt;</code> to wrap the <code>&lt;img&gt;</code> element and a <code>&lt;div&gt;</code> element that will contain the menu links.</li>
+<li>Use the <code>opacity</code> and <code>right</code> attributes to animate the image on hover, creating a sliding effect.</li>
+<li>Set the <code>left</code> attribute of the <code>&lt;div&gt;</code> to the negative of the element's <code>width</code> and reset it to <code>0</code> when hovering over the parent element to slide in the menu.</li>
+<li>Use <code>display: flex</code>, <code>flex-direction: column</code> and <code>justify-content: center</code> on the <code>&lt;div&gt;</code> to vertically center the menu items.</li>
+</ul>
+<pre><code class="language-html">&lt;figure class=&quot;hover-menu&quot;&gt;
+	&lt;img src=&quot;https://picsum.photos/id/1060/800/480.jpg&quot;/&gt;
+	&lt;div&gt;
+		&lt;a href=&quot;##&quot;&gt;Home&lt;/a&gt;
+		&lt;a href=&quot;##&quot;&gt;Pricing&lt;/a&gt;
+		&lt;a href=&quot;##&quot;&gt;About&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/figure&gt;
+</code></pre>
+<pre><code class="language-css">.hover-menu {
+  position: relative;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 340px;
+  max-width: 480px;
+  max-height: 290px;
+  width: 100%;
+  background: ##000;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hover-menu * {
+  box-sizing: border-box;
+}
+
+.hover-menu img {
+  position: relative;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.hover-menu div {
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 120px;
+  height: 100%;
+  padding: 8px 4px;
+  background: ##000;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hover-menu div a {
+  display: block;
+  line-height: 2;
+  color: ##fff;
+  text-decoration: none;
+  opacity: 0.8;
+  padding: 5px 15px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.hover-menu div a:hover {
+  text-decoration: underline;
+}
+
+.hover-menu:hover img {
+  opacity: 0.5;
+  right: -120px;
+}
+
+.hover-menu:hover div {
+  left: 0;
+  opacity: 1;
+}
+</code></pre>
+<h2><a class="header" href="#image-hover-rotate" id="image-hover-rotate">image-hover-rotate</a></h2>
+<hr />
+<ul>
+<li>title: Image rotate on hover</li>
+<li>tags: animation,visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a rotate effect for the image on hover.</p>
+<ul>
+<li>Use <code>scale</code> and <code>rotate</code> when hovering over the parent element (a <code>&lt;figure&gt;</code>) to animate the image, using the <code>transition</code> property.</li>
+<li>Use <code>overflow: hidden</code> on the parent container to hide the excess from the image transformation.</li>
+</ul>
+<pre><code class="language-html">&lt;figure class=&quot;hover-rotate&quot;&gt;
+  &lt;img src=&quot;https://picsum.photos/id/669/600/800.jpg&quot;/&gt;
+&lt;/figure&gt;
+</code></pre>
+<pre><code class="language-css">.hover-rotate {
+  overflow: hidden;
+  margin: 8px;
+  min-width: 240px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.hover-rotate img {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.hover-rotate:hover img {
+  transform: scale(1.3) rotate(5deg);
+}
+</code></pre>
+<h2><a class="header" href="#image-mosaic" id="image-mosaic">image-mosaic</a></h2>
+<hr />
+<ul>
+<li>title: Responsive image mosaic</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Creates a responsive image mosaic.</p>
+<ul>
+<li>Use <code>display: grid</code> to create an appropriate responsive grid layout.</li>
+<li>Use <code>grid-row: span 2 / auto</code> and <code>grid-column: span 2 / auto</code> to create items that span two rows or two columns respectively.</li>
+<li>Wrap the previous styles into a media query to avoid applying on small screen sizes.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;image-mosaic&quot;&gt;
+  &lt;div
+    class=&quot;card card-tall card-wide&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/564/1200/800')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card card-tall&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/566/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/575/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/626/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/667/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/678/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card card-wide&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/695/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/683/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/693/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/715/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/610/800/530')&quot;
+  &gt;&lt;/div&gt;
+  &lt;div
+    class=&quot;card&quot;
+    style=&quot;background-image: url('https://picsum.photos/id/599/800/530')&quot;
+  &gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: ##353535;
+  font-size: 3rem;
+  color: ##fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}
+</code></pre>
+<h2><a class="header" href="#image-overlay-hover" id="image-overlay-hover">image-overlay-hover</a></h2>
+<hr />
+<ul>
+<li>title: Image overlay on hover</li>
+<li>tags: visual,animation,advanced</li>
+</ul>
+<hr />
+<p>Displays an image overlay effect on hover.</p>
+<ul>
+<li>Use the <code>:before</code> and <code>:after</code> pseudo-elements for the top and bottom bars of the overlay respectively, setting their <code>opacity</code>, <code>transform</code> and <code>transition</code> to produce the desired effect.</li>
+<li>Use the <code>&lt;figcaption&gt;</code> for the text of the overlay, setting <code>display: flex</code>, <code>flex-direction: column</code> and <code>justify-content: center</code> to center the text into the image.</li>
+<li>Use the <code>:hover</code> pseudo-selector to update the <code>opacity</code> and <code>transform</code> of all the elements and produce the desired effect.</li>
+</ul>
+<pre><code class="language-html">&lt;figure class=&quot;hover-img&quot;&gt;
+  &lt;img src=&quot;https://picsum.photos/id/200/440/320.jpg&quot;/&gt;
+  &lt;figcaption&gt;
+    &lt;h3&gt;Lorem &lt;br/&gt;Ipsum&lt;/h3&gt;
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<pre><code class="language-css">.hover-img {
+  background-color: ##000;
+  color: ##fff;
+  display: inline-block;
+  margin: 8px;
+  max-width: 320px;
+  min-width: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.hover-img * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.hover-img:before,
+.hover-img:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 32px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 32px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+}
+
+.hover-img img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.hover-img figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hover-img:hover:before,
+.hover-img:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hover-img:hover &gt; img {
+  opacity: 0.7;
+}
+
+.hover-img:hover figcaption {
+  opacity: 1;
+}
+</code></pre>
+<h2><a class="header" href="#input-with-prefix" id="input-with-prefix">input-with-prefix</a></h2>
+<hr />
+<ul>
+<li>title: Input with prefix</li>
+<li>tags: interactivity,visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates an input with a visual, non-editable prefix.</p>
+<ul>
+<li>Use <code>display: flex</code> to create a container element.</li>
+<li>Remove the border and outline from the <code>&lt;input&gt;</code> field and apply them to the parent element instead to make it look like an input box.</li>
+<li>Use the <code>:focus-within</code> pseudo-class selector to style the parent element accordingly, when the user interacts with the <code>&lt;input&gt;</code> field.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;input-box&quot;&gt;
+  &lt;span class=&quot;prefix&quot;&gt;+30&lt;/span&gt;
+  &lt;input type=&quot;tel&quot; placeholder=&quot;210 123 4567&quot;/&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.input-box {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  background: ##fff;
+  border: 1px solid ##a0a0a0;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.input-box .prefix {
+  font-weight: 300;
+  font-size: 14px;
+  color: ##999;
+}
+
+.input-box input {
+  flex-grow: 1;
+  font-size: 14px;
+  background: ##fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.input-box:focus-within {
+  border-color: ##777;
+}
+</code></pre>
+<h2><a class="header" href="#masonry-layout" id="masonry-layout">masonry-layout</a></h2>
+<hr />
+<ul>
+<li>title: Masonry Layout</li>
+<li>tags: layout,advanced</li>
+</ul>
+<hr />
+<p>Creates a masonry-style layout that is especially useful when working with images.</p>
+<ul>
+<li>Create a masonry-style layout that consists of &quot;bricks&quot; that fall into each other with either a fixed <code>width</code> (vertical layout) or a fixed <code>height</code> (horizontal layout), forming a perfect fit. Especially useful when working with images.</li>
+<li>Define <code>.masonry-container</code>, the container for the masonry layout and <code>.masonry-columns</code> an inner container in which <code>.masonry-brick</code> elements will be placed.</li>
+<li>Apply <code>display: block</code> to <code>.masonry-brick</code> elements to allow the layout to flow properly.</li>
+<li>Use the <code>:first-child</code> pseudo-element selector to apply a different <code>margin</code> for the first element to account for its positioning.</li>
+<li>Use CSS variables to allow for greater flexibility within the layout in combination with media queries to ensure that the layout is responsive in different viewport sizes.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;masonry-container&quot;&gt;
+  &lt;div class=&quot;masonry-columns&quot;&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1016/384/256&quot;
+      alt=&quot;An image&quot;
+    /&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1025/495/330&quot;
+      alt=&quot;Another image&quot;
+    /&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1024/192/128&quot;
+      alt=&quot;Another image&quot;
+    /&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1028/518/345&quot;
+      alt=&quot;One more image&quot;
+    /&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1035/585/390&quot;
+      alt=&quot;And another one&quot;
+    /&gt;
+    &lt;img
+      class=&quot;masonry-brick&quot;
+      src=&quot;https://picsum.photos/id/1074/384/216&quot;
+      alt=&quot;Last one&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">/* Container */
+.masonry-container {
+  --column-count-small: 1;
+  --column-count-medium: 2;
+  --column-count-large: 3;
+  --column-gap: 0.125rem;
+  padding: var(--column-gap);
+}
+
+/* Columns */
+.masonry-columns {
+  column-gap: var(--column-gap);
+  column-count: var(--column-count-small);
+  column-width: calc(1 / var(--column-count-small) * 100%);
+}
+
+@media only screen and (min-width: 640px) {
+  .masonry-columns {
+    column-count: var(--column-count-medium);
+    column-width: calc(1 / var(--column-count-medium) * 100%);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .masonry-columns {
+    column-count: var(--column-count-large);
+    column-width: calc(1 / var(--column-count-large) * 100%);
+  }
+}
+
+/* Bricks */
+.masonry-brick {
+  width: 100%;
+  height: auto;
+  margin: var(--column-gap) 0;
+  display: block;
+}
+
+.masonry-brick:first-child {
+  margin: 0 0 var(--column-gap);
+}
+</code></pre>
+<h2><a class="header" href="#mouse-cursor-gradient-tracking" id="mouse-cursor-gradient-tracking">mouse-cursor-gradient-tracking</a></h2>
+<hr />
+<ul>
+<li>title: Mouse cursor gradient tracking</li>
+<li>tags: visual,interactivity,advanced</li>
+</ul>
+<hr />
+<p>A hover effect where the gradient follows the mouse cursor.</p>
+<ul>
+<li>Declare two CSS variables, <code>--x</code> and <code>--y</code>, used to track the position of the mouse on the button.</li>
+<li>Declare a CSS variable, <code>--size</code>, used to modify the gradient's dimensions.</li>
+<li>Use <code>background: radial-gradient(circle closest-side, pink, transparent);</code> to create the gradient at the correct position.</li>
+<li>Use <code>Document.querySelector()</code> and <code>EventTarget.addEventListener()</code> to register a handler for the <code>'mousemove'</code> event.</li>
+<li>Use <code>Element.getBoundingClientRect()</code> and <code>CSSStyleDeclaration.setProperty()</code> to update the values of the <code>--x</code> and <code>--y</code> CSS variables.</li>
+</ul>
+<pre><code class="language-html">&lt;button class=&quot;mouse-cursor-gradient-tracking&quot;&gt;
+  &lt;span&gt;Hover me&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<pre><code class="language-css">.mouse-cursor-gradient-tracking {
+  position: relative;
+  background: ##7983ff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+
+.mouse-cursor-gradient-tracking:before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover:before {
+  --size: 200px;
+}
+</code></pre>
+<pre><code class="language-js">let btn = document.querySelector('.mouse-cursor-gradient-tracking');
+btn.addEventListener('mousemove', e =&gt; {
+  let rect = e.target.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  let y = e.clientY - rect.top;
+  btn.style.setProperty('--x', x + 'px');
+  btn.style.setProperty('--y', y + 'px');
+});
+</code></pre>
+<h2><a class="header" href="#navigation-list-item-hover-and-focus-effect" id="navigation-list-item-hover-and-focus-effect">navigation-list-item-hover-and-focus-effect</a></h2>
+<hr />
+<ul>
+<li>title: Navigation list item hover and focus effect</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a custom hover and focus effect for navigation items, using CSS transformations.</p>
+<ul>
+<li>Use the <code>:before</code> pseudo-element at the list item anchor to create a hover effect, hide it using <code>transform: scale(0)</code>.</li>
+<li>Use the <code>:hover</code> and <code>:focus</code> pseudo-class selectors to transition to <code>transform: scale(1)</code> and show the pseudo-element with its colored background.</li>
+<li>Prevent the pseudo-element from covering the anchor element by using <code>z-index</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;nav class=&quot;hover-nav&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;##&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;##&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;##&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+<pre><code class="language-css">.hover-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hover-nav li {
+  float: left;
+}
+
+.hover-nav li a {
+  position: relative;
+  display: block;
+  color: ##222;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  z-index: 0;
+}
+
+li a:before {
+  position: absolute;
+  content: &quot;&quot;;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: ##f6c126;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+li a:hover:before,
+li a:focus:before {
+  transform: scale(1);
+}
+</code></pre>
+<h2><a class="header" href="#offscreen" id="offscreen">offscreen</a></h2>
+<hr />
+<ul>
+<li>title: Offscreen</li>
+<li>tags: layout,visual,intermediate</li>
+</ul>
+<hr />
+<p>Completely hides an element visually and positionally in the DOM while still allowing it to be accessible.</p>
+<ul>
+<li>Remove all borders and padding and hide the element's overflow.</li>
+<li>Use <code>clip</code> to indicate that no part of the element should be shown.</li>
+<li>Make the <code>height</code> and <code>width</code> of the element <code>1px</code> and negate them using <code>margin: -1px</code>.</li>
+<li>Use <code>position: absolute</code> so that the element does not take up space in the DOM.</li>
+<li><strong>Note:</strong> This provides an accessible and layout-friendly alternative to <code>display: none</code> (not readable by screen readers) and <code>visibility: hidden</code> (takes up physical space in the DOM).</li>
+</ul>
+<pre><code class="language-html">&lt;a class=&quot;button&quot; href=&quot;https://google.com&quot;&gt;
+  Learn More &lt;span class=&quot;offscreen&quot;&gt; about pants&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<pre><code class="language-css">.offscreen {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+</code></pre>
+<h2><a class="header" href="#overflow-scroll-gradient" id="overflow-scroll-gradient">overflow-scroll-gradient</a></h2>
+<hr />
+<ul>
+<li>title: Overflow scroll gradient</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Adds a fading gradient to an overflowing element to better indicate there is more content to be scrolled.</p>
+<ul>
+<li>Use the <code>:after</code> pseudo-element to create a <code>linear-gradient</code> that fades from <code>transparent</code> to <code>white</code> (top to bottom).</li>
+<li>Use <code>position: absolute</code>, <code>width</code> and <code>height</code> to appropriately place and size the pseudo-element in its parent.</li>
+<li>Use <code>pointer-events: none</code> to exclude the pseudo-element from mouse events, allowing text behind it to still be selectable/interactive.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;overflow-scroll-gradient&quot;&gt;
+  &lt;div class=&quot;overflow-scroll-gradient-scroller&quot;&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. &lt;br /&gt;
+    Iure id exercitationem nulla qui repellat laborum vitae, &lt;br /&gt;
+    molestias tempora velit natus. Quas, assumenda nisi. &lt;br /&gt;
+    Quisquam enim qui iure, consequatur velit sit? &lt;br /&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;br /&gt;
+    Iure id exercitationem nulla qui repellat laborum vitae, &lt;br /&gt;
+    molestias tempora velit natus. Quas, assumenda nisi. &lt;br /&gt;
+    Quisquam enim qui iure, consequatur velit sit?
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.overflow-scroll-gradient {
+  position: relative;
+}
+
+.overflow-scroll-gradient:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 25px;
+  background: linear-gradient(transparent, white);
+  pointer-events: none;
+}
+
+.overflow-scroll-gradient-scroller {
+  overflow-y: scroll;
+  background: white;
+  width: 240px;
+  height: 200px;
+  padding: 15px;
+  line-height: 1.2;
+}
+</code></pre>
+<h2><a class="header" href="#polka-dot-pattern" id="polka-dot-pattern">polka-dot-pattern</a></h2>
+<hr />
+<ul>
+<li>title: Polka dot background pattern</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a polka dot background pattern.</p>
+<ul>
+<li>Use <code>background-color</code> to set a black background.</li>
+<li>Use <code>background-image</code> with two <code>radial-gradient()</code> values to create two dots.</li>
+<li>Use <code>background-size</code> to specify the pattern's size and <code>background-position</code> to appropriately place the two gradients.</li>
+<li><strong>Note:</strong> The fixed <code>height</code> and <code>width</code> of the element is for demonstration purposes only.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;polka-dot&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.polka-dot {
+  width: 240px;
+  height: 240px;
+  background-color: ##000;
+  background-image: radial-gradient(##fff 10%, transparent 11%),
+    radial-gradient(##fff 10%, transparent 11%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-repeat: repeat;
+}
+</code></pre>
+<h2><a class="header" href="#popout-menu" id="popout-menu">popout-menu</a></h2>
+<hr />
+<ul>
+<li>title: Popout menu</li>
+<li>tags: interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Reveals an interactive popout menu on hover/focus.</p>
+<ul>
+<li>Use <code>left: 100%</code> to move the popout menu to the right of the parent.</li>
+<li>Use <code>visibility: hidden</code> to hide the popout menu initially, allowing for transitions to be applied (unlike <code>display: none</code>).</li>
+<li>Use the <code>:hover</code>, <code>:focus</code> and <code>:focus-within</code> pseudo-class selectors to apply <code>visibility: visible</code> to the popout menu, displaying it when the parent element is hovered/focused.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;reference&quot; tabindex=&quot;0&quot;&gt;
+  &lt;div class=&quot;popout-menu&quot;&gt;Popout menu&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.reference {
+  position: relative;
+  background: tomato;
+  width: 100px;
+  height: 80px;
+}
+
+.popout-menu {
+  position: absolute;
+  visibility: hidden;
+  left: 100%;
+  background: ##9C27B0;
+  color: white;
+  padding: 16px;
+}
+
+.reference:hover &gt; .popout-menu,
+.reference:focus &gt; .popout-menu,
+.reference:focus-within &gt; .popout-menu {
+  visibility: visible;
+}
+</code></pre>
+<h2><a class="header" href="#pretty-text-underline" id="pretty-text-underline">pretty-text-underline</a></h2>
+<hr />
+<ul>
+<li>title: Pretty text underline</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Provides a nicer alternative to <code>text-decoration: underline</code> where descenders do not clip the underline.</p>
+<ul>
+<li>Use <code>text-shadow</code> to apply 4 values with offsets covering a 4x4 px area, ensuring the underline has a thick shadow that covers the line where descenders clip it. For the best results, use a color that matches the <code>background</code> and adjust the <code>px</code> values for larger fonts.</li>
+<li>Use <code>background-image</code> with <code>linear-gradient()</code> and <code>currentColor</code> to create an appropriate gradient that will act as the actual underline.</li>
+<li>Set <code>background-position</code>, <code>background-repeat</code> and <code>background-size</code> to place the gradient in the correct position.</li>
+<li>Use the <code>::selection</code> pseudo-class selector to ensure the text shadow does not interfere with text selection.</li>
+<li><strong>Note:</strong> This is natively implemented as <code>text-decoration-skip-ink: auto</code> but it has less control over the underline.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;p class=&quot;pretty-text-underline&quot;&gt;Pretty text underline without clipping descenders.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  background: ##f5f6f9;
+  color: ##333;
+  padding: 8px 0;
+}
+
+.pretty-text-underline {
+  display: inline;
+  text-shadow: 1px 1px ##f5f6f9, -1px 1px ##f5f6f9, -1px -1px ##f5f6f9,
+    1px -1px ##f5f6f9;
+  background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+.pretty-text-underline::selection {
+  background-color: rgba(0, 150, 255, 0.3);
+  text-shadow: none;
+}
+</code></pre>
+<h2><a class="header" href="#pulse-loader" id="pulse-loader">pulse-loader</a></h2>
+<hr />
+<ul>
+<li>title: Pulse loader</li>
+<li>tags: animation,beginner</li>
+</ul>
+<hr />
+<p>Creates a pulse effect loader animation using the <code>animation-delay</code> property.</p>
+<ul>
+<li>Use <code>@keyframes</code> to define an animation at two points in the cycle: at the start (<code>0%</code>), the two <code>&lt;div&gt;</code> elements have no <code>width</code> or <code>height</code> and are positioned at the center and at the end (<code>100%</code>), both <code>&lt;div&gt;</code> elements have increased <code>width</code> and <code>height</code>, but their <code>position</code> is reset to <code>0</code>.</li>
+<li>Use <code>opacity</code> to transition from <code>1</code> to <code>0</code> when animating to give the <code>&lt;div&gt;</code> elements a disappearing effect as they expand.</li>
+<li>Set a predefined <code>width</code> and <code>height</code> for the parent container, <code>.ripple-loader</code> and use <code>position: relative</code> to position its children.</li>
+<li>Use <code>animation-delay</code> on the second <code>&lt;div&gt;</code> element, so that each element starts its animation at a different time.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;ripple-loader&quot;&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.ripple-loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.ripple-loader div {
+  position: absolute;
+  border: 4px solid ##454ADE;
+  border-radius: 50%;
+  animation: ripple-loader 1s ease-out infinite;
+}
+
+.ripple-loader div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes ripple-loader {
+  0% {
+    top: 32px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    opacity: 0;
+  }
+}
+</code></pre>
+<h2><a class="header" href="#reset-all-styles" id="reset-all-styles">reset-all-styles</a></h2>
+<hr />
+<ul>
+<li>title: Reset all styles</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Resets all styles to default values using only one property.</p>
+<ul>
+<li>Use the <code>all</code> property to reset all styles (inherited or not) to their default values.</li>
+<li><strong>Note:</strong> This will not affect <code>direction</code> and <code>unicode-bidi</code> properties.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;reset-all-styles&quot;&gt;
+  &lt;h5&gt;Title&lt;/h5&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id
+    exercitationem nulla qui repellat laborum vitae, molestias tempora velit
+    natus. Quas, assumenda nisi. Quisquam enim qui iure, consequatur velit sit?
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.reset-all-styles {
+  all: initial;
+}
+</code></pre>
+<h2><a class="header" href="#responsive-layout-sidebar" id="responsive-layout-sidebar">responsive-layout-sidebar</a></h2>
+<hr />
+<ul>
+<li>title: Responsive layout with sidebar</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Creates a responsive layout with a content area and a sidebar.</p>
+<ul>
+<li>Use <code>display: grid</code> on the parent container, to create a grid layout.</li>
+<li>Use <code>minmax()</code> for the second column (sidebar) to allow it to take up between <code>150px</code> and <code>20%</code>.</li>
+<li>Use <code>1fr</code> for the first column (main content) to take up the rest of the remaining space.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;main&gt;
+    This element is 1fr large.
+  &lt;/main&gt;
+  &lt;aside&gt;
+    Min: 150px / Max: 20%
+  &lt;/aside&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px, 20%);
+  height: 100px;
+}
+
+main, aside {
+  padding: 12px;
+  text-align: center;
+}
+
+main {
+  background: ##d4f2c4;
+}
+
+aside {
+  background: ##81cfd9;
+}
+</code></pre>
+<h2><a class="header" href="#rotating-card" id="rotating-card">rotating-card</a></h2>
+<hr />
+<ul>
+<li>title: Rotating Card</li>
+<li>tags: animation,advanced</li>
+</ul>
+<hr />
+<p>Creates a two sided card which rotates on hover.</p>
+<ul>
+<li>Set the the <code>backface-visibility</code> of the cards to none.</li>
+<li>Initially, set <code>rotateY</code> for the back side of the card to <code>-180deg</code> and the front side to <code>0deg</code>.</li>
+<li>Upon hover, set <code>rotateY</code> for the front side to <code>180deg</code> and backside to <code>0deg</code>.</li>
+<li>Set the appropriate <code>perspective</code> value to create the rotate effect.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-side front&quot;&gt;
+    &lt;div&gt;Front Side&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-side back&quot;&gt;
+    &lt;div&gt;Back Side&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.card {
+  perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  max-width: 400px;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+}
+
+.card-side {
+  height: 35rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding:2rem;
+  color: white
+}
+
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-color: ##4158D0;
+  background-image: linear-gradient(43deg, ##4158D0 0%,##C850C0 46%, ##FFCC70 100%);
+}
+
+.card-side.front {
+  background-color: ##0093E9;
+  background-image: linear-gradient(160deg, ##0093E9 0%, ##80D0C7 100%);
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+</code></pre>
+<h2><a class="header" href="#shape-separator" id="shape-separator">shape-separator</a></h2>
+<hr />
+<ul>
+<li>title: Shape separator</li>
+<li>tags: visual,intermediate
+unlisted: true</li>
+</ul>
+<hr />
+<p>Uses an SVG shape to create a separator between two different blocks.</p>
+<ul>
+<li>Use the <code>:after</code> pseudo-element to create the separator element.</li>
+<li>Use <code>background-image</code> to add the SVG (a 24x12 triangle) shape via a data URI. The background image will repeat by default, covering the whole area of the pseudo-element.</li>
+<li>Use the <code>background</code> of the parent element to set the desired color for the separator.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;shape-separator&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.shape-separator {
+  position: relative;
+  height: 48px;
+  background: ##9C27B0;
+}
+
+.shape-separator:after {
+  content: '';
+  background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 12'%3E%3Cpath d='m12 0l12 12h-24z' fill='transparent'/%3E%3C/svg%3E&quot;);
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  bottom: 0;
+}
+</code></pre>
+<h2><a class="header" href="#sibling-fade" id="sibling-fade">sibling-fade</a></h2>
+<hr />
+<ul>
+<li>title: Sibling fade</li>
+<li>tags: interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Fades out the siblings of a hovered item.</p>
+<ul>
+<li>Use a <code>transition</code> to animate changes to <code>opacity</code>.</li>
+<li>Use the <code>:hover</code> and <code>:not</code> pseudo-class selectors to change the <code>opacity</code> of all elements except for the one the mouse is over to <code>0.5</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;sibling-fade&quot;&gt;
+  &lt;span&gt;Item 1&lt;/span&gt; &lt;span&gt;Item 2&lt;/span&gt; &lt;span&gt;Item 3&lt;/span&gt;
+  &lt;span&gt;Item 4&lt;/span&gt; &lt;span&gt;Item 5&lt;/span&gt; &lt;span&gt;Item 6&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">span {
+  padding: 0 16px;
+  transition: opacity 0.3s;
+}
+
+.sibling-fade:hover span:not(:hover) {
+  opacity: 0.5;
+}
+</code></pre>
+<h2><a class="header" href="#staggered-animation" id="staggered-animation">staggered-animation</a></h2>
+<hr />
+<ul>
+<li>title: Staggered animation</li>
+<li>tags: animation,advanced</li>
+</ul>
+<hr />
+<p>Creates a staggered animation for the elements of a list.</p>
+<ul>
+<li>Set the <code>opacity</code> to <code>0</code> and <code>transform</code> to <code>translateX(100%)</code> to make list elements transparent and move them all the way to the right.</li>
+<li>Specify the appropriate <code>transition</code> properties for list elements, except <code>transition-delay</code> which is specified relative to the <code>--i</code> custom property.</li>
+<li>Use inline styles to specify a value for <code>--i</code> for each list element, which will in turn be used for <code>transition-delay</code> to create the stagger effect.</li>
+<li>Use the <code>:checked</code> pseudo-class selector for the checkbox to appropriately style list elements, setting <code>opacity</code> to <code>1</code> and <code>transform</code> to <code>translateX(0)</code> to make them appear and slide into view.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;menu&quot; id=&quot;menu&quot; class=&quot;menu-toggler&quot;&gt;
+  &lt;label for=&quot;menu&quot; class=&quot;menu-toggler-label&quot;&gt;Menu&lt;/label&gt;
+  &lt;ul class=&quot;stagger-menu&quot;&gt;
+    &lt;li style=&quot;--i: 0&quot;&gt;Home&lt;/li&gt;
+    &lt;li style=&quot;--i: 1&quot;&gt;Pricing&lt;/li&gt;
+    &lt;li style=&quot;--i: 2&quot;&gt;Account&lt;/li&gt;
+    &lt;li style=&quot;--i: 3&quot;&gt;Support&lt;/li&gt;
+    &lt;li style=&quot;--i: 4&quot;&gt;About&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.menu-toggler {
+  display: none;
+}
+
+.menu-toggler-label {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.stagger-menu {
+  list-style-type: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+.stagger-menu li {
+  margin-bottom: 8px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition-property: opacity, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+}
+
+.menu-toggler:checked ~ .stagger-menu li {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: calc(0.055s * var(--i));
+}
+</code></pre>
+<h2><a class="header" href="#sticky-list-titles" id="sticky-list-titles">sticky-list-titles</a></h2>
+<hr />
+<ul>
+<li>title: List with sticky section headings</li>
+<li>tags: visual,intermediate</li>
+</ul>
+<hr />
+<p>Creates a list with sticky headings for each section.</p>
+<ul>
+<li>Use <code>overflow-y: auto</code> to allow the list container (<code>&lt;dl&gt;</code>) to overflow vertically.</li>
+<li>Set headings (<code>&lt;dt&gt;</code>) <code>position</code> to <code>sticky</code> and apply <code>top: 0</code> to stick to the top of the container.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;dl class=&quot;sticky-stack&quot;&gt;
+    &lt;dt&gt;A&lt;/dt&gt;
+    &lt;dd&gt;Algeria&lt;/dd&gt;
+    &lt;dd&gt;Angola&lt;/dd&gt;
+
+    &lt;dt&gt;B&lt;/dt&gt;
+    &lt;dd&gt;Benin&lt;/dd&gt;
+    &lt;dd&gt;Botswana&lt;/dd&gt;
+    &lt;dd&gt;Burkina Faso&lt;/dd&gt;
+    &lt;dd&gt;Burundi&lt;/dd&gt;
+
+    &lt;dt&gt;C&lt;/dt&gt;
+    &lt;dd&gt;Cabo Verde&lt;/dd&gt;
+    &lt;dd&gt;Cameroon&lt;/dd&gt;
+    &lt;dd&gt;Central African Republic&lt;/dd&gt;
+    &lt;dd&gt;Chad&lt;/dd&gt;
+    &lt;dd&gt;Comoros&lt;/dd&gt;
+    &lt;dd&gt;Congo, Democratic Republic of the&lt;/dd&gt;
+    &lt;dd&gt;Congo, Republic of the&lt;/dd&gt;
+    &lt;dd&gt;Cote d'Ivoire&lt;/dd&gt;
+
+    &lt;dt&gt;D&lt;/dt&gt;
+    &lt;dd&gt;Djibouti&lt;/dd&gt;
+
+    &lt;dt&gt;E&lt;/dt&gt;
+    &lt;dd&gt;Egypt&lt;/dd&gt;
+    &lt;dd&gt;Equatorial Guinea&lt;/dd&gt;
+    &lt;dd&gt;Eritrea&lt;/dd&gt;
+    &lt;dd&gt;Eswatini (formerly Swaziland)&lt;/dd&gt;
+    &lt;dd&gt;Ethiopia&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+}
+
+.sticky-stack {
+  background: ##37474f;
+  color: ##fff;
+  margin: 0;
+  height: 320px;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.sticky-stack dt {
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  background: ##263238;
+  color: ##cfd8dc;
+  padding: 0.25rem 1rem;
+}
+
+.sticky-stack dd {
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+.sticky-stack dd + dt {
+  margin-top: 1rem;
+}
+</code></pre>
+<h2><a class="header" href="#stripes-pattern" id="stripes-pattern">stripes-pattern</a></h2>
+<hr />
+<ul>
+<li>title: Stripes background pattern</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a stripes background pattern.</p>
+<ul>
+<li>Use <code>background-color</code> to set a white background.</li>
+<li>Use <code>background-image</code> with a <code>radial-gradient()</code> value to create a vertical stripe.</li>
+<li>Use <code>background-size</code> to specify the pattern's size.</li>
+<li><strong>Note:</strong> The fixed <code>height</code> and <code>width</code> of the element is for demonstration purposes only.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;stripes&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.stripes {
+  width: 240px;
+  height: 240px;
+  background-color: ##fff;
+  background-image: linear-gradient(90deg, transparent 50%, ##000 50%);
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+</code></pre>
+<h2><a class="header" href="#system-font-stack" id="system-font-stack">system-font-stack</a></h2>
+<hr />
+<ul>
+<li>title: System font stack</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Uses the native font of the operating system to get close to a native app feel.</p>
+<ul>
+<li>Define a list of fonts using <code>font-family</code>.</li>
+<li>The browser looks for each successive font, preferring the first one if possible, and falls back to the next if it cannot find the font (on the system or defined in CSS).</li>
+<li><code>-apple-system</code> is San Francisco, used on iOS and macOS (not Chrome however).</li>
+<li><code>BlinkMacSystemFont</code> is San Francisco, used on macOS Chrome.</li>
+<li><code>'Segoe UI'</code> is used on Windows 10.</li>
+<li><code>Roboto</code> is used on Android.</li>
+<li><code>Oxygen-Sans</code> is used on Linux with KDE.</li>
+<li><code>Ubuntu</code> is used on Ubuntu (all variants).</li>
+<li><code>Cantarell</code> is used on Linux with GNOME Shell.</li>
+<li><code>'Helvetica Neue'</code> and <code>Helvetica</code> is used on macOS 10.10 and below.</li>
+<li><code>Arial</code> is a font widely supported by all operating systems.</li>
+<li><code>sans-serif</code> is the fallback sans serif font if none of the other fonts are supported.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;system-font-stack&quot;&gt;This text uses the system font.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.system-font-stack {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+}
+</code></pre>
+<h2><a class="header" href="#text-backdrop-overlay" id="text-backdrop-overlay">text-backdrop-overlay</a></h2>
+<hr />
+<ul>
+<li>title: Image text overlay</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Displays a text on top of an image using an overlay.</p>
+<ul>
+<li>Use <code>backdrop-filter</code> to apply a <code>blur(14px)</code> and <code>brightness(80%)</code> effect to make text readable regardless of background image and color.</li>
+</ul>
+<pre><code class="language-html">&lt;div&gt;
+  &lt;h3 class=&quot;text-overlay&quot;&gt;Hello, World&lt;/h3&gt;
+  &lt;img src=&quot;https://picsum.photos/id/1050/1200/800&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">div {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  backdrop-filter: blur(14px) brightness(80%);
+}
+</code></pre>
+<h2><a class="header" href="#tile-layout-using-inline-block" id="tile-layout-using-inline-block">tile-layout-using-inline-block</a></h2>
+<hr />
+<ul>
+<li>title: 3-tile layout</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Aligns items horizontally using <code>display: inline-block</code> to create a 3-tile layout.</p>
+<ul>
+<li>Use <code>display: inline-block</code> to create a tiled layout, without using <code>float</code>, <code>flex</code> or <code>grid</code>.</li>
+<li>Use <code>width</code> in combination with <code>calc</code> to divide the width of the container evenly into 3 columns.</li>
+<li>Set <code>font-size</code> for <code>.tiles</code> to <code>0</code> to avoid whitespace and to <code>20px</code> for <code>&lt;h2&gt;</code> elements to display the text.</li>
+<li><strong>Note:</strong> If you use relative units (e.g. <code>em</code>), using <code>font-size: 0;</code> to fight whitespace between blocks might cause side effects.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;tiles&quot;&gt;
+  &lt;div class=&quot;tile&quot;&gt;
+    &lt;img src=&quot;https://via.placeholder.com/200x150&quot;&gt;
+    &lt;h2&gt;30 Seconds of CSS&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tile&quot;&gt;
+    &lt;img src=&quot;https://via.placeholder.com/200x150&quot;&gt;
+    &lt;h2&gt;30 Seconds of CSS&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tile&quot;&gt;
+    &lt;img src=&quot;https://via.placeholder.com/200x150&quot;&gt;
+    &lt;h2&gt;30 Seconds of CSS&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.tiles {
+  width: 600px;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.tile {
+  width: calc(600px / 3);
+  display: inline-block;
+}
+
+.tile h2 {
+  font-size: 20px;
+}
+</code></pre>
+<h2><a class="header" href="#toggle-switch" id="toggle-switch">toggle-switch</a></h2>
+<hr />
+<ul>
+<li>title: Toggle switch</li>
+<li>tags: visual,interactivity,beginner</li>
+</ul>
+<hr />
+<p>Creates a toggle switch with CSS only.</p>
+<ul>
+<li>Use the <code>for</code> attribute to associate the <code>&lt;label&gt;</code> with the checkbox <code>&lt;input&gt;</code> element.</li>
+<li>Use the <code>:after</code> pseudo-element of the <code>&lt;label&gt;</code> to create a circular knob for the switch.</li>
+<li>Use the <code>:checked</code> pseudo-class selector to change the position of the knob, using <code>transform: translateX(20px)</code> and the <code>background-color</code> of the switch.</li>
+<li>Use <code>position: absolute</code> and <code>left: -9999px</code> to visually hide the <code>&lt;input&gt;</code> element.</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot; class=&quot;offscreen&quot; /&gt;
+&lt;label for=&quot;toggle&quot; class=&quot;switch&quot;&gt;&lt;/label&gt;
+</code></pre>
+<pre><code class="language-css">.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.switch:after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+input[type='checkbox']:checked + .switch:after {
+  transform: translateX(20px);
+}
+
+input[type='checkbox']:checked + .switch {
+  background-color: ##7983ff;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+</code></pre>
+<h2><a class="header" href="#transform-centering" id="transform-centering">transform-centering</a></h2>
+<hr />
+<ul>
+<li>title: Transform centering</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Vertically and horizontally centers a child element within its parent element using CSS transforms.</p>
+<ul>
+<li>Set the <code>position</code> of the parent to <code>relative</code> and that of the child to <code>absolute</code> to place it in relation to its parent.</li>
+<li>Use <code>left: 50%</code> and <code>top: 50%</code> to offset the child 50% from the left and top edge of the containing block.</li>
+<li>Use <code>transform: translate(-50%, -50%)</code> to negate its position, so that it is vertically and horizontally centered.</li>
+<li><strong>Note:</strong> The fixed <code>height</code> and <code>width</code> of the parent element is for demonstration purposes only.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;parent&quot;&gt;
+  &lt;div class=&quot;child&quot;&gt;Centered content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.parent {
+  border: 1px solid ##9C27B0;
+  height: 250px;
+  position: relative;
+  width: 250px;
+}
+
+.child {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</code></pre>
+<h2><a class="header" href="#triangle" id="triangle">triangle</a></h2>
+<hr />
+<ul>
+<li>title: Triangle</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a triangular shape with pure CSS.</p>
+<ul>
+<li>Use three borders to create a triangle shape.</li>
+<li>All borders should have the same <code>border-width</code> (<code>20px</code>).</li>
+<li>The opposite side of where the triangle points towards (i.e. top if the triangle points downwards) should have the desired <code>border-color</code>, whereas the adjacent borders (i.e. left and right) should have a <code>border-color</code> of <code>transparent</code>.</li>
+<li>Altering the <code>border-width</code> values will change the proportions of the triangle.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;triangle&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.triangle {
+  width: 0;
+  height: 0;
+  border-top: 20px solid ##9C27B0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+</code></pre>
+<h2><a class="header" href="#truncate-text-multiline" id="truncate-text-multiline">truncate-text-multiline</a></h2>
+<hr />
+<ul>
+<li>title: Truncate multiline text</li>
+<li>tags: layout,intermediate</li>
+</ul>
+<hr />
+<p>Truncates text that is longer than one line.</p>
+<ul>
+<li>Use <code>overflow: hidden</code> to prevent the text from overflowing its dimensions.</li>
+<li>Set a fixed <code>width</code> to ensure the element has at least one constant dimension.</li>
+<li>Set <code>height: 109.2px</code> as calculated from the <code>font-size</code>, using the formula <code>font-size * line-height * numberOfLines</code> (in this case <code>26 * 1.4 * 3 = 109.2</code>).</li>
+<li>Set <code>height: 36.4px</code> as calculated for the gradient container, based on the formula <code>font-size * line-height</code> (in this case <code>26 * 1.4 = 36.4</code>).</li>
+<li>Use <code>background</code> with <code>linear-gradient()</code> to create a gradient from <code>transparent</code> to the <code>background-color</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;truncate-text-multiline&quot;&gt;
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et.
+&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.truncate-text-multiline {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 109.2px;
+  margin: 0 auto;
+  font-size: 26px;
+  line-height: 1.4;
+  width: 400px;
+  background: ##f5f6f9;
+  color: ##333;
+}
+
+.truncate-text-multiline:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 36.4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), ##f5f6f9 50%);
+}
+</code></pre>
+<h2><a class="header" href="#truncate-text" id="truncate-text">truncate-text</a></h2>
+<hr />
+<ul>
+<li>title: Truncate text</li>
+<li>tags: layout,beginner</li>
+</ul>
+<hr />
+<p>Truncates text that is longer than one line, adding an ellipsis at the end (<code>…</code>).</p>
+<ul>
+<li>Use <code>overflow: hidden</code> to prevent the text from overflowing its dimensions.</li>
+<li>Use <code>white-space: nowrap</code> to prevent the text from exceeding one line in height.</li>
+<li>Use <code>text-overflow: ellipsis</code> to make it so that if the text exceeds its dimensions, it will end with an ellipsis.</li>
+<li>Specify a fixed <code>width</code> for the element to know when to display an ellipsis.</li>
+<li>Only works for single line elements.</li>
+</ul>
+<pre><code class="language-html">&lt;p class=&quot;truncate-text&quot;&gt;If I exceed one line's width, I will be truncated.&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">.truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+</code></pre>
+<h2><a class="header" href="#vertical-scroll-snap" id="vertical-scroll-snap">vertical-scroll-snap</a></h2>
+<hr />
+<ul>
+<li>title: Vertical scroll snap</li>
+<li>tags: interactivity,intermediate</li>
+</ul>
+<hr />
+<p>Creates a scrollable container that will snap on elements when scrolling.</p>
+<ul>
+<li>Use <code>display: gird</code> and <code>grid-auto-flow: row</code> to create a vertical layout.</li>
+<li>Use <code>scroll-snap-type: y mandatory</code> and <code>overscroll-behavior-y: contain</code> to create a snap effect on vertical scroll.</li>
+<li>You can use <code>scroll-snap-align</code> with either <code>start</code>, <code>stop</code> or <code>center</code> to change the snap alignment.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;vertical-snap&quot;&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/1067/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/122/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/188/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/249/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/257/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/259/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/283/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/288/640/640&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;##&quot;&gt;&lt;img src=&quot;https://picsum.photos/id/299/640/640&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.vertical-snap {
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  width: calc(180px + 1rem);
+  padding: 1rem;
+  height: 480px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+}
+
+.vertical-snap &gt; a {
+  scroll-snap-align: center;
+}
+
+.vertical-snap img {
+  width: 180px;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+</code></pre>
+<h2><a class="header" href="#zebra-striped-list" id="zebra-striped-list">zebra-striped-list</a></h2>
+<hr />
+<ul>
+<li>title: Zebra striped list</li>
+<li>tags: visual,beginner</li>
+</ul>
+<hr />
+<p>Creates a striped list with alternating background colors.</p>
+<ul>
+<li>Use the <code>:nth-child(odd)</code> or <code>:nth-child(even)</code> pseudo-class selectors to apply a different <code>background-color</code> to elements that match based on their position in a group of siblings.</li>
+<li><strong>Note:</strong> You can use it to apply different styles to other HTML elements like <code>&lt;div&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ol&gt;</code>, etc.</li>
+</ul>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Item 01&lt;/li&gt;
+  &lt;li&gt;Item 02&lt;/li&gt;
+  &lt;li&gt;Item 03&lt;/li&gt;
+  &lt;li&gt;Item 04&lt;/li&gt;
+  &lt;li&gt;Item 05&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre><code class="language-css">li:nth-child(odd) {
+  background-color: ##999;
+}
+</code></pre>
+<h2><a class="header" href="#zig-zag-pattern" id="zig-zag-pattern">zig-zag-pattern</a></h2>
+<hr />
+<ul>
+<li>title: Zig zag background pattern</li>
+<li>tags: visual,advanced</li>
+</ul>
+<hr />
+<p>Creates a zig zag background pattern.</p>
+<ul>
+<li>Use <code>background-color</code> to set a white background.</li>
+<li>Use <code>background-image</code> with four <code>linear-gradient()</code> values to create the parts of a zig zag pattern.</li>
+<li>Use <code>background-size</code> to specify the pattern's size and <code>background-position</code> to place the parts of the pattern in the correct locations.</li>
+<li><strong>Note:</strong> The fixed <code>height</code> and <code>width</code> of the element is for demonstration purposes only.</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;zig-zag&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.zig-zag {
+  width: 240px;
+  height: 240px;
+  background-color: ##fff;
+  background-image: linear-gradient(135deg, ##000 25%, transparent 25%),
+    linear-gradient(225deg, ##000 25%, transparent 25%),
+    linear-gradient(315deg, ##000 25%, transparent 25%),
+    linear-gradient(45deg, ##000 25%, transparent 25%);
+  background-position: -30px 0, -30px 0, 0 0, 0 0;
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="html5all.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="javascriptall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="html5all.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="javascriptall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

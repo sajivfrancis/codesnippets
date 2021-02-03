@@ -1,0 +1,3345 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Python - CodeSnippets</title>
+        <meta name="description" content="Python">
+        <meta name="og:title" property="og:title" content="Python">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://codesnippets.sajivfrancis.com/pythonall.html" />
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.ico">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html5all.html"><strong aria-hidden="true">1.</strong> HTML5</a></li><li class="chapter-item expanded "><a href="cssall.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li class="chapter-item expanded "><a href="javascriptall.html"><strong aria-hidden="true">3.</strong> JAVASCRIPT</a></li><li class="chapter-item expanded "><a href="reactall.html"><strong aria-hidden="true">4.</strong> REACT</a></li><li class="chapter-item expanded "><a href="phpall.html"><strong aria-hidden="true">5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="pythonall.html" class="active"><strong aria-hidden="true">6.</strong> PYTHON</a></li><li class="chapter-item expanded "><a href="csharpall.html"><strong aria-hidden="true">7.</strong> CSHARP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title" style="text-align:center">PYTHON</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                      <ul>
+                        <p align="center">
+                            <a href="https://sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-HOME-red"></a>
+                            <a href="https://docs.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-DOCS-brightgreen"></a>
+                            <a href="https://sajivfrancis.github.io/blog/"><img alt="npm" src="https://img.shields.io/badge/-BLOG-orange"></a>
+                            <a href="https://codesnippets.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-CODESNIPPETS-greenOh"></a>
+                            </p>
+                    </ul>
+                        <h2><a class="header" href="#add_days" id="add_days">add_days</a></h2>
+<hr />
+<ul>
+<li>title: add_days</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the date of <code>n</code> days from the given date.</p>
+<ul>
+<li>Use <code>datetime.timedelta</code> and the <code>+</code> operator to calculate the new <code>datetime.datetime</code> value after adding <code>n</code> days to <code>d</code>.</li>
+<li>Omit the second argument, <code>d</code>, to use a default value of <code>datetime.today()</code>.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime, timedelta
+
+def add_days(n, d = datetime.today()):
+  return d + timedelta(n)
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+add_days(5, date(2020, 10, 25)) ## date(2020, 10, 30)
+add_days(-5, date(2020, 10, 25)) ## date(2020, 10, 20)
+</code></pre>
+<h2><a class="header" href="#all_equal" id="all_equal">all_equal</a></h2>
+<hr />
+<ul>
+<li>title: all_equal</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Checks if all elements in a list are equal.</p>
+<ul>
+<li>Use <code>set()</code> to eliminate duplicate elements and then use <code>len()</code> to check if length is <code>1</code>.</li>
+</ul>
+<pre><code class="language-py">def all_equal(lst):
+  return len(set(lst)) == 1
+</code></pre>
+<pre><code class="language-py">all_equal([1, 2, 3, 4, 5, 6]) ## False
+all_equal([1, 1, 1, 1]) ## True
+</code></pre>
+<h2><a class="header" href="#all_unique" id="all_unique">all_unique</a></h2>
+<hr />
+<ul>
+<li>title: all_unique</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Checks if all the values in a list are unique.</p>
+<ul>
+<li>Use <code>set()</code> on the given list to keep only unique occurrences.</li>
+<li>Use <code>len()</code> to compare the length of the unique values to the original list.</li>
+</ul>
+<pre><code class="language-py">def all_unique(lst):
+  return len(lst) == len(set(lst))
+</code></pre>
+<pre><code class="language-py">x = [1, 2, 3, 4, 5, 6]
+y = [1, 2, 2, 3, 4, 5]
+all_unique(x) ## True
+all_unique(y) ## False
+</code></pre>
+<h2><a class="header" href="#arithmetic_progression" id="arithmetic_progression">arithmetic_progression</a></h2>
+<hr />
+<ul>
+<li>title: arithmetic_progression</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Generates a list of numbers in the arithmetic progression starting with the given positive integer and up to the specified limit.</p>
+<ul>
+<li>Use <code>range()</code> and <code>list()</code> with the appropriate start, step and end values.</li>
+</ul>
+<pre><code class="language-py">def arithmetic_progression(n, lim):
+  return list(range(n, lim + 1, n))
+</code></pre>
+<pre><code class="language-py">arithmetic_progression(5, 25) ## [5, 10, 15, 20, 25] 
+</code></pre>
+<h2><a class="header" href="#average" id="average">average</a></h2>
+<hr />
+<ul>
+<li>title: average</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Calculates the average of two or more numbers.</p>
+<ul>
+<li>Use <code>sum()</code> to sum all of the <code>args</code> provided, divide by <code>len()</code>.</li>
+</ul>
+<pre><code class="language-py">def average(*args):
+  return sum(args, 0.0) / len(args)
+</code></pre>
+<pre><code class="language-py">average(*[1, 2, 3]) ## 2.0
+average(1, 2, 3) ## 2.0
+</code></pre>
+<h2><a class="header" href="#average_by" id="average_by">average_by</a></h2>
+<hr />
+<ul>
+<li>title: average_by</li>
+<li>tags: math,list,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the average of a list, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>map()</code> to map each element to the value returned by <code>fn</code>.</li>
+<li>Use <code>sum()</code> to sum all of the mapped values, divide by <code>len(lst)</code>.</li>
+<li>Omit the last argument, <code>fn</code>, to use the default identity function.</li>
+</ul>
+<pre><code class="language-py">def average_by(lst, fn = lambda x: x):
+  return sum(map(fn, lst), 0.0) / len(lst)
+</code></pre>
+<pre><code class="language-py">average_by([{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }], lambda x: x['n'])
+## 5.0
+</code></pre>
+<h2><a class="header" href="#bifurcate" id="bifurcate">bifurcate</a></h2>
+<hr />
+<ul>
+<li>title: bifurcate</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Splits values into two groups, based on the result of the given <code>filter</code> list. </p>
+<ul>
+<li>Use a list comprehension and <code>zip()</code> to add elements to groups, based on <code>filter</code>.</li>
+<li>If <code>filter</code> has a truthy value for any element, add it to the first group, otherwise add it to the second group.</li>
+</ul>
+<pre><code class="language-py">def bifurcate(lst, filter):
+  return [
+    [x for x, flag in zip(lst, filter) if flag],
+    [x for x, flag in zip(lst, filter) if not flag]
+  ]
+</code></pre>
+<pre><code class="language-py">bifurcate(['beep', 'boop', 'foo', 'bar'], [True, True, False, True])
+## [ ['beep', 'boop', 'bar'], ['foo'] ]
+</code></pre>
+<h2><a class="header" href="#bifurcate_by" id="bifurcate_by">bifurcate_by</a></h2>
+<hr />
+<ul>
+<li>title: bifurcate_by</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Splits values into two groups, based on the result of the given filtering function.</p>
+<ul>
+<li>Use a list comprehension to add elements to groups, based on the value returned by <code>fn</code> for each element.</li>
+<li>If <code>fn</code> returns a truthy value for any element, add it to the first group, otherwise add it to the second group.</li>
+</ul>
+<pre><code class="language-py">def bifurcate_by(lst, fn):
+  return [
+    [x for x in lst if fn(x)],
+    [x for x in lst if not fn(x)]
+  ]
+</code></pre>
+<pre><code class="language-py">bifurcate_by(['beep', 'boop', 'foo', 'bar'], lambda x: x[0] == 'b')
+## [ ['beep', 'boop', 'bar'], ['foo'] ]
+</code></pre>
+<h2><a class="header" href="#binomial_coefficient" id="binomial_coefficient">binomial_coefficient</a></h2>
+<hr />
+<ul>
+<li>title: binomial_coefficient</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Calculates the number of ways to choose <code>k</code> items from <code>n</code> items without repetition and without order.</p>
+<ul>
+<li>Use <code>math.comb()</code> to calculate the binomial coefficient.</li>
+</ul>
+<pre><code class="language-py">from math import comb
+
+def binomial_coefficient(n, k):
+  return comb(n, k)
+</code></pre>
+<pre><code class="language-py">binomial_coefficient(8, 2) ## 28
+</code></pre>
+<h2><a class="header" href="#byte_size" id="byte_size">byte_size</a></h2>
+<hr />
+<ul>
+<li>title: byte_size</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns the length of a string in bytes.</p>
+<ul>
+<li>Use <code>str.encode('utf-8')</code> to encode the given string and return its length.</li>
+</ul>
+<pre><code class="language-py">def byte_size(s):
+  return len(s.encode('utf-8'))
+</code></pre>
+<pre><code class="language-py">byte_size('😀') ## 4
+byte_size('Hello World') ## 11
+</code></pre>
+<h2><a class="header" href="#camel" id="camel">camel</a></h2>
+<hr />
+<ul>
+<li>title: camel</li>
+<li>tags: string,regexp,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to camelcase.</p>
+<ul>
+<li>Use <code>re.sub()</code> to replace any <code>-</code> or <code>_</code> with a space, using the regexp <code>r&quot;(_|-)+&quot;</code>.</li>
+<li>Use <code>str.title()</code> to capitalize the first letter of each word and convert the rest to lowercase.</li>
+<li>Finally, use <code>str.replace()</code> to remove spaces between words.</li>
+</ul>
+<pre><code class="language-py">from re import sub
+
+def camel(s):
+  s = sub(r&quot;(_|-)+&quot;, &quot; &quot;, s).title().replace(&quot; &quot;, &quot;&quot;)
+  return ''.join([s[0].lower(), s[1:]])
+</code></pre>
+<pre><code class="language-py">camel('some_database_field_name') ## 'someDatabaseFieldName'
+camel('Some label that needs to be camelized')
+## 'someLabelThatNeedsToBeCamelized'
+camel('some-javascript-property') ## 'someJavascriptProperty'
+camel('some-mixed_string with spaces_underscores-and-hyphens')
+## 'someMixedStringWithSpacesUnderscoresAndHyphens'
+</code></pre>
+<h2><a class="header" href="#capitalize" id="capitalize">capitalize</a></h2>
+<hr />
+<ul>
+<li>title: capitalize</li>
+<li>tags: string,intermediate</li>
+</ul>
+<hr />
+<p>Capitalizes the first letter of a string.</p>
+<ul>
+<li>Use list slicing and <code>str.upper()</code> to capitalize the first letter of the string.</li>
+<li>Use <code>str.join()</code> to combine the capitalized first letter with the rest of the characters.</li>
+<li>Omit the <code>lower_rest</code> parameter to keep the rest of the string intact, or set it to <code>True</code> to convert to lowercase.</li>
+</ul>
+<pre><code class="language-py">def capitalize(s, lower_rest = False):
+  return ''.join([s[:1].upper(), (s[1:].lower() if lower_rest else s[1:])])
+</code></pre>
+<pre><code class="language-py">capitalize('fooBar') ## 'FooBar'
+capitalize('fooBar', True) ## 'Foobar'
+</code></pre>
+<h2><a class="header" href="#capitalize_every_word" id="capitalize_every_word">capitalize_every_word</a></h2>
+<hr />
+<ul>
+<li>title: capitalize_every_word</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Capitalizes the first letter of every word in a string.</p>
+<ul>
+<li>Use <code>str.title()</code> to capitalize the first letter of every word in the string.</li>
+</ul>
+<pre><code class="language-py">def capitalize_every_word(s):
+  return s.title()
+</code></pre>
+<pre><code class="language-py">capitalize_every_word('hello world!') ## 'Hello World!'
+</code></pre>
+<h2><a class="header" href="#cast_list" id="cast_list">cast_list</a></h2>
+<hr />
+<ul>
+<li>title: cast_list</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Casts the provided value as a list if it's not one.</p>
+<ul>
+<li>Use <code>isinstance()</code> to check if the given value is enumerable.</li>
+<li>Return it by using <code>list()</code> or encapsulated in a list accordingly.</li>
+</ul>
+<pre><code class="language-py">def cast_list(val):
+  return list(val) if isinstance(val, (tuple, list, set, dict)) else [val]
+</code></pre>
+<pre><code class="language-py">cast_list('foo') ## ['foo']
+cast_list([1]) ## [1]
+cast_list(('foo', 'bar')) ## ['foo', 'bar']
+</code></pre>
+<h2><a class="header" href="#celsius_to_fahrenheit" id="celsius_to_fahrenheit">celsius_to_fahrenheit</a></h2>
+<hr />
+<ul>
+<li>title: celsius_to_fahrenheit</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Converts Celsius to Fahrenheit.</p>
+<ul>
+<li>Follow the conversion formula <code>F = 1.8 * C + 32</code>.</li>
+</ul>
+<pre><code class="language-py">def celsius_to_fahrenheit(degrees):
+  return ((degrees * 1.8) + 32)
+</code></pre>
+<pre><code class="language-py">celsius_to_fahrenheit(180) ## 356.0
+</code></pre>
+<h2><a class="header" href="#check_prop" id="check_prop">check_prop</a></h2>
+<hr />
+<ul>
+<li>title: check_prop</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Creates a function that will invoke a predicate function for the specified property on a given object.</p>
+<ul>
+<li>Return a <code>lambda</code> function that takes an object and applies the predicate function, <code>fn</code> to the specified property.</li>
+</ul>
+<pre><code class="language-py">def check_prop(fn, prop):
+  return lambda obj: fn(obj[prop])
+</code></pre>
+<pre><code class="language-py">check_age = check_prop(lambda x: x &gt;= 18, 'age')
+user = {'name': 'Mark', 'age': 18}
+check_age(user) ## True
+</code></pre>
+<h2><a class="header" href="#chunk" id="chunk">chunk</a></h2>
+<hr />
+<ul>
+<li>title: chunk</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Chunks a list into smaller lists of a specified size.</p>
+<ul>
+<li>Use <code>list()</code> and <code>range()</code> to create a list of the desired <code>size</code>.</li>
+<li>Use <code>map()</code> on the list and fill it with splices of the given list.</li>
+<li>Finally, return the created list.</li>
+</ul>
+<pre><code class="language-py">from math import ceil
+
+def chunk(lst, size):
+  return list(
+    map(lambda x: lst[x * size:x * size + size],
+      list(range(ceil(len(lst) / size)))))
+</code></pre>
+<pre><code class="language-py">chunk([1, 2, 3, 4, 5], 2) ## [[1, 2], [3, 4], [5]]
+</code></pre>
+<h2><a class="header" href="#chunk_into_n" id="chunk_into_n">chunk_into_n</a></h2>
+<hr />
+<ul>
+<li>title: chunk_into_n</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Chunks a list into <code>n</code> smaller lists.</p>
+<ul>
+<li>Use <code>math.ceil()</code> and <code>len()</code> to get the size of each chunk.</li>
+<li>Use <code>list()</code> and <code>range()</code> to create a new list of size <code>n</code>.</li>
+<li>Use <code>map()</code> to map each element of the new list to a chunk the length of <code>size</code>.</li>
+<li>If the original list can't be split evenly, the final chunk will contain the remaining elements.</li>
+</ul>
+<pre><code class="language-py">from math import ceil
+
+def chunk_into_n(lst, n):
+  size = ceil(len(lst) / n)
+  return list(
+    map(lambda x: lst[x * size:x * size + size],
+    list(range(n)))
+  )
+</code></pre>
+<pre><code class="language-py">chunk_into_n([1, 2, 3, 4, 5, 6, 7], 4) ## [[1, 2], [3, 4], [5, 6], [7]]
+</code></pre>
+<h2><a class="header" href="#clamp_number" id="clamp_number">clamp_number</a></h2>
+<hr />
+<ul>
+<li>title: clamp_number</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Clamps <code>num</code> within the inclusive range specified by the boundary values.</p>
+<ul>
+<li>If <code>num</code> falls within the range (<code>a</code>, <code>b</code>), return <code>num</code>.</li>
+<li>Otherwise, return the nearest number in the range.</li>
+</ul>
+<pre><code class="language-py">def clamp_number(num, a, b):
+  return max(min(num, max(a, b)), min(a, b))
+</code></pre>
+<pre><code class="language-py">clamp_number(2, 3, 5) ## 3
+clamp_number(1, -1, -5) ## -1
+</code></pre>
+<h2><a class="header" href="#collect_dictionary" id="collect_dictionary">collect_dictionary</a></h2>
+<hr />
+<ul>
+<li>title: collect_dictionary</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Inverts a dictionary with non-unique hashable values.</p>
+<ul>
+<li>Create a <code>collections.defaultdict</code> with <code>list</code> as the default value for each key. </li>
+<li>Use <code>dictionary.items()</code> in combination with a loop to map the values of the dictionary to keys using <code>dict.append()</code>.</li>
+<li>Use <code>dict()</code> to convert the <code>collections.defaultdict</code> to a regular dictionary.</li>
+</ul>
+<pre><code class="language-py">from collections import defaultdict
+
+def collect_dictionary(obj):
+  inv_obj = defaultdict(list)
+  for key, value in obj.items():
+    inv_obj[value].append(key)
+  return dict(inv_obj)
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 10,
+  'Anna': 9,
+}
+collect_dictionary(ages) ## { 10: ['Peter', 'Isabel'], 9: ['Anna'] }
+</code></pre>
+<h2><a class="header" href="#compact" id="compact">compact</a></h2>
+<hr />
+<ul>
+<li>title: compact</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Removes falsy values from a list.</p>
+<ul>
+<li>Use <code>filter()</code> to filter out falsy values (<code>False</code>, <code>None</code>, <code>0</code>, and <code>&quot;&quot;</code>).</li>
+</ul>
+<pre><code class="language-py">def compact(lst):
+  return list(filter(None, lst))
+</code></pre>
+<pre><code class="language-py">compact([0, 1, False, 2, '', 3, 'a', 's', 34]) ## [ 1, 2, 3, 'a', 's', 34 ]
+</code></pre>
+<h2><a class="header" href="#compose" id="compose">compose</a></h2>
+<hr />
+<ul>
+<li>title: compose</li>
+<li>tags: function,advanced</li>
+</ul>
+<hr />
+<p>Performs right-to-left function composition.</p>
+<ul>
+<li>Use <code>functools.reduce()</code> to perform right-to-left function composition.</li>
+<li>The last (rightmost) function can accept one or more arguments; the remaining functions must be unary.</li>
+</ul>
+<pre><code class="language-py">from functools import reduce
+
+def compose(*fns):
+  return reduce(lambda f, g: lambda *args: f(g(*args)), fns)
+</code></pre>
+<pre><code class="language-py">add5 = lambda x: x + 5
+multiply = lambda x, y: x * y
+multiply_and_add_5 = compose(add5, multiply)
+multiply_and_add_5(5, 2) ## 15
+</code></pre>
+<h2><a class="header" href="#compose_right" id="compose_right">compose_right</a></h2>
+<hr />
+<ul>
+<li>title: compose_right</li>
+<li>tags: function,advanced</li>
+</ul>
+<hr />
+<p>Performs left-to-right function composition.</p>
+<ul>
+<li>Use <code>functools.reduce()</code> to perform left-to-right function composition.</li>
+<li>The first (leftmost) function can accept one or more arguments; the remaining functions must be unary.</li>
+</ul>
+<pre><code class="language-py">from functools import reduce
+
+def compose_right(*fns):
+  return reduce(lambda f, g: lambda *args: g(f(*args)), fns)
+</code></pre>
+<pre><code class="language-py">add = lambda x, y: x + y
+square = lambda x: x * x
+add_and_square = compose_right(add, square)
+add_and_square(1, 2) ## 9
+</code></pre>
+<h2><a class="header" href="#count_by" id="count_by">count_by</a></h2>
+<hr />
+<ul>
+<li>title: count_by</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Groups the elements of a list based on the given function and returns the count of elements in each group.</p>
+<ul>
+<li>Use <code>collections.defaultdict</code> to initialize a dictionary.</li>
+<li>Use <code>map()</code> to map the values of the given list using the given function.</li>
+<li>Iterate over the map and increase the element count each time it occurs.</li>
+</ul>
+<pre><code class="language-py">from collections import defaultdict
+
+def count_by(lst, fn = lambda x: x):
+  count = defaultdict(int)
+  for val in map(fn, lst):
+    count[val] += 1
+  return dict(count)
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+count_by([6.1, 4.2, 6.3], floor) ## {6: 2, 4: 1}
+count_by(['one', 'two', 'three'], len) ## {3: 2, 5: 1}
+</code></pre>
+<h2><a class="header" href="#count_occurrences" id="count_occurrences">count_occurrences</a></h2>
+<hr />
+<ul>
+<li>title: count_occurrences</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Counts the occurrences of a value in a list.</p>
+<ul>
+<li>Use <code>list.count()</code> to count the number of occurrences of <code>val</code> in <code>lst</code>.</li>
+</ul>
+<pre><code class="language-py">def count_occurrences(lst, val):
+  return lst.count(val)
+</code></pre>
+<pre><code class="language-py">count_occurrences([1, 1, 2, 1, 2, 3], 1) ## 3
+</code></pre>
+<h2><a class="header" href="#cumsum" id="cumsum">cumsum</a></h2>
+<hr />
+<ul>
+<li>title: cumsum</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Creates a list of partial sums.</p>
+<ul>
+<li>Use <code>itertools.accumulate()</code> to create the accumulated sum for each element.</li>
+<li>Use <code>list()</code> to convert the result into a list.</li>
+</ul>
+<pre><code class="language-py">from itertools import accumulate
+
+def cumsum(lst):
+  return list(accumulate(lst))
+</code></pre>
+<pre><code class="language-py">cumsum(range(0, 15, 3)) ## [0, 3, 9, 18, 30]
+</code></pre>
+<h2><a class="header" href="#curry" id="curry">curry</a></h2>
+<hr />
+<ul>
+<li>title: curry</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Curries a function.</p>
+<ul>
+<li>Use <code>functools.partial()</code> to return a new partial object which behaves like <code>fn</code> with the given arguments, <code>args</code>, partially applied.</li>
+</ul>
+<pre><code class="language-py">from functools import partial
+
+def curry(fn, *args):
+  return partial(fn, *args)
+</code></pre>
+<pre><code class="language-py">add = lambda x, y: x + y
+add10 = curry(add, 10)
+add10(20) ## 30
+</code></pre>
+<h2><a class="header" href="#daterange" id="daterange">daterange</a></h2>
+<hr />
+<ul>
+<li>title: daterange</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Creates a list of dates between <code>start</code> (inclusive) and <code>end</code> (not inclusive).</p>
+<ul>
+<li>Use  <code>datetime.timedelta.days</code> to get the days between <code>start</code> and <code>end</code>.</li>
+<li>Use <code>int()</code> to convert the result to an integer and <code>range()</code> to iterate over each day.</li>
+<li>Use a list comprehension and <code>datetime.timedelta()</code> to create a list of <code>datetime.date</code> objects.</li>
+</ul>
+<pre><code class="language-py">from datetime import timedelta, date
+
+def daterange(start, end):
+  return [start + timedelta(n) for n in range(int((end - start).days))]
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+daterange(date(2020, 10, 1), date(2020, 10, 5))
+## [date(2020, 10, 1), date(2020, 10, 2), date(2020, 10, 3), date(2020, 10, 4)]
+</code></pre>
+<h2><a class="header" href="#days_ago" id="days_ago">days_ago</a></h2>
+<hr />
+<ul>
+<li>title: days_ago</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the date of <code>n</code> days ago from today.</p>
+<ul>
+<li>Use <code>datetime.date.today()</code> to get the current day.</li>
+<li>Use <code>datetime.timedelta</code> to subtract <code>n</code> days from today's date.</li>
+</ul>
+<pre><code class="language-py">from datetime import timedelta, date
+
+def days_ago(n):
+  return date.today() - timedelta(n)
+</code></pre>
+<pre><code class="language-py">days_ago(5) ## date(2020, 10, 23)
+</code></pre>
+<h2><a class="header" href="#days_diff" id="days_diff">days_diff</a></h2>
+<hr />
+<ul>
+<li>title: days_diff</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Calculates the day difference between two dates.</p>
+<ul>
+<li>Subtract <code>start</code> from <code>end</code> and use <code>datetime.timedelta.days</code> to get the day difference.</li>
+</ul>
+<pre><code class="language-py">def days_diff(start, end):
+  return (end - start).days
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+days_diff(date(2020, 10, 25), date(2020, 10, 28)) ## 3
+</code></pre>
+<h2><a class="header" href="#days_from_now" id="days_from_now">days_from_now</a></h2>
+<hr />
+<ul>
+<li>title: days_from_now</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the date of <code>n</code> days from today.</p>
+<ul>
+<li>Use <code>datetime.date.today()</code> to get the current day.</li>
+<li>Use <code>datetime.timedelta</code> to add <code>n</code> days from today's date.</li>
+</ul>
+<pre><code class="language-py">from datetime import timedelta, date
+
+def days_from_now(n):
+  return date.today() + timedelta(n)
+</code></pre>
+<pre><code class="language-py">days_from_now(5) ## date(2020, 11, 02)
+</code></pre>
+<h2><a class="header" href="#decapitalize" id="decapitalize">decapitalize</a></h2>
+<hr />
+<ul>
+<li>title: decapitalize</li>
+<li>tags: string,intermediate</li>
+</ul>
+<hr />
+<p>Decapitalizes the first letter of a string.</p>
+<ul>
+<li>Use list slicing and <code>str.lower()</code> to decapitalize the first letter of the string.</li>
+<li>Use <code>str.join()</code> to combine the lowercase first letter with the rest of the characters.</li>
+<li>Omit the <code>upper_rest</code> parameter to keep the rest of the string intact, or set it to <code>True</code> to convert to uppercase.</li>
+</ul>
+<pre><code class="language-py">def decapitalize(s, upper_rest = False):
+  return ''.join([s[:1].lower(), (s[1:].upper() if upper_rest else s[1:])])
+</code></pre>
+<pre><code class="language-py">decapitalize('FooBar') ## 'fooBar'
+decapitalize('FooBar', True) ## 'fOOBAR'
+</code></pre>
+<h2><a class="header" href="#deep_flatten" id="deep_flatten">deep_flatten</a></h2>
+<hr />
+<ul>
+<li>title: deep_flatten</li>
+<li>tags: list,recursion,intermediate</li>
+</ul>
+<hr />
+<p>Deep flattens a list.</p>
+<ul>
+<li>Use recursion.</li>
+<li>Use <code>isinstance()</code> with <code>collections.abc.Iterable</code> to check if an element is iterable.</li>
+<li>If it is iterable, apply <code>deep_flatten()</code> recursively, otherwise return <code>[lst]</code>.</li>
+</ul>
+<pre><code class="language-py">from collections.abc import Iterable
+
+def deep_flatten(lst):
+  return ([a for i in lst for a in
+          deep_flatten(i)] if isinstance(lst, Iterable) else [lst])
+</code></pre>
+<pre><code class="language-py">deep_flatten([1, [2], [[3], 4], 5]) ## [1, 2, 3, 4, 5]
+</code></pre>
+<h2><a class="header" href="#degrees_to_rads" id="degrees_to_rads">degrees_to_rads</a></h2>
+<hr />
+<ul>
+<li>title: degrees_to_rads</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Converts an angle from degrees to radians.</p>
+<ul>
+<li>Use <code>math.pi</code> and the degrees to radians formula to convert the angle from degrees to radians.</li>
+</ul>
+<pre><code class="language-py">from math import pi
+
+def degrees_to_rads(deg):
+  return (deg * pi) / 180.0
+</code></pre>
+<pre><code class="language-py">degrees_to_rads(180) ## ~3.1416
+</code></pre>
+<h2><a class="header" href="#delay" id="delay">delay</a></h2>
+<hr />
+<ul>
+<li>title: delay</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Invokes the provided function after <code>ms</code> milliseconds.</p>
+<ul>
+<li>Use <code>time.sleep()</code> to delay the execution of <code>fn</code> by <code>ms / 1000</code> seconds.</li>
+</ul>
+<pre><code class="language-py">from time import sleep
+
+def delay(fn, ms, *args):
+  sleep(ms / 1000)
+  return fn(*args)
+</code></pre>
+<pre><code class="language-py">delay(lambda x: print(x), 1000, 'later') ## prints 'later' after one second
+</code></pre>
+<h2><a class="header" href="#dict_to_list" id="dict_to_list">dict_to_list</a></h2>
+<hr />
+<ul>
+<li>title: dict_to_list</li>
+<li>tags: dictionary,list,intermediate</li>
+</ul>
+<hr />
+<p>Converts a dictionary to a list of tuples.</p>
+<ul>
+<li>Use <code>dict.items()</code> and <code>list()</code> to get a list of tuples from the given dictionary.</li>
+</ul>
+<pre><code class="language-py">def dict_to_list(d):
+  return list(d.items())
+</code></pre>
+<pre><code class="language-py">d = {'one': 1, 'three': 3, 'five': 5, 'two': 2, 'four': 4}
+dict_to_list(d)
+## [('one', 1), ('three', 3), ('five', 5), ('two', 2), ('four', 4)]
+</code></pre>
+<h2><a class="header" href="#difference" id="difference">difference</a></h2>
+<hr />
+<ul>
+<li>title: difference</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Calculates the difference between two iterables, without filtering duplicate values.</p>
+<ul>
+<li>Create a <code>set</code> from <code>b</code>.</li>
+<li>Use a list comprehension on <code>a</code> to only keep values not contained in the previously created set, <code>_b</code>.</li>
+</ul>
+<pre><code class="language-py">def difference(a, b):
+  _b = set(b)
+  return [item for item in a if item not in _b]
+</code></pre>
+<pre><code class="language-py">difference([1, 2, 3], [1, 2, 4]) ## [3]
+</code></pre>
+<h2><a class="header" href="#difference_by" id="difference_by">difference_by</a></h2>
+<hr />
+<ul>
+<li>title: difference_by</li>
+<li>tags: list,function,intermediate</li>
+</ul>
+<hr />
+<p>Returns the difference between two lists, after applying the provided function to each list element of both.</p>
+<ul>
+<li>Create a <code>set</code>, using <code>map()</code> to apply <code>fn</code> to each element in <code>b</code>.</li>
+<li>Use a list comprehension in combination with <code>fn</code> on <code>a</code> to only keep values not contained in the previously created set, <code>_b</code>.</li>
+</ul>
+<pre><code class="language-py">def difference_by(a, b, fn):
+  _b = set(map(fn, b))
+  return [item for item in a if fn(item) not in _b]
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+difference_by([2.1, 1.2], [2.3, 3.4], floor) ## [1.2]
+difference_by([{ 'x': 2 }, { 'x': 1 }], [{ 'x': 1 }], lambda v : v['x'])
+## [ { x: 2 } ]
+</code></pre>
+<h2><a class="header" href="#digitize" id="digitize">digitize</a></h2>
+<hr />
+<ul>
+<li>title: digitize</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Converts a number to a list of digits.</p>
+<ul>
+<li>Use <code>map()</code> combined with <code>int</code> on the string representation of <code>n</code> and return a list from the result.</li>
+</ul>
+<pre><code class="language-py">def digitize(n):
+  return list(map(int, str(n)))
+</code></pre>
+<pre><code class="language-py">digitize(123) ## [1, 2, 3]
+</code></pre>
+<h2><a class="header" href="#drop" id="drop">drop</a></h2>
+<hr />
+<ul>
+<li>title: drop</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list with <code>n</code> elements removed from the left.</p>
+<ul>
+<li>Use slice notation to remove the specified number of elements from the left.</li>
+<li>Omit the last argument, <code>n</code>, to use a default value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-py">def drop(a, n = 1):
+  return a[n:]
+</code></pre>
+<pre><code class="language-py">drop([1, 2, 3]) ## [2, 3]
+drop([1, 2, 3], 2) ## [3]
+drop([1, 2, 3], 42) ## []
+</code></pre>
+<h2><a class="header" href="#drop_right" id="drop_right">drop_right</a></h2>
+<hr />
+<ul>
+<li>title: drop_right</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list with <code>n</code> elements removed from the right.</p>
+<ul>
+<li>Use slice notation to remove the specified number of elements from the right.</li>
+<li>Omit the last argument, <code>n</code>, to use a default value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-py">def drop_right(a, n = 1):
+  return a[:-n]
+</code></pre>
+<pre><code class="language-py">drop_right([1, 2, 3]) ## [1, 2]
+drop_right([1, 2, 3], 2) ## [1]
+drop_right([1, 2, 3], 42) ## []
+</code></pre>
+<h2><a class="header" href="#every" id="every">every</a></h2>
+<hr />
+<ul>
+<li>title: every</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the provided function returns <code>True</code> for every element in the list.</p>
+<ul>
+<li>Use <code>all()</code> in combination with <code>map()</code> and <code>fn</code> to check if <code>fn</code> returns <code>True</code> for all elements in the list.</li>
+</ul>
+<pre><code class="language-py">def every(lst, fn = lambda x: x):
+  return all(map(fn, lst))
+</code></pre>
+<pre><code class="language-py">every([4, 2, 3], lambda x: x &gt; 1) ## True
+every([1, 2, 3]) ## True
+</code></pre>
+<h2><a class="header" href="#every_nth" id="every_nth">every_nth</a></h2>
+<hr />
+<ul>
+<li>title: every_nth</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns every <code>nth</code> element in a list.</p>
+<ul>
+<li>Use slice notation to create a new list that contains every <code>nth</code> element of the given list.</li>
+</ul>
+<pre><code class="language-py">def every_nth(lst, nth):
+  return lst[nth - 1::nth]
+</code></pre>
+<pre><code class="language-py">every_nth([1, 2, 3, 4, 5, 6], 2) ## [ 2, 4, 6 ]
+</code></pre>
+<h2><a class="header" href="#factorial" id="factorial">factorial</a></h2>
+<hr />
+<ul>
+<li>title: factorial</li>
+<li>tags: math,recursion,beginner</li>
+</ul>
+<hr />
+<p>Calculates the factorial of a number.</p>
+<ul>
+<li>Use recursion.</li>
+<li>If <code>num</code> is less than or equal to <code>1</code>, return <code>1</code>.</li>
+<li>Otherwise, return the product of <code>num</code> and the factorial of <code>num - 1</code>.</li>
+<li>Throws an exception if <code>num</code> is a negative or a floating point number.</li>
+</ul>
+<pre><code class="language-py">def factorial(num):
+  if not ((num &gt;= 0) and (num % 1 == 0)):
+    raise Exception(&quot;Number can't be floating point or negative.&quot;)
+  return 1 if num == 0 else num * factorial(num - 1)
+</code></pre>
+<pre><code class="language-py">factorial(6) ## 720
+</code></pre>
+<h2><a class="header" href="#fahrenheit_to_celsius" id="fahrenheit_to_celsius">fahrenheit_to_celsius</a></h2>
+<hr />
+<ul>
+<li>title: fahrenheit_to_celsius</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Converts Fahrenheit to Celsius.</p>
+<ul>
+<li>Follow the conversion formula <code>C = (F - 32) * 5/9</code>.</li>
+</ul>
+<pre><code class="language-py">def fahrenheit_to_celsius(degrees):
+  return ((degrees - 32) * 5/9)
+</code></pre>
+<pre><code class="language-py">fahrenheit_to_celsius(77) ## 25.0
+</code></pre>
+<h2><a class="header" href="#fibonacci" id="fibonacci">fibonacci</a></h2>
+<hr />
+<ul>
+<li>title: fibonacci</li>
+<li>tags: math,list,intermediate</li>
+</ul>
+<hr />
+<p>Generates a list, containing the Fibonacci sequence, up until the nth term.</p>
+<ul>
+<li>Starting with <code>0</code> and <code>1</code>, use <code>list.append()</code> to add the sum of the last two numbers of the list to the end of the list, until the length of the list reaches <code>n</code>.</li>
+<li>If <code>n</code> is less or equal to <code>0</code>, return a list containing <code>0</code>.</li>
+</ul>
+<pre><code class="language-py">def fibonacci(n):
+  if n &lt;= 0:
+    return [0]
+  sequence = [0, 1]
+  while len(sequence) &lt;= n:
+    next_value = sequence[len(sequence) - 1] + sequence[len(sequence) - 2]
+    sequence.append(next_value)
+  return sequence
+</code></pre>
+<pre><code class="language-py">fibonacci(7) ## [0, 1, 1, 2, 3, 5, 8, 13]
+</code></pre>
+<h2><a class="header" href="#filter_non_unique" id="filter_non_unique">filter_non_unique</a></h2>
+<hr />
+<ul>
+<li>title: filter_non_unique</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Creates a list with the non-unique values filtered out.</p>
+<ul>
+<li>Use <code>collections.Counter</code> to get the count of each value in the list.</li>
+<li>Use a list comprehension to create a list containing only the unique values.</li>
+</ul>
+<pre><code class="language-py">from collections import Counter
+
+def filter_non_unique(lst):
+  return [item for item, count in Counter(lst).items() if count == 1]
+</code></pre>
+<pre><code class="language-py">filter_non_unique([1, 2, 2, 3, 4, 4, 5]) ## [1, 3, 5]
+</code></pre>
+<h2><a class="header" href="#filter_unique" id="filter_unique">filter_unique</a></h2>
+<hr />
+<ul>
+<li>title: filter_unique</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Creates a list with the unique values filtered out.</p>
+<ul>
+<li>Use <code>collections.Counter</code> to get the count of each value in the list.</li>
+<li>Use a list comprehension to create a list containing only the non-unique values.</li>
+</ul>
+<pre><code class="language-py">from collections import Counter
+
+def filter_unique(lst):
+  return [item for item, count in Counter(lst).items() if count &gt; 1]
+</code></pre>
+<pre><code class="language-py">filter_unique([1, 2, 2, 3, 4, 4, 5]) ## [2, 4]
+</code></pre>
+<h2><a class="header" href="#find" id="find">find</a></h2>
+<hr />
+<ul>
+<li>title: find</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Finds the value of the first element in the given list that satisfies the provided testing function.</p>
+<ul>
+<li>Use a list comprehension and <code>next()</code> to return the first element in <code>lst</code> for which <code>fn</code> returns <code>True</code>.</li>
+</ul>
+<pre><code class="language-py">def find(lst, fn):
+  return next(x for x in lst if fn(x))
+</code></pre>
+<pre><code class="language-py">find([1, 2, 3, 4], lambda n: n % 2 == 1) ## 1
+</code></pre>
+<h2><a class="header" href="#find_index" id="find_index">find_index</a></h2>
+<hr />
+<ul>
+<li>title: find_index</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Finds the index of the first element in the given list that satisfies the provided testing function.</p>
+<ul>
+<li>Use a list comprehension, <code>enumerate()</code> and <code>next()</code> to return the index of the first element in <code>lst</code> for which <code>fn</code> returns <code>True</code>.</li>
+</ul>
+<pre><code class="language-py">def find_index(lst, fn):
+  return next(i for i, x in enumerate(lst) if fn(x))
+</code></pre>
+<pre><code class="language-py">find_index([1, 2, 3, 4], lambda n: n % 2 == 1) ## 0
+</code></pre>
+<h2><a class="header" href="#find_index_of_all" id="find_index_of_all">find_index_of_all</a></h2>
+<hr />
+<ul>
+<li>title: find_index_of_all</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Finds the indexes of all elements in the given list that satisfy the provided testing function.</p>
+<ul>
+<li>Use <code>enumerate()</code> and a list comprehension to return the indexes of the all element in <code>lst</code> for which <code>fn</code> returns <code>True</code>.</li>
+</ul>
+<pre><code class="language-py">def find_index_of_all(lst, fn):
+  return [i for i, x in enumerate(lst) if fn(x)]
+</code></pre>
+<pre><code class="language-py">find_index_of_all([1, 2, 3, 4], lambda n: n % 2 == 1) ## [0, 2]
+</code></pre>
+<h2><a class="header" href="#find_key" id="find_key">find_key</a></h2>
+<hr />
+<ul>
+<li>title: find_key</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Finds the first key in the provided dictionary that has the given value.</p>
+<ul>
+<li>Use <code>dictionary.items()</code> and <code>next()</code> to return the first key that has a value equal to <code>val</code>.</li>
+</ul>
+<pre><code class="language-py">def find_key(dict, val):
+  return next(key for key, value in dict.items() if value == val)
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 11,
+  'Anna': 9,
+}
+find_key(ages, 11) ## 'Isabel'
+</code></pre>
+<h2><a class="header" href="#find_keys" id="find_keys">find_keys</a></h2>
+<hr />
+<ul>
+<li>title: find_keys</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Finds all keys in the provided dictionary that have the given value.</p>
+<ul>
+<li>Use <code>dictionary.items()</code>, a generator and <code>list()</code> to return all keys that have a value equal to <code>val</code>.</li>
+</ul>
+<pre><code class="language-py">def find_keys(dict, val):
+  return list(key for key, value in dict.items() if value == val)
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 11,
+  'Anna': 10,
+}
+find_keys(ages, 10) ## [ 'Peter', 'Anna' ]
+</code></pre>
+<h2><a class="header" href="#find_last" id="find_last">find_last</a></h2>
+<hr />
+<ul>
+<li>title: find_last</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Finds the value of the last element in the given list that satisfies the provided testing function.</p>
+<ul>
+<li>Use a list comprehension and <code>next()</code> to return the last element in <code>lst</code> for which <code>fn</code> returns <code>True</code>.</li>
+</ul>
+<pre><code class="language-py">def find_last(lst, fn):
+  return next(x for x in lst[::-1] if fn(x))
+</code></pre>
+<pre><code class="language-py">find_last([1, 2, 3, 4], lambda n: n % 2 == 1) ## 3
+</code></pre>
+<h2><a class="header" href="#find_last_index" id="find_last_index">find_last_index</a></h2>
+<hr />
+<ul>
+<li>title: find_last_index</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Finds the index of the last element in the given list that satisfies the provided testing function.</p>
+<ul>
+<li>Use a list comprehension, <code>enumerate()</code> and <code>next()</code> to return the index of the last element in <code>lst</code> for which <code>fn</code> returns <code>True</code>.</li>
+</ul>
+<pre><code class="language-py">def find_last_index(lst, fn):
+  return len(lst) - 1 - next(i for i, x in enumerate(lst[::-1]) if fn(x))
+</code></pre>
+<pre><code class="language-py">find_last_index([1, 2, 3, 4], lambda n: n % 2 == 1) ## 2
+</code></pre>
+<h2><a class="header" href="#find_parity_outliers" id="find_parity_outliers">find_parity_outliers</a></h2>
+<hr />
+<ul>
+<li>title: find_parity_outliers</li>
+<li>tags: list,math,intermediate</li>
+</ul>
+<hr />
+<p>Finds the items that are parity outliers in a given list.</p>
+<ul>
+<li>Use <code>collections.Counter</code> with a list comprehension to count even and odd values in the list.</li>
+<li>Use <code>collections.Counter.most_common()</code> to get the most common parity.</li>
+<li>Use a list comprehension to find all elements that do not match the most common parity.</li>
+</ul>
+<pre><code class="language-py">from collections import Counter
+
+def find_parity_outliers(nums):
+  return [
+    x for x in nums
+    if x % 2 != Counter([n % 2 for n in nums]).most_common()[0][0]
+  ]
+</code></pre>
+<pre><code class="language-py">find_parity_outliers([1, 2, 3, 4, 6]) ## [1, 3]
+</code></pre>
+<h2><a class="header" href="#flatten" id="flatten">flatten</a></h2>
+<hr />
+<ul>
+<li>title: flatten</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Flattens a list of lists once.</p>
+<ul>
+<li>Use a list comprehension to extract each value from sub-lists in order.</li>
+</ul>
+<pre><code class="language-py">def flatten(lst):
+  return [x for y in lst for x in y]
+</code></pre>
+<pre><code class="language-py">flatten([[1, 2, 3, 4], [5, 6, 7, 8]]) ## [1, 2, 3, 4, 5, 6, 7, 8]
+</code></pre>
+<h2><a class="header" href="#for_each" id="for_each">for_each</a></h2>
+<hr />
+<ul>
+<li>title: for_each</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Executes the provided function once for each list element.</p>
+<ul>
+<li>Use a <code>for</code> loop to execute <code>fn</code> for each element in <code>itr</code>.</li>
+</ul>
+<pre><code class="language-py">def for_each(itr, fn):
+  for el in itr:
+    fn(el)
+</code></pre>
+<pre><code class="language-py">for_each([1, 2, 3], print) ## 1 2 3
+</code></pre>
+<h2><a class="header" href="#for_each_right" id="for_each_right">for_each_right</a></h2>
+<hr />
+<ul>
+<li>title: for_each_right</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Executes the provided function once for each list element, starting from the list's last element.</p>
+<ul>
+<li>Use a <code>for</code> loop in combination with slice notation to execute <code>fn</code> for each element in <code>itr</code>, starting from the last one.</li>
+</ul>
+<pre><code class="language-py">def for_each_right(itr, fn):
+  for el in itr[::-1]:
+    fn(el)
+</code></pre>
+<pre><code class="language-py">for_each_right([1, 2, 3], print) ## 3 2 1
+</code></pre>
+<h2><a class="header" href="#frequencies" id="frequencies">frequencies</a></h2>
+<hr />
+<ul>
+<li>title: frequencies</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Creates a dictionary with the unique values of a list as keys and their frequencies as the values.</p>
+<ul>
+<li>Use <code>collections.defaultdict()</code> to store the frequencies of each unique element.</li>
+<li>Use <code>dict()</code> to return a dictionary with the unique elements of the list as keys and their frequencies as the values.</li>
+</ul>
+<pre><code class="language-py">from collections import defaultdict
+
+def frequencies(lst):
+  freq = defaultdict(int)
+  for val in lst:
+    freq[val] += 1
+  return dict(freq)
+</code></pre>
+<pre><code class="language-py">frequencies(['a', 'b', 'a', 'c', 'a', 'a', 'b']) ## { 'a': 4, 'b': 2, 'c': 1 }
+</code></pre>
+<h2><a class="header" href="#from_iso_date" id="from_iso_date">from_iso_date</a></h2>
+<hr />
+<ul>
+<li>title: from_iso_date</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Converts a date from its ISO-8601 representation.</p>
+<ul>
+<li>Use <code>datetime.datetime.fromisoformat()</code> to convert the given ISO-8601 date to a <code>datetime.datetime</code> object.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime
+
+def from_iso_date(d):
+  return datetime.fromisoformat(d)
+</code></pre>
+<pre><code class="language-py">from_iso_date('2020-10-28T12:30:59.000000') ## 2020-10-28 12:30:59
+</code></pre>
+<h2><a class="header" href="#gcd" id="gcd">gcd</a></h2>
+<hr />
+<ul>
+<li>title: gcd</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Calculates the greatest common divisor of a list of numbers.</p>
+<ul>
+<li>Use <code>functools.reduce()</code> and <code>math.gcd()</code> over the given list.</li>
+</ul>
+<pre><code class="language-py">from functools import reduce
+from math import gcd as _gcd
+
+def gcd(numbers):
+  return reduce(_gcd, numbers)
+</code></pre>
+<pre><code class="language-py">gcd([8, 36, 28]) ## 4
+</code></pre>
+<h2><a class="header" href="#geometric_progression" id="geometric_progression">geometric_progression</a></h2>
+<hr />
+<ul>
+<li>title: geometric_progression</li>
+<li>tags: math,list,intermediate</li>
+</ul>
+<hr />
+<p>Initializes a list containing the numbers in the specified range where <code>start</code> and <code>end</code> are inclusive and the ratio between two terms is <code>step</code>.
+Returns an error if <code>step</code> equals <code>1</code>.</p>
+<ul>
+<li>Use <code>range()</code>, <code>math.log()</code> and <code>math.floor()</code> and a list comprehension to create a list of the appropriate length, applying the step for each element.</li>
+<li>Omit the second argument, <code>start</code>, to use a default value of <code>1</code>.</li>
+<li>Omit the third argument, <code>step</code>, to use a default value of <code>2</code>.</li>
+</ul>
+<pre><code class="language-py">from math import floor, log
+
+def geometric_progression(end, start=1, step=2):
+  return [start * step ** i for i in range(floor(log(end / start)
+          / log(step)) + 1)]
+</code></pre>
+<pre><code class="language-py">geometric_progression(256) ## [1, 2, 4, 8, 16, 32, 64, 128, 256]
+geometric_progression(256, 3) ## [3, 6, 12, 24, 48, 96, 192]
+geometric_progression(256, 1, 4) ## [1, 4, 16, 64, 256]
+</code></pre>
+<h2><a class="header" href="#get" id="get">get</a></h2>
+<hr />
+<ul>
+<li>title: get</li>
+<li>tags: dictionary,list,intermediate</li>
+</ul>
+<hr />
+<p>Retrieves the value of the nested key indicated by the given selector list from a dictionary or list.</p>
+<ul>
+<li>Use <code>functools.reduce()</code> to iterate over the <code>selectors</code> list.</li>
+<li>Apply <code>operator.getitem()</code> for each key in <code>selectors</code>, retrieving the value to be used as the iteratee for the next iteration.</li>
+</ul>
+<pre><code class="language-py">from functools import reduce 
+from operator import getitem
+
+def get(d, selectors):
+  return reduce(getitem, selectors, d)
+</code></pre>
+<pre><code class="language-py">users = {
+  'freddy': {
+    'name': {
+      'first': 'fred',
+      'last': 'smith' 
+    },
+    'postIds': [1, 2, 3]
+  }
+}
+get(users, ['freddy', 'name', 'last']) ## 'smith'
+get(users, ['freddy', 'postIds', 1]) ## 2
+</code></pre>
+<h2><a class="header" href="#group_by" id="group_by">group_by</a></h2>
+<hr />
+<ul>
+<li>title: group_by</li>
+<li>tags: list,dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Groups the elements of a list based on the given function.</p>
+<ul>
+<li>Use <code>collections.defaultdict</code> to initialize a dictionary.</li>
+<li>Use <code>fn</code> in combination with a <code>for</code> loop and <code>dict.append()</code> to populate the dictionary.</li>
+<li>Use <code>dict()</code> to convert it to a regular dictionary.</li>
+</ul>
+<pre><code class="language-py">from collections import defaultdict
+
+def group_by(lst, fn):
+  d = defaultdict(list)
+  for el in lst:
+    d[fn(el)].append(el)
+  return dict(d)
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+group_by([6.1, 4.2, 6.3], floor) ## {4: [4.2], 6: [6.1, 6.3]}
+group_by(['one', 'two', 'three'], len) ## {3: ['one', 'two'], 5: ['three']}
+</code></pre>
+<h2><a class="header" href="#hamming_distance" id="hamming_distance">hamming_distance</a></h2>
+<hr />
+<ul>
+<li>title: hamming_distance</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the Hamming distance between two values.</p>
+<ul>
+<li>Use the XOR operator (<code>^</code>) to find the bit difference between the two numbers.</li>
+<li>Use <code>bin()</code> to convert the result to a binary string.</li>
+<li>Convert the string to a list and use <code>list.count()</code> to count and return the number of <code>1</code>s in it.</li>
+</ul>
+<pre><code class="language-py">def hamming_distance(a, b):
+  return list(bin(a ^ b)).count('1')
+</code></pre>
+<pre><code class="language-py">hamming_distance(2, 3) ## 1
+</code></pre>
+<h2><a class="header" href="#has_duplicates" id="has_duplicates">has_duplicates</a></h2>
+<hr />
+<ul>
+<li>title: has_duplicates</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Checks if there are duplicate values in a flat list.</p>
+<ul>
+<li>Use <code>set()</code> on the given list to remove duplicates, compare its length with the length of the list.</li>
+</ul>
+<pre><code class="language-py">def has_duplicates(lst):
+  return len(lst) != len(set(lst))
+</code></pre>
+<pre><code class="language-py">x = [1, 2, 3, 4, 5, 5]
+y = [1, 2, 3, 4, 5]
+has_duplicates(x) ## True
+has_duplicates(y) ## False
+</code></pre>
+<h2><a class="header" href="#have_same_contents" id="have_same_contents">have_same_contents</a></h2>
+<hr />
+<ul>
+<li>title: have_same_contents</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if two lists contain the same elements regardless of order.</p>
+<ul>
+<li>Use <code>set()</code> on the combination of both lists to find the unique values.</li>
+<li>Iterate over them with a <code>for</code> loop comparing the <code>count()</code> of each unique value in each list.</li>
+<li>Return <code>False</code> if the counts do not match for any element, <code>True</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">def have_same_contents(a, b):
+  for v in set(a + b):
+    if a.count(v) != b.count(v):
+      return False
+  return True
+</code></pre>
+<pre><code class="language-py">have_same_contents([1, 2, 4], [2, 4, 1]) ## True
+</code></pre>
+<h2><a class="header" href="#head" id="head">head</a></h2>
+<hr />
+<ul>
+<li>title: head</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns the head of a list.</p>
+<ul>
+<li>Use <code>lst[0]</code> to return the first element of the passed list.</li>
+</ul>
+<pre><code class="language-py">def head(lst):
+  return lst[0]
+</code></pre>
+<pre><code class="language-py">head([1, 2, 3]) ## 1
+</code></pre>
+<h2><a class="header" href="#hex_to_rgb" id="hex_to_rgb">hex_to_rgb</a></h2>
+<hr />
+<ul>
+<li>title: hex_to_rgb</li>
+<li>tags: string,math,intermediate</li>
+</ul>
+<hr />
+<p>Converts a hexadecimal color code to a tuple of integers corresponding to its RGB components.</p>
+<ul>
+<li>Use a list comprehension in combination with <code>int()</code> and list slice notation to get the RGB components from the hexadecimal string.</li>
+<li>Use <code>tuple()</code> to convert the resulting list to a tuple.</li>
+</ul>
+<pre><code class="language-py">def hex_to_rgb(hex):
+  return tuple(int(hex[i:i+2], 16) for i in (0, 2, 4))
+</code></pre>
+<pre><code class="language-py">hex_to_rgb('FFA501') ## (255, 165, 1)
+</code></pre>
+<h2><a class="header" href="#in_range" id="in_range">in_range</a></h2>
+<hr />
+<ul>
+<li>title: in_range</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Checks if the given number falls within the given range.</p>
+<ul>
+<li>Use arithmetic comparison to check if the given number is in the specified range.</li>
+<li>If the second parameter, <code>end</code>, is not specified, the range is considered to be from <code>0</code> to <code>start</code>.</li>
+</ul>
+<pre><code class="language-py">def in_range(n, start, end = 0):
+  return start &lt;= n &lt;= end if end &gt;= start else end &lt;= n &lt;= start
+</code></pre>
+<pre><code class="language-py">in_range(3, 2, 5) ## True
+in_range(3, 4) ## True
+in_range(2, 3, 5) ## False
+in_range(3, 2) ## False
+</code></pre>
+<h2><a class="header" href="#includes_all" id="includes_all">includes_all</a></h2>
+<hr />
+<ul>
+<li>title: includes_all</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if all the elements in <code>values</code> are included in <code>lst</code>.</p>
+<ul>
+<li>Check if every value in <code>values</code> is contained in <code>lst</code> using a <code>for</code> loop.</li>
+<li>Return <code>False</code> if any one value is not found, <code>True</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">def includes_all(lst, values):
+  for v in values:
+    if v not in lst:
+      return False
+  return True
+</code></pre>
+<pre><code class="language-py">includes_all([1, 2, 3, 4], [1, 4]) ## True
+includes_all([1, 2, 3, 4], [1, 5]) ## False
+</code></pre>
+<h2><a class="header" href="#includes_any" id="includes_any">includes_any</a></h2>
+<hr />
+<ul>
+<li>title: includes_any</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if any element in <code>values</code> is included in <code>lst</code>.</p>
+<ul>
+<li>Check if any value in <code>values</code> is contained in <code>lst</code> using a <code>for</code> loop.</li>
+<li>Return <code>True</code> if any one value is found, <code>False</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">def includes_any(lst, values):
+  for v in values:
+    if v in lst:
+      return True
+  return False
+</code></pre>
+<pre><code class="language-py">includes_any([1, 2, 3, 4], [2, 9]) ## True
+includes_any([1, 2, 3, 4], [8, 9]) ## False
+</code></pre>
+<h2><a class="header" href="#index_of_all" id="index_of_all">index_of_all</a></h2>
+<hr />
+<ul>
+<li>title: index_of_all</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Returns a list of indexes of all the occurrences of an element in a list.</p>
+<ul>
+<li>Use <code>enumerate()</code> and a list comprehension to check each element for equality with <code>value</code> and adding <code>i</code> to the result.</li>
+</ul>
+<pre><code class="language-py">def index_of_all(lst, value):
+  return [i for i, x in enumerate(lst) if x == value]
+</code></pre>
+<pre><code class="language-py">index_of_all([1, 2, 1, 4, 5, 1], 1) ## [0, 2, 5]
+index_of_all([1, 2, 3, 4], 6) ## [] 
+</code></pre>
+<h2><a class="header" href="#initial" id="initial">initial</a></h2>
+<hr />
+<ul>
+<li>title: initial</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns all the elements of a list except the last one.</p>
+<ul>
+<li>Use <code>lst[:-1]</code> to return all but the last element of the list.</li>
+</ul>
+<pre><code class="language-py">def initial(lst):
+  return lst[:-1]
+</code></pre>
+<pre><code class="language-py">initial([1, 2, 3]) ## [1, 2]
+</code></pre>
+<h2><a class="header" href="#initialize_2d_list" id="initialize_2d_list">initialize_2d_list</a></h2>
+<hr />
+<ul>
+<li>title: initialize_2d_list</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Initializes a 2D list of given width and height and value.</p>
+<ul>
+<li>Use a list comprehension and <code>range()</code> to generate <code>h</code> rows where each is a list with length <code>h</code>, initialized with <code>val</code>.</li>
+<li>Omit the last argument, <code>val</code>, to set the default value to <code>None</code>.</li>
+</ul>
+<pre><code class="language-py">def initialize_2d_list(w, h, val = None):
+  return [[val for x in range(w)] for y in range(h)]
+</code></pre>
+<pre><code class="language-py">initialize_2d_list(2, 2, 0) ## [[0, 0], [0, 0]]
+</code></pre>
+<h2><a class="header" href="#initialize_list_with_range" id="initialize_list_with_range">initialize_list_with_range</a></h2>
+<hr />
+<ul>
+<li>title: initialize_list_with_range</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Initializes a list containing the numbers in the specified range where <code>start</code> and <code>end</code> are inclusive with their common difference <code>step</code>.</p>
+<ul>
+<li>Use <code>list()</code> and <code>range()</code> to generate a list of the appropriate length, filled with the desired values in the given range.</li>
+<li>Omit <code>start</code> to use the default value of <code>0</code>.</li>
+<li>Omit <code>step</code> to use the default value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-py">def initialize_list_with_range(end, start = 0, step = 1):
+  return list(range(start, end + 1, step))
+</code></pre>
+<pre><code class="language-py">initialize_list_with_range(5) ## [0, 1, 2, 3, 4, 5]
+initialize_list_with_range(7, 3) ## [3, 4, 5, 6, 7]
+initialize_list_with_range(9, 0, 2) ## [0, 2, 4, 6, 8]
+</code></pre>
+<h2><a class="header" href="#initialize_list_with_values" id="initialize_list_with_values">initialize_list_with_values</a></h2>
+<hr />
+<ul>
+<li>title: initialize_list_with_values</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Initializes and fills a list with the specified value.</p>
+<ul>
+<li>Use a list comprehension and <code>range()</code> to generate a list of length equal to <code>n</code>, filled with the desired values.</li>
+<li>Omit <code>val</code> to use the default value of <code>0</code>.</li>
+</ul>
+<pre><code class="language-py">def initialize_list_with_values(n, val = 0):
+  return [val for x in range(n)]
+</code></pre>
+<pre><code class="language-py">initialize_list_with_values(5, 2) ## [2, 2, 2, 2, 2]
+</code></pre>
+<h2><a class="header" href="#intersection" id="intersection">intersection</a></h2>
+<hr />
+<ul>
+<li>title: intersection</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list of elements that exist in both lists.</p>
+<ul>
+<li>Create a <code>set</code> from <code>a</code> and <code>b</code>.</li>
+<li>Use the built-in set operator <code>&amp;</code> to only keep values contained in both sets, then transform the <code>set</code> back into a <code>list</code>.</li>
+</ul>
+<pre><code class="language-py">def intersection(a, b):
+  _a, _b = set(a), set(b)
+  return list(_a &amp; _b)
+</code></pre>
+<pre><code class="language-py">intersection([1, 2, 3], [4, 3, 2]) ## [2, 3]
+</code></pre>
+<h2><a class="header" href="#intersection_by" id="intersection_by">intersection_by</a></h2>
+<hr />
+<ul>
+<li>title: intersection_by</li>
+<li>tags: list,function,intermediate</li>
+</ul>
+<hr />
+<p>Returns a list of elements that exist in both lists, after applying the provided function to each list element of both.</p>
+<ul>
+<li>Create a <code>set</code>, using <code>map()</code> to apply <code>fn</code> to each element in <code>b</code>.</li>
+<li>Use a list comprehension in combination with <code>fn</code> on <code>a</code> to only keep values contained in both lists.</li>
+</ul>
+<pre><code class="language-py">def intersection_by(a, b, fn):
+  _b = set(map(fn, b))
+  return [item for item in a if fn(item) in _b]
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+intersection_by([2.1, 1.2], [2.3, 3.4], floor) ## [2.1]
+</code></pre>
+<h2><a class="header" href="#invert_dictionary" id="invert_dictionary">invert_dictionary</a></h2>
+<hr />
+<ul>
+<li>title: invert_dictionary</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Inverts a dictionary with unique hashable values.</p>
+<ul>
+<li>Use <code>dictionary.items()</code> in combination with a list comprehension to create a new dictionary with the values and keys inverted.</li>
+</ul>
+<pre><code class="language-py">def invert_dictionary(obj):
+  return { value: key for key, value in obj.items() }
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 11,
+  'Anna': 9,
+}
+invert_dictionary(ages) ## { 10: 'Peter', 11: 'Isabel', 9: 'Anna' }
+</code></pre>
+<h2><a class="header" href="#is_anagram" id="is_anagram">is_anagram</a></h2>
+<hr />
+<ul>
+<li>title: is_anagram</li>
+<li>tags: string,intermediate</li>
+</ul>
+<hr />
+<p>Checks if a string is an anagram of another string (case-insensitive, ignores spaces, punctuation and special characters).</p>
+<ul>
+<li>Use <code>str.isalnum()</code> to filter out non-alphanumeric characters, <code>str.lower()</code> to transform each character to lowercase.</li>
+<li>Use <code>collections.Counter</code> to count the resulting characters for each string and compare the results.</li>
+</ul>
+<pre><code class="language-py">from collections import Counter
+
+def is_anagram(s1, s2):
+  return Counter(
+    c.lower() for c in s1 if c.isalnum()
+  ) == Counter(
+    c.lower() for c in s2 if c.isalnum()
+  )
+</code></pre>
+<pre><code class="language-py">is_anagram('##anagram', 'Nag a ram!')  ## True
+</code></pre>
+<h2><a class="header" href="#is_contained_in" id="is_contained_in">is_contained_in</a></h2>
+<hr />
+<ul>
+<li>title: is_contained_in</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the elements of the first list are contained in the second one regardless of order.</p>
+<ul>
+<li>Use <code>count()</code> to check if any value in <code>a</code> has more occurrences than it has in <code>b</code>.</li>
+<li>Return <code>False</code> if any such value is found, <code>True</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">def is_contained_in(a, b):
+  for v in set(a):
+    if a.count(v) &gt; b.count(v):
+      return False
+  return True
+</code></pre>
+<pre><code class="language-py">is_contained_in([1, 4], [2, 4, 1]) ## True
+</code></pre>
+<h2><a class="header" href="#is_divisible" id="is_divisible">is_divisible</a></h2>
+<hr />
+<ul>
+<li>title: is_divisible</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Checks if the first numeric argument is divisible by the second one.</p>
+<ul>
+<li>Use the modulo operator (<code>%</code>) to check if the remainder is equal to <code>0</code>.</li>
+</ul>
+<pre><code class="language-py">def is_divisible(dividend, divisor):
+  return dividend % divisor == 0
+</code></pre>
+<pre><code class="language-py">is_divisible(6, 3) ## True
+</code></pre>
+<h2><a class="header" href="#is_even" id="is_even">is_even</a></h2>
+<hr />
+<ul>
+<li>title: is_even</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Checks if the given number is even.</p>
+<ul>
+<li>Check whether a number is odd or even using the modulo (<code>%</code>) operator.</li>
+<li>Return <code>True</code> if the number is even, <code>False</code> if the number is odd.</li>
+</ul>
+<pre><code class="language-py">def is_even(num):
+  return num % 2 == 0
+</code></pre>
+<pre><code class="language-py">is_even(3) ## False
+</code></pre>
+<h2><a class="header" href="#is_odd" id="is_odd">is_odd</a></h2>
+<hr />
+<ul>
+<li>title: is_odd</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Checks if the given number is odd.</p>
+<ul>
+<li>Checks whether a number is even or odd using the modulo (<code>%</code>) operator.</li>
+<li>Returns <code>True</code> if the number is odd, <code>False</code> if the number is even.</li>
+</ul>
+<pre><code class="language-py">def is_odd(num):
+  return num % 2 != 0
+</code></pre>
+<pre><code class="language-py">is_odd(3) ## True
+</code></pre>
+<h2><a class="header" href="#is_prime" id="is_prime">is_prime</a></h2>
+<hr />
+<ul>
+<li>title: is_prime</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the provided integer is a prime number.</p>
+<ul>
+<li>Return <code>False</code> if the number is <code>0</code>, <code>1</code>, a negative number or a multiple of <code>2</code>.</li>
+<li>Use <code>all()</code> and <code>range()</code> to check numbers from <code>3</code> to the square root of the given number.</li>
+<li>Return <code>True</code> if none divides the given number, <code>False</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">from math import sqrt
+
+def is_prime(n):
+  if n &lt;= 1 or (n % 2 == 0 and n &gt; 2): 
+    return False
+  return all(n % i for i in range(3, int(sqrt(n)) + 1, 2))
+</code></pre>
+<pre><code class="language-py">is_prime(11) ## True
+</code></pre>
+<h2><a class="header" href="#is_weekday" id="is_weekday">is_weekday</a></h2>
+<hr />
+<ul>
+<li>title: is_weekday</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Checks if the given date is a weekday.</p>
+<ul>
+<li>Use <code>datetime.datetime.weekday()</code> to get the day of the week as an integer.</li>
+<li>Check if the day of the week is less than or equal to <code>4</code>.</li>
+<li>Omit the second argument, <code>d</code>, to use a default value of <code>datetime.today()</code>.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime
+
+def is_weekday(d = datetime.today()):
+  return d.weekday() &lt;= 4 
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+is_weekday(date(2020, 10, 25)) ## False
+is_weekday(date(2020, 10, 28)) ## True
+</code></pre>
+<h2><a class="header" href="#is_weekend" id="is_weekend">is_weekend</a></h2>
+<hr />
+<ul>
+<li>title: is_weekend</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Checks if the given date is a weekend.</p>
+<ul>
+<li>Use <code>datetime.datetime.weekday()</code> to get the day of the week as an integer.</li>
+<li>Check if the day of the week is greater than <code>4</code>.</li>
+<li>Omit the second argument, <code>d</code>, to use a default value of <code>datetime.today()</code>.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime
+
+def is_weekend(d = datetime.today()):
+  return d.weekday() &gt; 4 
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+is_weekend(date(2020, 10, 25)) ## True
+is_weekend(date(2020, 10, 28)) ## False
+</code></pre>
+<h2><a class="header" href="#kebab" id="kebab">kebab</a></h2>
+<hr />
+<ul>
+<li>title: kebab</li>
+<li>tags: string,regexp,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to kebab case.</p>
+<ul>
+<li>Use <code>re.sub()</code> to replace any <code>-</code> or <code>_</code> with a space, using the regexp <code>r&quot;(_|-)+&quot;</code>.</li>
+<li>Use <code>re.sub()</code> to match all words in the string, <code>str.lower()</code> to lowercase them.</li>
+<li>Finally, use <code>str.join()</code> to combine all word using <code>-</code> as the separator.</li>
+</ul>
+<pre><code class="language-py">from re import sub
+
+def kebab(s):
+  return '-'.join(
+    sub(r&quot;(\s|_|-)+&quot;,&quot; &quot;,
+    sub(r&quot;[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+&quot;,
+    lambda mo: ' ' + mo.group(0).lower(), s)).split())
+</code></pre>
+<pre><code class="language-py">kebab('camelCase') ## 'camel-case'
+kebab('some text') ## 'some-text'
+kebab('some-mixed_string With spaces_underscores-and-hyphens')
+## 'some-mixed-string-with-spaces-underscores-and-hyphens'
+kebab('AllThe-small Things') ## 'all-the-small-things'
+</code></pre>
+<h2><a class="header" href="#key_in_dict" id="key_in_dict">key_in_dict</a></h2>
+<hr />
+<ul>
+<li>title: key_in_dict</li>
+<li>tags: dictionary,beginner</li>
+</ul>
+<hr />
+<p>Checks if the given key exists in a dictionary.</p>
+<ul>
+<li>Use the <code>in</code> operator to check if <code>d</code> contains <code>key</code>.</li>
+</ul>
+<pre><code class="language-py">def key_in_dict(d, key):
+  return (key in d)
+</code></pre>
+<pre><code class="language-py">d = {'one': 1, 'three': 3, 'five': 5, 'two': 2, 'four': 4}
+key_in_dict(d, 'three') ## True
+</code></pre>
+<h2><a class="header" href="#key_of_max" id="key_of_max">key_of_max</a></h2>
+<hr />
+<ul>
+<li>title: key_of_max</li>
+<li>tags: dictionary,beginner</li>
+</ul>
+<hr />
+<p>Finds the key of the maximum value in a dictionary.</p>
+<ul>
+<li>Use <code>max()</code> with the <code>key</code> parameter set to <code>dict.get()</code> to find and return the key of the maximum value in the given dictionary.</li>
+</ul>
+<pre><code class="language-py">def key_of_max(d):
+  return max(d, key = d.get)
+</code></pre>
+<pre><code class="language-py">key_of_max({'a':4, 'b':0, 'c':13}) ## c
+</code></pre>
+<h2><a class="header" href="#key_of_min" id="key_of_min">key_of_min</a></h2>
+<hr />
+<ul>
+<li>title: key_of_min</li>
+<li>tags: dictionary,beginner</li>
+</ul>
+<hr />
+<p>Finds the key of the minimum value in a dictionary.</p>
+<ul>
+<li>Use <code>min()</code> with the <code>key</code> parameter set to <code>dict.get()</code> to find and return the key of the minimum value in the given dictionary.</li>
+</ul>
+<pre><code class="language-py">def key_of_min(d):
+  return min(d, key = d.get)
+</code></pre>
+<pre><code class="language-py">key_of_min({'a':4, 'b':0, 'c':13}) ## b
+</code></pre>
+<h2><a class="header" href="#keys_only" id="keys_only">keys_only</a></h2>
+<hr />
+<ul>
+<li>title: keys_only</li>
+<li>tags: dictionary,list,beginner</li>
+</ul>
+<hr />
+<p>Creates a flat list of all the keys in a flat dictionary.</p>
+<ul>
+<li>Use <code>dict.keys()</code> to return the keys in the given dictionary.</li>
+<li>Return a <code>list()</code> of the previous result.</li>
+</ul>
+<pre><code class="language-py">def keys_only(flat_dict):
+  return list(flat_dict.keys())
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 11,
+  'Anna': 9,
+}
+keys_only(ages) ## ['Peter', 'Isabel', 'Anna']
+</code></pre>
+<h2><a class="header" href="#km_to_miles" id="km_to_miles">km_to_miles</a></h2>
+<hr />
+<ul>
+<li>title: km_to_miles</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Converts kilometers to miles.</p>
+<ul>
+<li>Follows the conversion formula <code>mi = km * 0.621371</code>.</li>
+</ul>
+<pre><code class="language-py">def km_to_miles(km):
+  return km * 0.621371
+</code></pre>
+<pre><code class="language-py">km_to_miles(8.1) ## 5.0331051
+</code></pre>
+<h2><a class="header" href="#last" id="last">last</a></h2>
+<hr />
+<ul>
+<li>title: last</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns the last element in a list.</p>
+<ul>
+<li>Use <code>lst[-1]</code> to return the last element of the passed list.</li>
+</ul>
+<pre><code class="language-py">def last(lst):
+  return lst[-1]
+</code></pre>
+<pre><code class="language-py">last([1, 2, 3]) ## 3
+</code></pre>
+<h2><a class="header" href="#lcm" id="lcm">lcm</a></h2>
+<hr />
+<ul>
+<li>title: lcm </li>
+<li>tags: math,list,intermediate </li>
+</ul>
+<hr />
+<p>Returns the least common multiple of a list of numbers.</p>
+<ul>
+<li>Use <code>functools.reduce()</code>, <code>math.gcd()</code> and <code>lcm(x,y) = x * y / gcd(x,y)</code> over the given list.</li>
+</ul>
+<pre><code class="language-py">from functools import reduce
+from math import gcd
+
+def lcm(numbers):
+  return reduce((lambda x, y: int(x * y / gcd(x, y))), numbers)
+</code></pre>
+<pre><code class="language-py">lcm([12, 7]) ## 84
+lcm([1, 3, 4, 5]) ## 60
+</code></pre>
+<h2><a class="header" href="#longest_item" id="longest_item">longest_item</a></h2>
+<hr />
+<ul>
+<li>title: longest_item</li>
+<li>tags: list,string,intermediate</li>
+</ul>
+<hr />
+<p>Takes any number of iterable objects or objects with a length property and returns the longest one. </p>
+<ul>
+<li>Use <code>max()</code> with <code>len()</code> as the <code>key</code> to return the item with the greatest length.</li>
+<li>If multiple objects have the same length, the first one will be returned.</li>
+</ul>
+<pre><code class="language-py">def longest_item(*args):
+  return max(args, key = len)
+</code></pre>
+<pre><code class="language-py">longest_item('this', 'is', 'a', 'testcase') ## 'testcase'
+longest_item([1, 2, 3], [1, 2], [1, 2, 3, 4, 5]) ## [1, 2, 3, 4, 5]
+longest_item([1, 2, 3], 'foobar') ## 'foobar'
+</code></pre>
+<h2><a class="header" href="#map_dictionary" id="map_dictionary">map_dictionary</a></h2>
+<hr />
+<ul>
+<li>title: map_dictionary</li>
+<li>tags: list,dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Maps the values of a list to a dictionary using a function, where the key-value pairs consist of the original value as the key and the result of the function as the value.</p>
+<ul>
+<li>Use <code>map()</code> to apply <code>fn</code> to each value of the list.</li>
+<li>Use <code>zip()</code> to pair original values to the values produced by <code>fn</code>.</li>
+<li>Use <code>dict()</code> to return an appropriate dictionary.</li>
+</ul>
+<pre><code class="language-py">def map_dictionary(itr, fn):
+  return dict(zip(itr, map(fn, itr)))
+</code></pre>
+<pre><code class="language-py">map_dictionary([1, 2, 3], lambda x: x * x) ## { 1: 1, 2: 4, 3: 9 }
+</code></pre>
+<h2><a class="header" href="#map_values" id="map_values">map_values</a></h2>
+<hr />
+<ul>
+<li>title: map_values</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Creates a dictionary with the same keys as the provided dictionary and values generated by running the provided function for each value.</p>
+<ul>
+<li>Use <code>dict.items()</code> to iterate over the dictionary, assigning the values produced by <code>fn</code> to each key of a new dictionary.</li>
+</ul>
+<pre><code class="language-py">def map_values(obj, fn):
+  return dict((k, fn(v)) for k, v in obj.items())
+</code></pre>
+<pre><code class="language-py">users = {
+  'fred': { 'user': 'fred', 'age': 40 },
+  'pebbles': { 'user': 'pebbles', 'age': 1 }
+}
+map_values(users, lambda u : u['age']) ## {'fred': 40, 'pebbles': 1}
+</code></pre>
+<h2><a class="header" href="#max_by" id="max_by">max_by</a></h2>
+<hr />
+<ul>
+<li>title: max_by</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the maximum value of a list, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>map()</code> with <code>fn</code> to map each element to a value using the provided function.</li>
+<li>Use <code>max()</code> to return the maximum value.</li>
+</ul>
+<pre><code class="language-py">def max_by(lst, fn):
+  return max(map(fn, lst))
+</code></pre>
+<pre><code class="language-py">max_by([{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }], lambda v : v['n']) ## 8
+</code></pre>
+<h2><a class="header" href="#max_element_index" id="max_element_index">max_element_index</a></h2>
+<hr />
+<ul>
+<li>title: max_element_index</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the index of the element with the maximum value in a list.</p>
+<ul>
+<li>Use <code>max()</code> and <code>list.index()</code> to get the maximum value in the list and return its index.</li>
+</ul>
+<pre><code class="language-py">def max_element_index(arr):
+  return arr.index(max(arr))
+</code></pre>
+<pre><code class="language-py">max_element_index([5, 8, 9, 7, 10, 3, 0]) ## 4
+</code></pre>
+<h2><a class="header" href="#max_n" id="max_n">max_n</a></h2>
+<hr />
+<ul>
+<li>title: max_n</li>
+<li>tags: list,math,beginner</li>
+</ul>
+<hr />
+<p>Returns the <code>n</code> maximum elements from the provided list. </p>
+<ul>
+<li>Use <code>sorted()</code> to sort the list.</li>
+<li>Use slice notation to get the specified number of elements.</li>
+<li>Omit the second argument, <code>n</code>, to get a one-element list.</li>
+<li>If <code>n</code> is greater than or equal to the provided list's length, then return the original list (sorted in descending order).</li>
+</ul>
+<pre><code class="language-py">def max_n(lst, n = 1):
+  return sorted(lst, reverse = True)[:n]
+</code></pre>
+<pre><code class="language-py">max_n([1, 2, 3]) ## [3]
+max_n([1, 2, 3], 2) ## [3, 2]
+</code></pre>
+<h2><a class="header" href="#median" id="median">median</a></h2>
+<hr />
+<ul>
+<li>title: median</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Finds the median of a list of numbers.</p>
+<ul>
+<li>Sort the numbers of the list using <code>list.sort()</code>.</li>
+<li>Find the median, which is either the middle element of the list if the list length is odd or the average of the two middle elements if the list length is even.</li>
+<li><a href="https://docs.python.org/3/library/statistics.html##statistics.median"><code>statistics.median()</code></a> provides similar functionality to this snippet.</li>
+</ul>
+<pre><code class="language-py">def median(list):
+  list.sort()
+  list_length = len(list)
+  if list_length % 2 == 0:
+    return (list[int(list_length / 2) - 1] + list[int(list_length / 2)]) / 2
+  return float(list[int(list_length / 2)])
+</code></pre>
+<pre><code class="language-py">median([1, 2, 3]) ## 2.0
+median([1, 2, 3, 4]) ## 2.5
+</code></pre>
+<h2><a class="header" href="#merge" id="merge">merge</a></h2>
+<hr />
+<ul>
+<li>title: merge</li>
+<li>tags: list,advanced</li>
+</ul>
+<hr />
+<p>Merges two or more lists into a list of lists, combining elements from each of the input lists based on their positions.</p>
+<ul>
+<li>Use <code>max()</code> combined with a list comprehension to get the length of the longest list in the arguments.</li>
+<li>Use <code>range()</code> in combination with the <code>max_length</code> variable to loop as many times as there are elements in the longest list.</li>
+<li>If a list is shorter than <code>max_length</code>, use <code>fill_value</code> for the remaining items (defaults to <code>None</code>).</li>
+<li><a href="https://docs.python.org/3/library/functions.html##zip"><code>zip()</code></a> and <a href="https://docs.python.org/3/library/itertools.html##itertools.zip_longest"><code>itertools.zip_longest()</code></a> provide similar functionality to this snippet.</li>
+</ul>
+<pre><code class="language-py">def merge(*args, fill_value = None):
+  max_length = max([len(lst) for lst in args])
+  result = []
+  for i in range(max_length):
+    result.append([
+      args[k][i] if i &lt; len(args[k]) else fill_value for k in range(len(args))
+    ])
+  return result
+</code></pre>
+<pre><code class="language-py">merge(['a', 'b'], [1, 2], [True, False]) ## [['a', 1, True], ['b', 2, False]]
+merge(['a'], [1, 2], [True, False]) ## [['a', 1, True], [None, 2, False]]
+merge(['a'], [1, 2], [True, False], fill_value = '_')
+## [['a', 1, True], ['_', 2, False]]
+</code></pre>
+<h2><a class="header" href="#merge_dictionaries" id="merge_dictionaries">merge_dictionaries</a></h2>
+<hr />
+<ul>
+<li>title: merge_dictionaries</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Merges two or more dictionaries.</p>
+<ul>
+<li>Create a new <code>dict</code> and loop over <code>dicts</code>, using <code>dictionary.update()</code> to add the key-value pairs from each one to the result.</li>
+</ul>
+<pre><code class="language-py">def merge_dictionaries(*dicts):
+  res = dict()
+  for d in dicts:
+    res.update(d)
+  return res
+</code></pre>
+<pre><code class="language-py">ages_one = {
+  'Peter': 10,
+  'Isabel': 11,
+}
+ages_two = {
+  'Anna': 9
+}
+merge_dictionaries(ages_one, ages_two)
+## { 'Peter': 10, 'Isabel': 11, 'Anna': 9 }
+</code></pre>
+<h2><a class="header" href="#miles_to_km" id="miles_to_km">miles_to_km</a></h2>
+<hr />
+<ul>
+<li>title: miles_to_km</li>
+<li>tags: math,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Converts miles to kilometers.</p>
+<ul>
+<li>Follows the conversion formula <code>km = mi * 1.609344</code>.</li>
+</ul>
+<pre><code class="language-py">def miles_to_km(miles):
+  return miles * 1.609344
+</code></pre>
+<pre><code class="language-py">miles_to_km(5.03) ## 8.09500032
+</code></pre>
+<h2><a class="header" href="#min_by" id="min_by">min_by</a></h2>
+<hr />
+<ul>
+<li>title: min_by</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the minimum value of a list, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>map()</code> with <code>fn</code> to map each element to a value using the provided function.</li>
+<li>Use <code>min()</code> to return the minimum value.</li>
+</ul>
+<pre><code class="language-py">def min_by(lst, fn):
+  return min(map(fn, lst))
+</code></pre>
+<pre><code class="language-py">min_by([{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }], lambda v : v['n']) ## 2
+</code></pre>
+<h2><a class="header" href="#min_element_index" id="min_element_index">min_element_index</a></h2>
+<hr />
+<ul>
+<li>title: min_element_index</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the index of the element with the minimum value in a list.</p>
+<ul>
+<li>Use <code>min()</code> and <code>list.index()</code> to obtain the minimum value in the list and then return its index.</li>
+</ul>
+<pre><code class="language-py">def min_element_index(arr):
+  return arr.index(min(arr))
+</code></pre>
+<pre><code class="language-py">min_element_index([3, 5, 2, 6, 10, 7, 9]) ## 2
+</code></pre>
+<h2><a class="header" href="#min_n" id="min_n">min_n</a></h2>
+<hr />
+<ul>
+<li>title: min_n</li>
+<li>tags: list,math,beginner</li>
+</ul>
+<hr />
+<p>Returns the <code>n</code> minimum elements from the provided list. </p>
+<ul>
+<li>Use <code>sorted()</code> to sort the list.</li>
+<li>Use slice notation to get the specified number of elements.</li>
+<li>Omit the second argument, <code>n</code>, to get a one-element list.</li>
+<li>If <code>n</code> is greater than or equal to the provided list's length, then return the original list (sorted in ascending order).</li>
+</ul>
+<pre><code class="language-py">def min_n(lst, n = 1):
+  return sorted(lst, reverse = False)[:n]
+</code></pre>
+<pre><code class="language-py">min_n([1, 2, 3]) ## [1]
+min_n([1, 2, 3], 2) ## [1, 2]
+</code></pre>
+<h2><a class="header" href="#months_diff" id="months_diff">months_diff</a></h2>
+<hr />
+<ul>
+<li>title: months_diff</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Calculates the month difference between two dates.</p>
+<ul>
+<li>Subtract <code>start</code> from <code>end</code> and use <code>datetime.timedelta.days</code> to get the day difference.</li>
+<li>Divide by <code>30</code> and use <code>math.ceil()</code> to get the difference in months (rounded up).</li>
+</ul>
+<pre><code class="language-py">from math import ceil
+
+def months_diff(start, end):
+  return ceil((end - start).days / 30)
+</code></pre>
+<pre><code class="language-py">from datetime import date
+
+months_diff(date(2020, 10, 28), date(2020, 11, 25)) ## 1
+</code></pre>
+<h2><a class="header" href="#most_frequent" id="most_frequent">most_frequent</a></h2>
+<hr />
+<ul>
+<li>title: most_frequent</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns the most frequent element in a list.</p>
+<ul>
+<li>Use <code>set()</code> to get the unique values in <code>lst</code>.</li>
+<li>Use <code>max()</code> to find the element that has the most appearances.</li>
+</ul>
+<pre><code class="language-py">def most_frequent(lst):
+  return max(set(lst), key = lst.count)
+</code></pre>
+<pre><code class="language-py">most_frequent([1, 2, 1, 2, 3, 2, 1, 4, 2]) ##2
+</code></pre>
+<h2><a class="header" href="#n_times_string" id="n_times_string">n_times_string</a></h2>
+<hr />
+<ul>
+<li>title: n_times_string</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Generates a string with the given string value repeated <code>n</code> number of times.</p>
+<ul>
+<li>Repeat the string <code>n</code> times, using the <code>*</code> operator.</li>
+</ul>
+<pre><code class="language-py">def n_times_string(s, n):
+  return (s * n)
+</code></pre>
+<pre><code class="language-py">n_times_string('py', 4) ##'pypypypy'
+</code></pre>
+<h2><a class="header" href="#none" id="none">none</a></h2>
+<hr />
+<ul>
+<li>title: none</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the provided function returns <code>True</code> for at least one element in the list.</p>
+<ul>
+<li>Use <code>all()</code> and <code>fn</code> to check if <code>fn</code> returns <code>False</code> for all the elements in the list.</li>
+</ul>
+<pre><code class="language-py">def none(lst, fn = lambda x: x):
+  return all(not fn(x) for x in lst)
+</code></pre>
+<pre><code class="language-py">none([0, 1, 2, 0], lambda x: x &gt;= 2 ) ## False
+none([0, 0, 0]) ## True
+</code></pre>
+<h2><a class="header" href="#num_to_range" id="num_to_range">num_to_range</a></h2>
+<hr />
+<ul>
+<li>title: num_to_range</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Maps a number from one range to another range.</p>
+<ul>
+<li>Return <code>num</code> mapped between <code>outMin</code>-<code>outMax</code> from <code>inMin</code>-<code>inMax</code>.</li>
+</ul>
+<pre><code class="language-py">def num_to_range(num, inMin, inMax, outMin, outMax):
+  return outMin(float(num - inMin) / float(inMax - inMin) * (outMax
+                  - outMin))
+</code></pre>
+<pre><code class="language-py">num_to_range(5, 0, 10, 0, 100) ## 50.0
+</code></pre>
+<h2><a class="header" href="#offset" id="offset">offset</a></h2>
+<hr />
+<ul>
+<li>title: offset</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Moves the specified amount of elements to the end of the list.</p>
+<ul>
+<li>Use slice notation to get the two slices of the list and combine them before returning.</li>
+</ul>
+<pre><code class="language-py">def offset(lst, offset):
+  return lst[offset:] + lst[:offset]
+</code></pre>
+<pre><code class="language-py">offset([1, 2, 3, 4, 5], 2) ## [3, 4, 5, 1, 2]
+offset([1, 2, 3, 4, 5], -2) ## [4, 5, 1, 2, 3]
+</code></pre>
+<h2><a class="header" href="#pad" id="pad">pad</a></h2>
+<hr />
+<ul>
+<li>title: pad</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Pads a string on both sides with the specified character, if it's shorter than the specified length.</p>
+<ul>
+<li>Use <code>str.ljust()</code> and <code>str.rjust()</code> to pad both sides of the given string.</li>
+<li>Omit the third argument, <code>char</code>, to use the whitespace character as the default padding character.</li>
+</ul>
+<pre><code class="language-py">from math import floor
+
+def pad(s, length, char = ' '):
+  return s.rjust(floor((len(s) + length)/2), char).ljust(length, char)
+</code></pre>
+<pre><code class="language-py">pad('cat', 8) ## '  cat   '
+pad('42', 6, '0') ## '004200'
+pad('foobar', 3) ## 'foobar'
+</code></pre>
+<h2><a class="header" href="#pad_number" id="pad_number">pad_number</a></h2>
+<hr />
+<ul>
+<li>title: pad_number</li>
+<li>tags: string,math,beginner</li>
+</ul>
+<hr />
+<p>Pads a given number to the specified length.</p>
+<ul>
+<li>Use <code>str.zfill()</code> to pad the number to the specified length, after converting it to a string.</li>
+</ul>
+<pre><code class="language-py">def pad_number(n, l):
+  return str(n).zfill(l)
+</code></pre>
+<pre><code class="language-py">pad_number(1234, 6); ## '001234'
+</code></pre>
+<h2><a class="header" href="#palindrome" id="palindrome">palindrome</a></h2>
+<hr />
+<ul>
+<li>title: palindrome</li>
+<li>tags: string,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the given string is a palindrome.</p>
+<ul>
+<li>Use <code>str.lower()</code> and <code>re.sub()</code> to convert to lowercase and remove non-alphanumeric characters from the given string.</li>
+<li>Then, compare the new string with its reverse, using slice notation.</li>
+</ul>
+<pre><code class="language-py">from re import sub
+
+def palindrome(s):
+  s = sub('[\W_]', '', s.lower())
+  return s == s[::-1]
+</code></pre>
+<pre><code class="language-py">palindrome('taco cat') ## True
+</code></pre>
+<h2><a class="header" href="#pluck" id="pluck">pluck</a></h2>
+<hr />
+<ul>
+<li>title: pluck</li>
+<li>tags: list,dictionary,beginner</li>
+</ul>
+<hr />
+<p>Converts a list of dictionaries into a list of values corresponding to the specified <code>key</code>.</p>
+<ul>
+<li>Use a list comprehension and <code>dict.get()</code> to get the value of <code>key</code> for each dictionary in <code>lst</code>.</li>
+</ul>
+<pre><code class="language-py">def pluck(lst, key):
+  return [x.get(key) for x in lst]
+</code></pre>
+<pre><code class="language-py">simpsons = [
+  { 'name': 'lisa', 'age': 8 },
+  { 'name': 'homer', 'age': 36 },
+  { 'name': 'marge', 'age': 34 },
+  { 'name': 'bart', 'age': 10 }
+]
+pluck(simpsons, 'age') ## [8, 36, 34, 10]
+</code></pre>
+<h2><a class="header" href="#powerset" id="powerset">powerset</a></h2>
+<hr />
+<ul>
+<li>title: powerset</li>
+<li>tags: math,list,advanced</li>
+</ul>
+<hr />
+<p>Returns the powerset of a given iterable.</p>
+<ul>
+<li>Use <code>list()</code> to convert the given value to a list.</li>
+<li>Use <code>range()</code> and <code>itertools.combinations()</code> to create a generator that returns all subsets.</li>
+<li>Use <code>itertools.chain.from_iterable()</code> and <code>list()</code> to consume the generator and return a list.</li>
+</ul>
+<pre><code class="language-py">from itertools import chain, combinations
+
+def powerset(iterable):
+  s = list(iterable)
+  return list(chain.from_iterable(combinations(s, r) for r in range(len(s)+1)))
+</code></pre>
+<pre><code class="language-py">powerset([1, 2]) ## [(), (1,), (2,), (1, 2)]
+</code></pre>
+<h2><a class="header" href="#rads_to_degrees" id="rads_to_degrees">rads_to_degrees</a></h2>
+<hr />
+<ul>
+<li>title: rads_to_degrees</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Converts an angle from radians to degrees.</p>
+<ul>
+<li>Use <code>math.pi</code> and the radian to degree formula to convert the angle from radians to degrees.</li>
+</ul>
+<pre><code class="language-py">from math import pi
+
+def rads_to_degrees(rad):
+  return (rad * 180.0) / pi
+</code></pre>
+<pre><code class="language-py">from math import pi
+
+rads_to_degrees(pi / 2) ## 90.0
+</code></pre>
+<h2><a class="header" href="#reverse" id="reverse">reverse</a></h2>
+<hr />
+<ul>
+<li>title: reverse</li>
+<li>tags: list,string,beginner</li>
+</ul>
+<hr />
+<p>Reverses a list or a string.</p>
+<ul>
+<li>Use slice notation to reverse the list or string.</li>
+</ul>
+<pre><code class="language-py">def reverse(itr):
+  return itr[::-1]
+</code></pre>
+<pre><code class="language-py">reverse([1, 2, 3]) ## [3, 2, 1] 
+reverse('snippet') ## 'teppins' 
+</code></pre>
+<h2><a class="header" href="#reverse_number" id="reverse_number">reverse_number</a></h2>
+<hr />
+<ul>
+<li>title: reverse_number</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Reverses a number.</p>
+<ul>
+<li>Use <code>str()</code> to convert the number to a string, slice notation to reverse it and <code>str.replace()</code> to remove the sign.</li>
+<li>Use <code>float()</code> to convert the result to a number and <code>math.copysign()</code> to copy the original sign.</li>
+</ul>
+<pre><code class="language-py">from math import copysign
+
+def reverse_number(n):
+  return copysign(float(str(n)[::-1].replace('-', '')), n)
+</code></pre>
+<pre><code class="language-py">reverse_number(981) ## 189
+reverse_number(-500) ## -5
+reverse_number(73.6) ## 6.37
+reverse_number(-5.23) ## -32.5
+</code></pre>
+<h2><a class="header" href="#rgb_to_hex" id="rgb_to_hex">rgb_to_hex</a></h2>
+<hr />
+<ul>
+<li>title: rgb_to_hex</li>
+<li>tags: string,math,intermediate</li>
+</ul>
+<hr />
+<p>Converts the values of RGB components to a hexadecimal color code.</p>
+<ul>
+<li>Create a placeholder for a zero-padded hexadecimal value using <code>'{:02X}'</code> and copy it three times.</li>
+<li>Use <code>str.format()</code> on the resulting string to replace the placeholders with the given values.</li>
+</ul>
+<pre><code class="language-py">def rgb_to_hex(r, g, b):
+  return ('{:02X}' * 3).format(r, g, b)
+</code></pre>
+<pre><code class="language-py">rgb_to_hex(255, 165, 1) ## 'FFA501'
+</code></pre>
+<h2><a class="header" href="#roll" id="roll">roll</a></h2>
+<hr />
+<ul>
+<li>title: roll</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Moves the specified amount of elements to the start of the list.</p>
+<ul>
+<li>Use slice notation to get the two slices of the list and combine them before returning.</li>
+</ul>
+<pre><code class="language-py">def roll(lst, offset):
+  return lst[-offset:] + lst[:-offset]
+</code></pre>
+<pre><code class="language-py">roll([1, 2, 3, 4, 5], 2) ## [4, 5, 1, 2, 3]
+roll([1, 2, 3, 4, 5], -2) ## [3, 4, 5, 1, 2]
+</code></pre>
+<h2><a class="header" href="#sample" id="sample">sample</a></h2>
+<hr />
+<ul>
+<li>title: sample</li>
+<li>tags: list,random,beginner</li>
+</ul>
+<hr />
+<p>Returns a random element from a list.</p>
+<ul>
+<li>Use <code>random.choice()</code> to get a random element from <code>lst</code>.</li>
+</ul>
+<pre><code class="language-py">from random import choice
+
+def sample(lst):
+  return choice(lst)
+</code></pre>
+<pre><code class="language-py">sample([3, 7, 9, 11]) ## 9
+</code></pre>
+<h2><a class="header" href="#shuffle" id="shuffle">shuffle</a></h2>
+<hr />
+<ul>
+<li>title: shuffle</li>
+<li>tags: list,random,advanced</li>
+</ul>
+<hr />
+<p>Randomizes the order of the values of an list, returning a new list.</p>
+<ul>
+<li>Uses the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates algorithm</a> to reorder the elements of the list.</li>
+<li><a href="https://docs.python.org/3/library/random.html##random.shuffle"><code>random.shuffle</code></a> provides similar functionality to this snippet.</li>
+</ul>
+<pre><code class="language-py">from copy import deepcopy
+from random import randint
+
+def shuffle(lst):
+  temp_lst = deepcopy(lst)
+  m = len(temp_lst)
+  while (m):
+    m -= 1
+    i = randint(0, m)
+    temp_lst[m], temp_lst[i] = temp_lst[i], temp_lst[m]
+  return temp_lst
+</code></pre>
+<pre><code class="language-py">foo = [1, 2, 3]
+shuffle(foo) ## [2, 3, 1], foo = [1, 2, 3]
+</code></pre>
+<h2><a class="header" href="#similarity" id="similarity">similarity</a></h2>
+<hr />
+<ul>
+<li>title: similarity</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list of elements that exist in both lists.</p>
+<ul>
+<li>Use a list comprehension on <code>a</code> to only keep values contained in both lists.</li>
+</ul>
+<pre><code class="language-py">def similarity(a, b):
+  return [item for item in a if item in b]
+</code></pre>
+<pre><code class="language-py">similarity([1, 2, 3], [1, 2, 4]) ## [1, 2]
+</code></pre>
+<h2><a class="header" href="#slugify" id="slugify">slugify</a></h2>
+<hr />
+<ul>
+<li>title: slugify</li>
+<li>tags: string,regexp,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to a URL-friendly slug.</p>
+<ul>
+<li>Use <code>str.lower()</code> and <code>str.strip()</code> to normalize the input string.</li>
+<li>Use <code>re.sub()</code> to to replace spaces, dashes and underscores with <code>-</code> and remove special characters.</li>
+</ul>
+<pre><code class="language-py">import re
+
+def slugify(s):
+  s = s.lower().strip()
+  s = re.sub(r'[^\w\s-]', '', s)
+  s = re.sub(r'[\s_-]+', '-', s)
+  s = re.sub(r'^-+|-+$', '', s)
+  return s
+</code></pre>
+<pre><code class="language-py">slugify('Hello World!') ## 'hello-world'
+</code></pre>
+<h2><a class="header" href="#snake" id="snake">snake</a></h2>
+<hr />
+<ul>
+<li>title: snake</li>
+<li>tags: string,regexp,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to snake case.</p>
+<ul>
+<li>Use <code>re.sub()</code> to match all words in the string, <code>str.lower()</code> to lowercase them.</li>
+<li>Use <code>re.sub()</code> to replace any <code>-</code> characters with spaces.</li>
+<li>Finally, use <code>str.join()</code> to combine all words using <code>-</code> as the separator.</li>
+</ul>
+<pre><code class="language-py">from re import sub
+
+def snake(s):
+  return '_'.join(
+    sub('([A-Z][a-z]+)', r' \1',
+    sub('([A-Z]+)', r' \1',
+    s.replace('-', ' '))).split()).lower()
+</code></pre>
+<pre><code class="language-py">snake('camelCase') ## 'camel_case'
+snake('some text') ## 'some_text'
+snake('some-mixed_string With spaces_underscores-and-hyphens')
+## 'some_mixed_string_with_spaces_underscores_and_hyphens'
+snake('AllThe-small Things') ## 'all_the_small_things'
+</code></pre>
+<h2><a class="header" href="#some" id="some">some</a></h2>
+<hr />
+<ul>
+<li>title: some</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the provided function returns <code>True</code> for at least one element in the list.</p>
+<ul>
+<li>Use <code>any()</code> in combination with <code>map()</code> to check if <code>fn</code> returns <code>True</code> for any element in the list.</li>
+</ul>
+<pre><code class="language-py">def some(lst, fn = lambda x: x):
+  return any(map(fn, lst))
+</code></pre>
+<pre><code class="language-py">some([0, 1, 2, 0], lambda x: x &gt;= 2 ) ## True
+some([0, 0, 1, 0]) ## True
+</code></pre>
+<h2><a class="header" href="#sort_by_indexes" id="sort_by_indexes">sort_by_indexes</a></h2>
+<hr />
+<ul>
+<li>title: sort_by_indexes</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Sorts one list based on another list containing the desired indexes.</p>
+<ul>
+<li>Use <code>zip()</code> and <code>sorted()</code> to combine and sort the two lists, based on the values of <code>indexes</code>.</li>
+<li>Use a list comprehension to get the first element of each pair from the result.</li>
+<li>Use the <code>reverse</code> parameter in <code>sorted()</code> to sort the dictionary in reverse order, based on the third argument.</li>
+</ul>
+<pre><code class="language-py">def sort_by_indexes(lst, indexes, reverse=False):
+  return [val for (_, val) in sorted(zip(indexes, lst), key=lambda x: \
+          x[0], reverse=reverse)]
+</code></pre>
+<pre><code class="language-py">a = ['eggs', 'bread', 'oranges', 'jam', 'apples', 'milk']
+b = [3, 2, 6, 4, 1, 5]
+sort_by_indexes(a, b) ## ['apples', 'bread', 'eggs', 'jam', 'milk', 'oranges']
+sort_by_indexes(a, b, True)
+## ['oranges', 'milk', 'jam', 'eggs', 'bread', 'apples']
+</code></pre>
+<h2><a class="header" href="#sort_dict_by_key" id="sort_dict_by_key">sort_dict_by_key</a></h2>
+<hr />
+<ul>
+<li>title: sort_dict_by_key</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Sorts the given dictionary by key.</p>
+<ul>
+<li>Use <code>dict.items()</code> to get a list of tuple pairs from <code>d</code> and sort it using <code>sorted()</code>.</li>
+<li>Use <code>dict()</code> to convert the sorted list back to a dictionary.</li>
+<li>Use the <code>reverse</code> parameter in <code>sorted()</code> to sort the dictionary in reverse order, based on the second argument.</li>
+</ul>
+<pre><code class="language-py">def sort_dict_by_key(d, reverse = False):
+  return dict(sorted(d.items(), reverse = reverse))
+</code></pre>
+<pre><code class="language-py">d = {'one': 1, 'three': 3, 'five': 5, 'two': 2, 'four': 4}
+sort_dict_by_key(d) ## {'five': 5, 'four': 4, 'one': 1, 'three': 3, 'two': 2}
+sort_dict_by_key(d, True)
+## {'two': 2, 'three': 3, 'one': 1, 'four': 4, 'five': 5}
+</code></pre>
+<h2><a class="header" href="#sort_dict_by_value" id="sort_dict_by_value">sort_dict_by_value</a></h2>
+<hr />
+<ul>
+<li>title: sort_dict_by_value</li>
+<li>tags: dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Sorts the given dictionary by value.</p>
+<ul>
+<li>Use <code>dict.items()</code> to get a list of tuple pairs from <code>d</code> and sort it using a lambda function and <code>sorted()</code>.</li>
+<li>Use <code>dict()</code> to convert the sorted list back to a dictionary.</li>
+<li>Use the <code>reverse</code> parameter in <code>sorted()</code> to sort the dictionary in reverse order, based on the second argument.</li>
+<li><strong>⚠️ NOTICE:</strong> Dictionary values must be of the same type.</li>
+</ul>
+<pre><code class="language-py">def sort_dict_by_value(d, reverse = False):
+  return dict(sorted(d.items(), key = lambda x: x[1], reverse = reverse))
+</code></pre>
+<pre><code class="language-py">d = {'one': 1, 'three': 3, 'five': 5, 'two': 2, 'four': 4}
+sort_dict_by_value(d) ## {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}
+sort_dict_by_value(d, True)
+## {'five': 5, 'four': 4, 'three': 3, 'two': 2, 'one': 1}
+</code></pre>
+<h2><a class="header" href="#split_lines" id="split_lines">split_lines</a></h2>
+<hr />
+<ul>
+<li>title: split_lines</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Splits a multiline string into a list of lines.</p>
+<ul>
+<li>Use <code>str.split()</code> and <code>'\n'</code> to match line breaks and create a list.</li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html##str.splitlines"><code>str.splitlines()</code></a> provides similar functionality to this snippet.</li>
+</ul>
+<pre><code class="language-py">def split_lines(s):
+  return s.split('\n')
+</code></pre>
+<pre><code class="language-py">split_lines('This\nis a\nmultiline\nstring.\n')
+## ['This', 'is a', 'multiline', 'string.' , '']
+</code></pre>
+<h2><a class="header" href="#spread" id="spread">spread</a></h2>
+<hr />
+<ul>
+<li>title: spread</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Flattens a list, by spreading its elements into a new list.</p>
+<ul>
+<li>Loop over elements, use <code>list.extend()</code> if the element is a list, <code>list.append()</code> otherwise.</li>
+</ul>
+<pre><code class="language-py">def spread(arg):
+  ret = []
+  for i in arg:
+    ret.extend(i) if isinstance(i, list) else ret.append(i)
+  return ret
+</code></pre>
+<pre><code class="language-py">spread([1, 2, 3, [4, 5, 6], [7], 8, 9]) ## [1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+<h2><a class="header" href="#sum_by" id="sum_by">sum_by</a></h2>
+<hr />
+<ul>
+<li>title: sum_by</li>
+<li>tags: math,list,beginner</li>
+</ul>
+<hr />
+<p>Calculates the sum of a list, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>map()</code> with <code>fn</code> to map each element to a value using the provided function.</li>
+<li>Use <code>sum()</code> to return the sum of the values.</li>
+</ul>
+<pre><code class="language-py">def sum_by(lst, fn):
+  return sum(map(fn, lst))
+</code></pre>
+<pre><code class="language-py">sum_by([{ 'n': 4 }, { 'n': 2 }, { 'n': 8 }, { 'n': 6 }], lambda v : v['n']) ## 20
+</code></pre>
+<h2><a class="header" href="#sum_of_powers" id="sum_of_powers">sum_of_powers</a></h2>
+<hr />
+<ul>
+<li>title: sum_of_powers</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Returns the sum of the powers of all the numbers from <code>start</code> to <code>end</code> (both inclusive).</p>
+<ul>
+<li>Use <code>range()</code> in combination with a list comprehension to create a list of elements in the desired range raised to the given <code>power</code>.</li>
+<li>Use <code>sum()</code> to add the values together.</li>
+<li>Omit the second argument, <code>power</code>, to use a default power of <code>2</code>.</li>
+<li>Omit the third argument, <code>start</code>, to use a default starting value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-py">def sum_of_powers(end, power = 2, start = 1):
+  return sum([(i) ** power for i in range(start, end + 1)])
+</code></pre>
+<pre><code class="language-py">sum_of_powers(10) ## 385
+sum_of_powers(10, 3) ## 3025
+sum_of_powers(10, 3, 5) ## 2925
+</code></pre>
+<h2><a class="header" href="#symmetric_difference" id="symmetric_difference">symmetric_difference</a></h2>
+<hr />
+<ul>
+<li>title: symmetric_difference</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the symmetric difference between two iterables, without filtering out duplicate values.</p>
+<ul>
+<li>Create a <code>set</code> from each list.</li>
+<li>Use a list comprehension on each of them to only keep values not contained in the previously created set of the other.</li>
+</ul>
+<pre><code class="language-py">def symmetric_difference(a, b):
+  (_a, _b) = (set(a), set(b))
+  return [item for item in a if item not in _b] + [item for item in b
+          if item not in _a]
+</code></pre>
+<pre><code class="language-py">symmetric_difference([1, 2, 3], [1, 2, 4]) ## [3, 4]
+</code></pre>
+<h2><a class="header" href="#symmetric_difference_by" id="symmetric_difference_by">symmetric_difference_by</a></h2>
+<hr />
+<ul>
+<li>title: symmetric_difference_by</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the symmetric difference between two lists, after applying the provided function to each list element of both.</p>
+<ul>
+<li>Create a <code>set</code> by applying <code>fn</code> to each element in every list.</li>
+<li>Use a list comprehension in combination with <code>fn</code> on each of them to only keep values not contained in the previously created set of the other.</li>
+</ul>
+<pre><code class="language-py">def symmetric_difference_by(a, b, fn):
+  (_a, _b) = (set(map(fn, a)), set(map(fn, b)))
+  return [item for item in a if fn(item) not in _b] + [item
+          for item in b if fn(item) not in _a]
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+symmetric_difference_by([2.1, 1.2], [2.3, 3.4], floor) ## [1.2, 3.4]
+</code></pre>
+<h2><a class="header" href="#tail" id="tail">tail</a></h2>
+<hr />
+<ul>
+<li>title: tail</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns all elements in a list except for the first one.</p>
+<ul>
+<li>Use slice notation to return the last element if the list's length is more than <code>1</code>.</li>
+<li>Otherwise, return the whole list.</li>
+</ul>
+<pre><code class="language-py">def tail(lst):
+  return lst[1:] if len(lst) &gt; 1 else lst
+</code></pre>
+<pre><code class="language-py">tail([1, 2, 3]) ## [2, 3]
+tail([1]) ## [1]
+</code></pre>
+<h2><a class="header" href="#take" id="take">take</a></h2>
+<hr />
+<ul>
+<li>title: take</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list with <code>n</code> elements removed from the beginning.</p>
+<ul>
+<li>Use slice notation to create a slice of the list with <code>n</code> elements taken from the beginning.</li>
+</ul>
+<pre><code class="language-py">def take(itr, n = 1):
+  return itr[:n]
+</code></pre>
+<pre><code class="language-py">take([1, 2, 3], 5) ## [1, 2, 3]
+take([1, 2, 3], 0) ## []
+</code></pre>
+<h2><a class="header" href="#take_right" id="take_right">take_right</a></h2>
+<hr />
+<ul>
+<li>title: take_right</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns a list with <code>n</code> elements removed from the end.</p>
+<ul>
+<li>Use slice notation to create a slice of the list with <code>n</code> elements taken from the end.</li>
+</ul>
+<pre><code class="language-py">def take_right(itr, n = 1):
+  return itr[-n:]
+</code></pre>
+<pre><code class="language-py">take_right([1, 2, 3], 2) ## [2, 3]
+take_right([1, 2, 3]) ## [3]
+</code></pre>
+<h2><a class="header" href="#to_binary" id="to_binary">to_binary</a></h2>
+<hr />
+<ul>
+<li>title: to_binary</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns the binary representation of the given number.</p>
+<ul>
+<li>Use <code>bin()</code> to convert a given decimal number into its binary equivalent.</li>
+</ul>
+<pre><code class="language-py">def to_binary(n):
+  return bin(n)
+</code></pre>
+<pre><code class="language-py">to_binary(100) ## 0b1100100
+</code></pre>
+<h2><a class="header" href="#to_dictionary" id="to_dictionary">to_dictionary</a></h2>
+<hr />
+<ul>
+<li>title: to_dictionary</li>
+<li>tags: list,dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Combines two lists into a dictionary, where the elements of the first one serve as the keys and the elements of the second one serve as the values.
+The values of the first list need to be unique and hashable.</p>
+<ul>
+<li>Use <code>zip()</code> in combination with <code>dict()</code> to combine the values of the two lists into a dictionary.</li>
+</ul>
+<pre><code class="language-py">def to_dictionary(keys, values):
+  return dict(zip(keys, values))
+</code></pre>
+<pre><code class="language-py">to_dictionary(['a', 'b'], [1, 2]) ## { a: 1, b: 2 }
+</code></pre>
+<h2><a class="header" href="#to_hex" id="to_hex">to_hex</a></h2>
+<hr />
+<ul>
+<li>title: to_hex</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns the hexadecimal representation of the given number.</p>
+<ul>
+<li>Use <code>hex()</code> to convert a given decimal number into its hexadecimal equivalent.</li>
+</ul>
+<pre><code class="language-py">def to_hex(dec):
+  return hex(dec)
+</code></pre>
+<pre><code class="language-py">to_hex(41) ## 0x29
+to_hex(332) ## 0x14c
+</code></pre>
+<h2><a class="header" href="#to_iso_date" id="to_iso_date">to_iso_date</a></h2>
+<hr />
+<ul>
+<li>title: to_iso_date</li>
+<li>tags: date,intermediate</li>
+</ul>
+<hr />
+<p>Converts a date to its ISO-8601 representation.</p>
+<ul>
+<li>Use <code>datetime.datetime.isoformat()</code> to convert the given <code>datetime.datetime</code> object to an ISO-8601 date.</li>
+</ul>
+<pre><code class="language-py">from datetime import datetime
+
+def to_iso_date(d):
+  return d.isoformat()
+</code></pre>
+<pre><code class="language-py">from datetime import datetime
+
+to_iso_date(datetime(2020, 10, 25)) ## 2020-10-25T00:00:00
+</code></pre>
+<h2><a class="header" href="#to_roman_numeral" id="to_roman_numeral">to_roman_numeral</a></h2>
+<hr />
+<ul>
+<li>title: to_roman_numeral</li>
+<li>tags: math,string,intermediate</li>
+</ul>
+<hr />
+<p>Converts an integer to its roman numeral representation. 
+Accepts value between <code>1</code> and <code>3999</code> (both inclusive).</p>
+<ul>
+<li>Create a lookup list containing tuples in the form of (roman value, integer).</li>
+<li>Use a <code>for</code> loop to iterate over the values in <code>lookup</code>.</li>
+<li>Use <code>divmod()</code> to update <code>num</code> with the remainder, adding the roman numeral representation to the result.</li>
+</ul>
+<pre><code class="language-py">def to_roman_numeral(num):
+  lookup = [
+    (1000, 'M'),
+    (900, 'CM'),
+    (500, 'D'),
+    (400, 'CD'),
+    (100, 'C'),
+    (90, 'XC'),
+    (50, 'L'),
+    (40, 'XL'),
+    (10, 'X'),
+    (9, 'IX'),
+    (5, 'V'),
+    (4, 'IV'),
+    (1, 'I'),
+  ]
+  res = ''
+  for (n, roman) in lookup:
+    (d, num) = divmod(num, n)
+    res += roman * d
+  return res
+</code></pre>
+<pre><code class="language-py">to_roman_numeral(3) ## 'III'
+to_roman_numeral(11) ## 'XI'
+to_roman_numeral(1998) ## 'MCMXCVIII'
+</code></pre>
+<h2><a class="header" href="#transpose" id="transpose">transpose</a></h2>
+<hr />
+<ul>
+<li>title: transpose</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Transposes a two-dimensional list.</p>
+<ul>
+<li>Use <code>*lst</code> to get the provided list as tuples.</li>
+<li>Use <code>zip()</code> in combination with <code>list()</code> to create the transpose of the given two-dimensional list.</li>
+</ul>
+<pre><code class="language-py">def transpose(lst):
+  return list(zip(*lst))
+</code></pre>
+<pre><code class="language-py">transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]])
+## [(1, 4, 7, 10), (2, 5, 8, 11), (3, 6, 9, 12)]
+</code></pre>
+<h2><a class="header" href="#unfold" id="unfold">unfold</a></h2>
+<hr />
+<ul>
+<li>title: unfold</li>
+<li>tags: function,list,advanced</li>
+</ul>
+<hr />
+<p>Builds a list, using an iterator function and an initial seed value.</p>
+<ul>
+<li>The iterator function accepts one argument (<code>seed</code>) and must always return a list with two elements ([<code>value</code>, <code>nextSeed</code>]) or <code>False</code> to terminate.</li>
+<li>Use a generator function, <code>fn_generator</code>, that uses a <code>while</code> loop to call the iterator function and <code>yield</code> the <code>value</code> until it returns <code>False</code>.</li>
+<li>Use a list comprehension to return the list that is produced by the generator, using the iterator function.</li>
+</ul>
+<pre><code class="language-py">def unfold(fn, seed):
+  def fn_generator(val):
+    while True: 
+      val = fn(val[1])
+      if val == False: break
+      yield val[0]
+  return [i for i in fn_generator([None, seed])]
+</code></pre>
+<pre><code class="language-py">f = lambda n: False if n &gt; 50 else [-n, n + 10]
+unfold(f, 10) ## [-10, -20, -30, -40, -50]
+</code></pre>
+<h2><a class="header" href="#union" id="union">union</a></h2>
+<hr />
+<ul>
+<li>title: union</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns every element that exists in any of the two lists once.</p>
+<ul>
+<li>Create a <code>set</code> with all values of <code>a</code> and <code>b</code> and convert to a <code>list</code>.</li>
+</ul>
+<pre><code class="language-py">def union(a, b):
+  return list(set(a + b))
+</code></pre>
+<pre><code class="language-py">union([1, 2, 3], [4, 3, 2]) ## [1, 2, 3, 4]
+</code></pre>
+<h2><a class="header" href="#union_by" id="union_by">union_by</a></h2>
+<hr />
+<ul>
+<li>title: union_by</li>
+<li>tags: list,intermediate</li>
+</ul>
+<hr />
+<p>Returns every element that exists in any of the two lists once, after applying the provided function to each element of both.</p>
+<ul>
+<li>Create a <code>set</code> by applying <code>fn</code> to each element in <code>a</code>.</li>
+<li>Use a list comprehension in combination with <code>fn</code> on <code>b</code> to only keep values not contained in the previously created set, <code>_a</code>.</li>
+<li>Finally, create a <code>set</code> from the previous result and <code>a</code> and transform it into a <code>list</code></li>
+</ul>
+<pre><code class="language-py">def union_by(a, b, fn):
+  _a = set(map(fn, a))
+  return list(set(a + [item for item in b if fn(item) not in _a]))
+</code></pre>
+<pre><code class="language-py">from math import floor
+
+union_by([2.1], [1.2, 2.3], floor) ## [2.1, 1.2]
+</code></pre>
+<h2><a class="header" href="#unique_elements" id="unique_elements">unique_elements</a></h2>
+<hr />
+<ul>
+<li>title: unique_elements</li>
+<li>tags: list,beginner</li>
+</ul>
+<hr />
+<p>Returns the unique elements in a given list.</p>
+<ul>
+<li>Create a <code>set</code> from the list to discard duplicated values, then return a <code>list</code> from it.</li>
+</ul>
+<pre><code class="language-py">def unique_elements(li):
+  return list(set(li))
+</code></pre>
+<pre><code class="language-py">unique_elements([1, 2, 2, 3, 4, 3]) ## [1, 2, 3, 4]
+</code></pre>
+<h2><a class="header" href="#values_only" id="values_only">values_only</a></h2>
+<hr />
+<ul>
+<li>title: values_only</li>
+<li>tags: dictionary,list,beginner</li>
+</ul>
+<hr />
+<p>Returns a flat list of all the values in a flat dictionary.</p>
+<ul>
+<li>Use <code>dict.values()</code> to return the values in the given dictionary.</li>
+<li>Return a <code>list()</code> of the previous result.</li>
+</ul>
+<pre><code class="language-py">def values_only(flat_dict):
+  return list(flat_dict.values())
+</code></pre>
+<pre><code class="language-py">ages = {
+  'Peter': 10,
+  'Isabel': 11,
+  'Anna': 9,
+}
+values_only(ages) ## [10, 11, 9]
+</code></pre>
+<h2><a class="header" href="#weighted_average" id="weighted_average">weighted_average</a></h2>
+<hr />
+<ul>
+<li>title: weighted_average</li>
+<li>tags: math,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the weighted average of two or more numbers.</p>
+<ul>
+<li>Use <code>sum()</code> to sum the products of the numbers by their weight and to sum the weights.</li>
+<li>Use <code>zip()</code> and a list comprehension to iterate over the pairs of values and weights.</li>
+</ul>
+<pre><code class="language-py">def weighted_average(nums, weights):
+  return sum(x * y for x, y in zip(nums, weights)) / sum(weights)
+</code></pre>
+<pre><code class="language-py">weighted_average([1, 2, 3], [0.6, 0.2, 0.3]) ## 1.72727
+</code></pre>
+<h2><a class="header" href="#when" id="when">when</a></h2>
+<hr />
+<ul>
+<li>title: when</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Tests a value, <code>x</code>, against a testing function, conditionally applying a function. </p>
+<ul>
+<li>Check if the value of <code>predicate(x)</code> is <code>True</code> and if so return <code>when_true(x)</code>, otherwise return <code>x</code>.</li>
+</ul>
+<pre><code class="language-py">def when(predicate, when_true):
+  return lambda x: when_true(x) if predicate(x) else x
+</code></pre>
+<pre><code class="language-py">double_even_numbers = when(lambda x: x % 2 == 0, lambda x : x * 2)
+double_even_numbers(2) ## 4
+double_even_numbers(1) ## 1
+</code></pre>
+<h2><a class="header" href="#words" id="words">words</a></h2>
+<hr />
+<ul>
+<li>title: words</li>
+<li>tags: string,regexp,beginner</li>
+</ul>
+<hr />
+<p>Converts a given string into a list of words.</p>
+<ul>
+<li>Use <code>re.findall()</code> with the supplied <code>pattern</code> to find all matching substrings.</li>
+<li>Omit the second argument to use the default regexp, which matches alphanumeric and hyphens.</li>
+</ul>
+<pre><code class="language-py">import re
+
+def words(s, pattern = '[a-zA-Z-]+'):
+  return re.findall(pattern, s)
+</code></pre>
+<pre><code class="language-py">words('I love Python!!') ## ['I', 'love', 'Python']
+words('python, javaScript &amp; coffee') ## ['python', 'javaScript', 'coffee']
+words('build -q --out one-item', r'\b[a-zA-Z-]+\b')
+## ['build', 'q', 'out', 'one-item']
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="phpall.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="csharpall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="phpall.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="csharpall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,1372 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Php - CodeSnippets</title>
+        <meta name="description" content="Php">
+        <meta name="og:title" property="og:title" content="Php">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://codesnippets.sajivfrancis.com/phpall.html" />
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.ico">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html5all.html"><strong aria-hidden="true">1.</strong> HTML5</a></li><li class="chapter-item expanded "><a href="cssall.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li class="chapter-item expanded "><a href="javascriptall.html"><strong aria-hidden="true">3.</strong> JAVASCRIPT</a></li><li class="chapter-item expanded "><a href="reactall.html"><strong aria-hidden="true">4.</strong> REACT</a></li><li class="chapter-item expanded "><a href="phpall.html" class="active"><strong aria-hidden="true">5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="pythonall.html"><strong aria-hidden="true">6.</strong> PYTHON</a></li><li class="chapter-item expanded "><a href="csharpall.html"><strong aria-hidden="true">7.</strong> CSHARP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title" style="text-align:center">PHP</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                      <ul>
+                        <p align="center">
+                            <a href="https://sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-HOME-red"></a>
+                            <a href="https://docs.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-DOCS-brightgreen"></a>
+                            <a href="https://sajivfrancis.github.io/blog/"><img alt="npm" src="https://img.shields.io/badge/-BLOG-orange"></a>
+                            <a href="https://codesnippets.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-CODESNIPPETS-greenOh"></a>
+                            </p>
+                    </ul>
+                        <h2><a class="header" href="#all" id="all">all</a></h2>
+<hr />
+<ul>
+<li>title:  all</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the provided function returns <code>true</code> for all elements of an array, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>array_filter()</code> and <code>count()</code> to check if <code>$func</code> returns <code>true</code> for all the elements in <code>$items</code>.</li>
+</ul>
+<pre><code class="language-php">function all($items, $func)
+{
+  return count(array_filter($items, $func)) === count($items);
+}
+</code></pre>
+<pre><code class="language-php">all([2, 3, 4, 5], function ($item) {
+  return $item &gt; 1;
+}); // true
+</code></pre>
+<h2><a class="header" href="#any" id="any">any</a></h2>
+<hr />
+<ul>
+<li>title:  any</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the provided function returns <code>true</code> for at least one element of an array, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>array_filter()</code> and <code>count()</code> to check if <code>$func</code> returns <code>true</code> for any of the elements in <code>$items</code>.</li>
+</ul>
+<pre><code class="language-php">function any($items, $func)
+{
+  return count(array_filter($items, $func)) &gt; 0;
+}
+</code></pre>
+<pre><code class="language-php">any([1, 2, 3, 4], function ($item) {
+  return $item &lt; 2;
+}); // true
+</code></pre>
+<h2><a class="header" href="#approximatelyequal" id="approximatelyequal">approximatelyEqual</a></h2>
+<hr />
+<ul>
+<li>title:  approximatelyEqual</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Checks if two numbers are approximately equal to each other.</p>
+<ul>
+<li>Use <code>abs()</code> to compare the absolute difference of the two values to <code>$epsilon</code>.</li>
+<li>Omit the third parameter, <code>$epsilon</code>, to use a default value of <code>0.001</code>.</li>
+</ul>
+<pre><code class="language-php">function approximatelyEqual($number1, $number2, $epsilon = 0.001)
+{
+  return abs($number1 - $number2) &lt; $epsilon;
+}
+</code></pre>
+<pre><code class="language-php">approximatelyEqual(10.0, 10.00001); // true
+
+approximatelyEqual(10.0, 10.01); // false
+</code></pre>
+<h2><a class="header" href="#average" id="average">average</a></h2>
+<hr />
+<ul>
+<li>title:  average</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns the average of two or more numbers.</p>
+<ul>
+<li>Use <code>array_sum()</code> for all the values in <code>$items</code> and return the result divided by their <code>count()</code>.</li>
+</ul>
+<pre><code class="language-php">function average(...$items)
+{
+  $count = count($items);
+  
+  return $count === 0 ? 0 : array_sum($items) / $count;
+}
+</code></pre>
+<pre><code class="language-php">average(1, 2, 3); // 2
+</code></pre>
+<h2><a class="header" href="#clampnumber" id="clampnumber">clampNumber</a></h2>
+<hr />
+<ul>
+<li>title:  clampNumber</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Clamps <code>$num</code> within the inclusive range specified by the boundary values <code>$a</code> and <code>$b</code>.</p>
+<ul>
+<li>If <code>$num</code> falls within the range, return <code>$num</code>.</li>
+<li>Otherwise, return the nearest number in the range, using <code>min()</code> and <code>max()</code>.</li>
+</ul>
+<pre><code class="language-php">function clampNumber($num, $a, $b)
+{
+  return max(min($num, max($a, $b)), min($a, $b));
+}
+</code></pre>
+<pre><code class="language-php">clampNumber(2, 3, 5); // 3
+clampNumber(1, -1, -5); // -1
+</code></pre>
+<h2><a class="header" href="#compose" id="compose">compose</a></h2>
+<hr />
+<ul>
+<li>title:  compose</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Return a new function that composes multiple functions into a single callable.</p>
+<ul>
+<li>Use <code>array_reduce()</code> to perform right-to-left function composition.</li>
+</ul>
+<pre><code class="language-php">function compose(...$functions)
+{
+  return array_reduce(
+    $functions,
+    function ($carry, $function) {
+      return function ($x) use ($carry, $function) {
+        return $function($carry($x));
+      };
+    },
+    function ($x) {
+      return $x;
+    }
+  );
+}
+</code></pre>
+<pre><code class="language-php">$compose = compose(
+  // add 2
+  function ($x) {
+    return $x + 2;
+  },
+  // multiply 4
+  function ($x) {
+    return $x * 4;
+  }
+);
+$compose(3); // 20
+</code></pre>
+<h2><a class="header" href="#countvowels" id="countvowels">countVowels</a></h2>
+<hr />
+<ul>
+<li>title:  countVowels</li>
+<li>tags: string,regexp,beginner</li>
+</ul>
+<hr />
+<p>Returns number of vowels in the provided string.</p>
+<ul>
+<li>Use a regular expression to count the number of vowels (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code> and <code>u</code>a) in a string.</li>
+</ul>
+<pre><code class="language-php">function countVowels($string)
+{
+  preg_match_all('/[aeiou]/i', $string, $matches);
+
+  return count($matches[0]);
+}
+</code></pre>
+<pre><code class="language-php">countVowels('sampleInput'); // 4
+</code></pre>
+<h2><a class="header" href="#curry" id="curry">curry</a></h2>
+<hr />
+<ul>
+<li>title:  curry</li>
+<li>tags: function,advanced</li>
+</ul>
+<hr />
+<p>Curries a function to take arguments in multiple calls.</p>
+<ul>
+<li>If the number of provided arguments (<code>$args</code>) is sufficient, call the passed function, <code>$function</code>.</li>
+<li>Otherwise, return a curried function that expects the rest of the arguments.</li>
+</ul>
+<pre><code class="language-php">function curry($function)
+{
+  $accumulator = function ($arguments) use ($function, &amp;$accumulator) {
+    return function (...$args) use ($function, $arguments, $accumulator) {
+      $arguments = array_merge($arguments, $args);
+      $reflection = new ReflectionFunction($function);
+      $totalArguments = $reflection-&gt;getNumberOfRequiredParameters();
+
+      if ($totalArguments &lt;= count($arguments)) {
+        return $function(...$arguments);
+      }
+
+      return $accumulator($arguments);
+    };
+  };
+
+  return $accumulator([]);
+}
+</code></pre>
+<pre><code class="language-php">$curriedAdd = curry(
+  function ($a, $b) {
+    return $a + $b;
+  }
+);
+
+$add10 = $curriedAdd(10);
+var_dump($add10(15)); // 25
+</code></pre>
+<h2><a class="header" href="#decapitalize" id="decapitalize">decapitalize</a></h2>
+<hr />
+<ul>
+<li>title:  decapitalize</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Decapitalizes the first letter of a string.</p>
+<ul>
+<li>Decapitalizes the first letter of the string and then adds it with rest of the string.</li>
+<li>Omit the <code>$upperRest</code> parameter to keep the rest of the string intact, or set it to <code>true</code> to convert to uppercase.</li>
+</ul>
+<pre><code class="language-php">function decapitalize($string, $upperRest = false)
+{
+  return lcfirst($upperRest ? strtoupper($string) : $string);
+}
+</code></pre>
+<pre><code class="language-php">decapitalize('FooBar'); // 'fooBar'
+</code></pre>
+<h2><a class="header" href="#deepflatten" id="deepflatten">deepFlatten</a></h2>
+<hr />
+<ul>
+<li>title:  deepFlatten</li>
+<li>tags: array,recursion,intermediate</li>
+</ul>
+<hr />
+<p>Deep flattens an array.</p>
+<ul>
+<li>Use recursion.</li>
+<li>Use <code>array_push</code>, splat operator and an empty array to flatten the array.</li>
+<li>Recursively flatten each element that is an array.</li>
+</ul>
+<pre><code class="language-php">function deepFlatten($items)
+{
+  $result = [];
+  foreach ($items as $item) {
+    if (!is_array($item)) {
+      $result[] = $item;
+    } else {
+      array_push($result, ...deepFlatten($item));
+    }
+  }
+
+  return $result;
+}
+</code></pre>
+<pre><code class="language-php">deepFlatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]
+</code></pre>
+<h2><a class="header" href="#drop" id="drop">drop</a></h2>
+<hr />
+<ul>
+<li>title:  drop</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns a new array with <code>$n</code> elements removed from the left.</p>
+<ul>
+<li>Use <code>array_slice()</code> to remove <code>$n</code> elements from the left.</li>
+<li>Omit the second argument, <code>$n</code>, to only remove one element.</li>
+</ul>
+<pre><code class="language-php">function drop($items, $n = 1)
+{
+  return array_slice($items, $n);
+}
+</code></pre>
+<pre><code class="language-php">drop([1, 2, 3]); // [2,3]
+drop([1, 2, 3], 2); // [3]
+</code></pre>
+<h2><a class="header" href="#endswith" id="endswith">endsWith</a></h2>
+<hr />
+<ul>
+<li>title:  endsWith</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Checks if a string is ends with a given substring.</p>
+<ul>
+<li>Use <code>strrpos()</code> in combination with <code>strlen</code> to find the position of <code>$needle</code> in <code>$haystack</code>.</li>
+</ul>
+<pre><code class="language-php">function endsWith($haystack, $needle)
+{
+  return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
+}
+</code></pre>
+<pre><code class="language-php">endsWith('Hi, this is me', 'me'); // true
+</code></pre>
+<h2><a class="header" href="#factorial" id="factorial">factorial</a></h2>
+<hr />
+<ul>
+<li>title:  factorial</li>
+<li>tags: math,recursion,beginner</li>
+</ul>
+<hr />
+<p>Calculates the factorial of a number.</p>
+<ul>
+<li>Use recursion.</li>
+<li>If <code>$n</code> is less then or equal to <code>1</code>, return <code>1</code>.</li>
+<li>Otherwise, return the product of <code>$n</code> and the factorial of <code>$n -1</code>.</li>
+</ul>
+<pre><code class="language-php">function factorial($n)
+{
+  if ($n &lt;= 1) {
+    return 1;
+  }
+
+  return $n * factorial($n - 1);
+}
+</code></pre>
+<pre><code class="language-php">factorial(6); // 720
+</code></pre>
+<h2><a class="header" href="#fibonacci" id="fibonacci">fibonacci</a></h2>
+<hr />
+<ul>
+<li>title:  fibonacci</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Generates an array, containing the Fibonacci sequence, up until the nth term.</p>
+<ul>
+<li>Create an empty array, initializing the first two values (<code>0</code> and <code>1</code>).</li>
+<li>Loop from 2 through <code>$n</code> and add values into the array, using the sum of the last two values.</li>
+</ul>
+<pre><code class="language-php">function fibonacci($n)
+{
+  $sequence = [0, 1];
+
+  for ($i = 2; $i &lt; $n; $i++) {
+    $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];
+  }
+
+  return $sequence;
+}
+</code></pre>
+<pre><code class="language-php">fibonacci(6); // [0, 1, 1, 2, 3, 5]
+</code></pre>
+<h2><a class="header" href="#findlast" id="findlast">findLast</a></h2>
+<hr />
+<ul>
+<li>title:  findLast</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns the last element for which the provided function returns a truthy value.</p>
+<ul>
+<li>Use <code>array_filter()</code> to remove elements for which <code>$func</code> returns falsy values, <code>array_pop()</code> to get the last one.</li>
+</ul>
+<pre><code class="language-php">function findLast($items, $func)
+{
+  $filteredItems = array_filter($items, $func);
+
+  return array_pop($filteredItems);
+}
+</code></pre>
+<pre><code class="language-php">findLast([1, 2, 3, 4], function ($n) {
+  return ($n % 2) === 1;
+});
+// 3
+</code></pre>
+<h2><a class="header" href="#findlastindex" id="findlastindex">findLastIndex</a></h2>
+<hr />
+<ul>
+<li>title:  findLastIndex</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns the index of the last element for which the provided function returns a truthy value.</p>
+<ul>
+<li>Use <code>array_keys()</code> and <code>array_filter()</code> to remove elements for which <code>$func</code> returns falsy values, <code>array_pop()</code> to get the last one.</li>
+</ul>
+<pre><code class="language-php">function findLastIndex($items, $func)
+{
+  $keys = array_keys(array_filter($items, $func));
+
+  return array_pop($keys);
+}
+</code></pre>
+<pre><code class="language-php">findLastIndex([1, 2, 3, 4], function ($n) {
+  return ($n % 2) === 1;
+});
+// 2
+</code></pre>
+<h2><a class="header" href="#firststringbetween" id="firststringbetween">firstStringBetween</a></h2>
+<hr />
+<ul>
+<li>title:  firstStringBetween</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns the first string there is between the strings from the parameter <code>$start</code> and <code>$end</code>.</p>
+<ul>
+<li>Use <code>trim()</code> and <code>strstr()</code> to find the string contained between <code>$start</code> and <code>$end</code>.</li>
+</ul>
+<pre><code class="language-php">function firstStringBetween($haystack, $start, $end)
+{
+  return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
+}
+</code></pre>
+<pre><code class="language-php">firstStringBetween('This is a [custom] string', '[', ']'); // custom
+</code></pre>
+<h2><a class="header" href="#flatten" id="flatten">flatten</a></h2>
+<hr />
+<ul>
+<li>title:  flatten</li>
+<li>tags: array,intermediate</li>
+</ul>
+<hr />
+<p>Flattens an array up to the one level depth.</p>
+<ul>
+<li>Use <code>array_push()</code>, splat operator and <code>array_values()</code> to flatten the array.</li>
+</ul>
+<pre><code class="language-php">function flatten($items)
+{
+  $result = [];
+  foreach ($items as $item) {
+    if (!is_array($item)) {
+      $result[] = $item;
+    } else {
+      array_push($result, ...array_values($item));
+    }
+  }
+
+  return $result;
+}
+</code></pre>
+<pre><code class="language-php">flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
+</code></pre>
+<h2><a class="header" href="#gcd" id="gcd">gcd</a></h2>
+<hr />
+<ul>
+<li>title:  gcd</li>
+<li>tags: math,recursion,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the greatest common divisor between two or more numbers.</p>
+<ul>
+<li>Use recursion.</li>
+<li>Use <code>array_reduce()</code> with the <code>gcd</code> function to appy to all elements in the <code>$numbers</code> list.</li>
+<li>Base case is when <code>y</code> equals <code>0</code>. In this case, return <code>x</code>.</li>
+<li>Otherwise, return the gcd of <code>y</code> and the remainder of the division <code>x/y</code>.</li>
+</ul>
+<pre><code class="language-php">function gcd(...$numbers)
+{
+  if (count($numbers) &gt; 2) {
+    return array_reduce($numbers, 'gcd');
+  }
+
+  $r = $numbers[0] % $numbers[1];
+  return $r === 0 ? abs($numbers[1]) : gcd($numbers[1], $r);
+}
+</code></pre>
+<pre><code class="language-php">gcd(8, 36); // 4
+gcd(12, 8, 32); // 4
+</code></pre>
+<h2><a class="header" href="#groupby" id="groupby">groupBy</a></h2>
+<hr />
+<ul>
+<li>title:  groupBy</li>
+<li>tags: array,intermediate</li>
+</ul>
+<hr />
+<p>Groups the elements of an array based on the given function.</p>
+<ul>
+<li>Use <code>call_use_func()</code> with <code>$func</code> on <code>$items</code> to group them based on <code>$func</code>.</li>
+</ul>
+<pre><code class="language-php">function groupBy($items, $func)
+{
+  $group = [];
+  foreach ($items as $item) {
+    if ((!is_string($func) &amp;&amp; is_callable($func)) || function_exists($func)) {
+      $key = call_user_func($func, $item);
+      $group[$key][] = $item;
+    } elseif (is_object($item)) {
+      $group[$item-&gt;{$func}][] = $item;
+    } elseif (isset($item[$func])) {
+      $group[$item[$func]][] = $item;
+    }
+  }
+
+  return $group;
+}
+</code></pre>
+<pre><code class="language-php">groupBy(['one', 'two', 'three'], 'strlen'); // [3 =&gt; ['one', 'two'], 5 =&gt; ['three']]
+</code></pre>
+<h2><a class="header" href="#hasduplicates" id="hasduplicates">hasDuplicates</a></h2>
+<hr />
+<ul>
+<li>title:  hasDuplicates</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Checks a flat list for duplicate values, returning <code>true</code> if duplicate values exists and <code>false</code> if values are all unique.</p>
+<ul>
+<li>Use <code>count()</code> and <code>array_unique()</code> to check <code>$items</code> for duplicate values.</li>
+</ul>
+<pre><code class="language-php">function hasDuplicates($items)
+{
+  return count($items) &gt; count(array_unique($items));
+}
+</code></pre>
+<pre><code class="language-php">hasDuplicates([1, 2, 3, 4, 5, 5]); // true
+</code></pre>
+<h2><a class="header" href="#head" id="head">head</a></h2>
+<hr />
+<ul>
+<li>title:  head</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns the head of a list.</p>
+<ul>
+<li>Use <code>reset()</code> to return the first item in the array.</li>
+</ul>
+<pre><code class="language-php">function head($items)
+{
+  return reset($items);
+}
+</code></pre>
+<pre><code class="language-php">head([1, 2, 3]); // 1
+</code></pre>
+<h2><a class="header" href="#isanagram" id="isanagram">isAnagram</a></h2>
+<hr />
+<ul>
+<li>title:  isAnagram</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Compare two strings and returns <code>true</code> if both strings are anagram, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>count_chars()</code> to compare <code>$string1</code> and <code>$string2</code>.</li>
+</ul>
+<pre><code class="language-php">function isAnagram($string1, $string2)
+{
+  return count_chars($string1, 1) === count_chars($string2, 1);
+}
+</code></pre>
+<pre><code class="language-php">isAnagram('act', 'cat'); // true
+</code></pre>
+<h2><a class="header" href="#iscontains" id="iscontains">isContains</a></h2>
+<hr />
+<ul>
+<li>title:  isContains</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Check if a word / substring exists in a given string input.</p>
+<ul>
+<li>Using <code>strpos()</code> to find the position of the first occurrence of a substring in a string.</li>
+</ul>
+<pre><code class="language-php">function isContains($string, $needle)
+{
+  return strpos($string, $needle) === false ? false : true;
+}
+</code></pre>
+<pre><code class="language-php">isContains('This is an example string', 'example'); // true
+isContains('This is an example string', 'hello'); // false
+</code></pre>
+<h2><a class="header" href="#iseven" id="iseven">isEven</a></h2>
+<hr />
+<ul>
+<li>title:  isEven</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given number is even, <code>false</code> otherwise.</p>
+<ul>
+<li>Checks whether a number is odd or even using the modulo (<code>%</code>) operator.</li>
+<li>Returns <code>true</code> if the number is even, <code>false</code> if the number is odd.</li>
+</ul>
+<pre><code class="language-php">function isEven($number)
+{
+  return ($number % 2) === 0;
+}
+</code></pre>
+<pre><code class="language-php">isEven(4); // true
+</code></pre>
+<h2><a class="header" href="#islowercase" id="islowercase">isLowerCase</a></h2>
+<hr />
+<ul>
+<li>title:  isLowerCase</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given string is lower case, <code>false</code> otherwise.</p>
+<ul>
+<li>Convert the given string to lower case, using <code>strtolower</code> and compare it to the original.</li>
+</ul>
+<pre><code class="language-php">function isLowerCase($string)
+{
+  return $string === strtolower($string);
+}
+</code></pre>
+<pre><code class="language-php">isLowerCase('Morning shows the day!'); // false
+isLowerCase('hello'); // true
+</code></pre>
+<h2><a class="header" href="#isprime" id="isprime">isPrime</a></h2>
+<hr />
+<ul>
+<li>title:  isPrime</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Checks if the provided integer is a prime number.</p>
+<ul>
+<li>Check numbers from <code>2</code> to the square root of the given number.</li>
+<li>Return <code>false</code> if any of them divides the given number, else return <code>true</code>, unless the number is less than <code>2</code>.</li>
+</ul>
+<pre><code class="language-php">function isPrime($number)
+{
+  $boundary = floor(sqrt($number));
+  for ($i = 2; $i &lt;= $boundary; $i++) {
+    if ($number % $i === 0) {
+      return false;
+    }
+  }
+
+  return $number &gt;= 2;
+}
+</code></pre>
+<pre><code class="language-php">isPrime(3); // true
+</code></pre>
+<h2><a class="header" href="#isuppercase" id="isuppercase">isUpperCase</a></h2>
+<hr />
+<ul>
+<li>title:  isUpperCase</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given string is upper case, false otherwise.</p>
+<ul>
+<li>Convert the given string to upper case, using <code>strtoupper</code> and compare it to the original.</li>
+</ul>
+<pre><code class="language-php">function isUpperCase($string)
+{
+  return $string === strtoupper($string);
+}
+</code></pre>
+<pre><code class="language-php">isUpperCase('MORNING SHOWS THE DAY!'); // true
+isUpperCase('qUick Fox'); // false
+</code></pre>
+<h2><a class="header" href="#last" id="last">last</a></h2>
+<hr />
+<ul>
+<li>title:  last</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns the last element in an array.</p>
+<ul>
+<li>Use <code>end()</code> to return the last item in the array.</li>
+</ul>
+<pre><code class="language-php">function last($items)
+{
+  return end($items);
+}
+</code></pre>
+<pre><code class="language-php">last([1, 2, 3]); // 3
+</code></pre>
+<h2><a class="header" href="#lcm" id="lcm">lcm</a></h2>
+<hr />
+<ul>
+<li>title:  lcm</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Returns the least common multiple of two or more numbers.</p>
+<ul>
+<li>Use the greatest common divisor (GCD) formula and the fact that <code>lcm(x,y) = x * y / gcd(x,y)</code> to determine the least common multiple.</li>
+<li>The GCD formula uses recursion.</li>
+</ul>
+<pre><code class="language-php">function lcm(...$numbers)
+{
+  $ans = $numbers[0];
+  for ($i = 1, $max = count($numbers); $i &lt; $max; $i++) {
+    $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));
+  }
+
+  return $ans;
+}
+</code></pre>
+<pre><code class="language-php">lcm(12, 7); // 84
+lcm(1, 3, 4, 5); // 60
+</code></pre>
+<h2><a class="header" href="#maxn" id="maxn">maxN</a></h2>
+<hr />
+<ul>
+<li>title:  maxN</li>
+<li>tags: math,array,intermediate</li>
+</ul>
+<hr />
+<p>Returns the maximum value from the provided array.</p>
+<ul>
+<li>Use <code>array_filter()</code> and <code>max()</code> to find the maximum value in an array.</li>
+</ul>
+<pre><code class="language-php">function maxN($numbers)
+{
+  $maxValue = max($numbers);
+  $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {
+    return $maxValue === $value;
+  });
+
+  return count($maxValueArray);
+}
+</code></pre>
+<pre><code class="language-php">maxN([1, 2, 3, 4, 5, 5]); // 2
+maxN([1, 2, 3, 4, 5]); // 1
+</code></pre>
+<h2><a class="header" href="#median" id="median">median</a></h2>
+<hr />
+<ul>
+<li>title:  median</li>
+<li>tags: math,array,beginner</li>
+</ul>
+<hr />
+<p>Returns the median of an array of numbers.</p>
+<ul>
+<li>Find the middle of the array, use <code>sort()</code> to sort the values.</li>
+<li>Return the number at the midpoint if the array's length is odd, otherwise the average of the two middle numbers.</li>
+</ul>
+<pre><code class="language-php">function median($numbers)
+{
+  sort($numbers);
+  $totalNumbers = count($numbers);
+  $mid = floor($totalNumbers / 2);
+
+  return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
+}
+</code></pre>
+<pre><code class="language-php">median([1, 3, 3, 6, 7, 8, 9]); // 6
+median([1, 2, 3, 6, 7, 9]); // 4.5
+</code></pre>
+<h2><a class="header" href="#memoize" id="memoize">memoize</a></h2>
+<hr />
+<ul>
+<li>title:  memoize</li>
+<li>tags: function,advanced</li>
+</ul>
+<hr />
+<p>Returns the memoized (cached) function.</p>
+<ul>
+<li>Create an empty cache by instantiating a new array.</li>
+<li>Return a function which takes a single argument to be supplied to the memoized function by first checking if the function's output for that specific input value is already cached, or store and return it if not.</li>
+<li>Allow access to the cache by setting it as a property on the returned function.</li>
+</ul>
+<pre><code class="language-php">function memoize($func)
+{
+  return function () use ($func) {
+    static $cache = [];
+
+    $args = func_get_args();
+    $key = serialize($args);
+    $cached = true;
+
+    if (!isset($cache[$key])) {
+      $cache[$key] = $func(...$args);
+      $cached = false;
+    }
+
+    return ['result' =&gt; $cache[$key], 'cached' =&gt; $cached];
+  };
+}
+</code></pre>
+<pre><code class="language-php">$memoizedAdd = memoize(
+  function ($num) {
+    return $num + 10;
+  }
+);
+
+var_dump($memoizedAdd(5)); // ['result' =&gt; 15, 'cached' =&gt; false]
+var_dump($memoizedAdd(6)); // ['result' =&gt; 16, 'cached' =&gt; false]
+var_dump($memoizedAdd(5)); // ['result' =&gt; 15, 'cached' =&gt; true]
+</code></pre>
+<h2><a class="header" href="#minn" id="minn">minN</a></h2>
+<hr />
+<ul>
+<li>title:  minN</li>
+<li>tags: math,array,intermediate</li>
+</ul>
+<hr />
+<p>Returns the minimum value from the provided array.</p>
+<ul>
+<li>Use <code>array_filter()</code> and <code>min()</code> to find the minimum value in an array.</li>
+</ul>
+<pre><code class="language-php">function minN($numbers)
+{
+  $minValue = min($numbers);
+  $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
+    return $minValue === $value;
+  });
+
+  return count($minValueArray);
+}
+</code></pre>
+<pre><code class="language-php">minN([1, 1, 2, 3, 4, 5, 5]); // 2
+minN([1, 2, 3, 4, 5]); // 1
+</code></pre>
+<h2><a class="header" href="#once" id="once">once</a></h2>
+<hr />
+<ul>
+<li>title:  once</li>
+<li>tags: function,intermediate</li>
+</ul>
+<hr />
+<p>Call a function only once.</p>
+<ul>
+<li>Return a function, which only calls the provided function, <code>$function</code>, if <code>$called</code> is <code>false</code> and sets <code>$called</code> to <code>true</code>.</li>
+</ul>
+<pre><code class="language-php">function once($function)
+{
+  return function (...$args) use ($function) {
+    static $called = false;
+    if ($called) {
+      return;
+    }
+    $called = true;
+    return $function(...$args);
+  };
+}
+</code></pre>
+<pre><code class="language-php">$add = function ($a, $b) {
+  return $a + $b;
+};
+
+$once = once($add);
+
+var_dump($once(10, 5)); // 15
+var_dump($once(20, 10)); // null
+</code></pre>
+<h2><a class="header" href="#orderby" id="orderby">orderBy</a></h2>
+<hr />
+<ul>
+<li>title:  orderBy</li>
+<li>tags: array,advanced</li>
+</ul>
+<hr />
+<p>Sorts a collection of arrays or objects by key.</p>
+<ul>
+<li>Uses <code>sort()</code> on the provided array to sort the array based on <code>$order</code> and <code>$attr</code>.</li>
+</ul>
+<pre><code class="language-php">function orderBy($items, $attr, $order)
+{
+  $sortedItems = [];
+  foreach ($items as $item) {
+    $key = is_object($item) ? $item-&gt;{$attr} : $item[$attr];
+    $sortedItems[$key] = $item;
+  }
+  if ($order === 'desc') {
+    krsort($sortedItems);
+  } else {
+    ksort($sortedItems);
+  }
+
+  return array_values($sortedItems);
+}
+</code></pre>
+<pre><code class="language-php">orderBy(
+  [
+    ['id' =&gt; 2, 'name' =&gt; 'Joy'],
+    ['id' =&gt; 3, 'name' =&gt; 'Khaja'],
+    ['id' =&gt; 1, 'name' =&gt; 'Raja']
+  ],
+  'id',
+  'desc'
+); // [['id' =&gt; 3, 'name' =&gt; 'Khaja'], ['id' =&gt; 2, 'name' =&gt; 'Joy'], ['id' =&gt; 1, 'name' =&gt; 'Raja']]
+</code></pre>
+<h2><a class="header" href="#palindrome" id="palindrome">palindrome</a></h2>
+<hr />
+<ul>
+<li>title:  palindrome</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given string is a palindrome, <code>false</code> otherwise.</p>
+<ul>
+<li>Check if the value of <code>strrev($string)</code> is equal to the passed <code>$string</code>.</li>
+</ul>
+<pre><code class="language-php">function palindrome($string)
+{
+  return strrev($string) === (string) $string;
+}
+</code></pre>
+<pre><code class="language-php">palindrome('racecar'); // true
+palindrome(2221222); // true
+</code></pre>
+<h2><a class="header" href="#pluck" id="pluck">pluck</a></h2>
+<hr />
+<ul>
+<li>title:  pluck</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Retrieves all of the values for a given key.</p>
+<ul>
+<li>Use <code>array_map()</code> to map each object in the <code>$items</code> array to the provided <code>$key</code>.</li>
+</ul>
+<pre><code class="language-php">function pluck($items, $key)
+{
+  return array_map( function($item) use ($key) {
+    return is_object($item) ? $item-&gt;$key : $item[$key];
+  }, $items);
+}
+</code></pre>
+<pre><code class="language-php">pluck([
+  ['product_id' =&gt; 'prod-100', 'name' =&gt; 'Desk'],
+  ['product_id' =&gt; 'prod-200', 'name' =&gt; 'Chair'],
+], 'name');
+// ['Desk', 'Chair']
+</code></pre>
+<h2><a class="header" href="#pull" id="pull">pull</a></h2>
+<hr />
+<ul>
+<li>title:  pull</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Mutates the original array to filter out the values specified.</p>
+<ul>
+<li>Use <code>array_values()</code> and <code>array_diff()</code> to remove the specified values from <code>$items</code>.</li>
+</ul>
+<pre><code class="language-php">function pull(&amp;$items, ...$params)
+{
+  $items = array_values(array_diff($items, $params));
+  return $items;
+}
+</code></pre>
+<pre><code class="language-php">$items = ['a', 'b', 'c', 'a', 'b', 'c'];
+pull($items, 'a', 'c'); // $items will be ['b', 'b']
+</code></pre>
+<h2><a class="header" href="#reject" id="reject">reject</a></h2>
+<hr />
+<ul>
+<li>title:  reject</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Filters the collection using the given callback.</p>
+<ul>
+<li>Use <code>array_values()</code>, <code>array_diff()</code> and <code>array_filter()</code> to filter <code>$items</code> based on <code>$func</code>.</li>
+</ul>
+<pre><code class="language-php">function reject($items, $func)
+{
+  return array_values(array_diff($items, array_filter($items, $func)));
+}
+</code></pre>
+<pre><code class="language-php">reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {
+  return strlen($item) &gt; 4;
+}); // ['Pear', 'Kiwi']
+</code></pre>
+<h2><a class="header" href="#remove" id="remove">remove</a></h2>
+<hr />
+<ul>
+<li>title:  remove</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Removes elements from an array for which the given function returns <code>false</code>.</p>
+<ul>
+<li>Use <code>array_filter()</code> to find array elements that return truthy values and <code>array_diff_keys()</code> to remove the elements not contained in <code>$filtered</code>.</li>
+</ul>
+<pre><code class="language-php">function remove($items, $func)
+{
+  $filtered = array_filter($items, $func);
+
+  return array_diff_key($items, $filtered);
+}
+</code></pre>
+<pre><code class="language-php">remove([1, 2, 3, 4], function ($n) {
+  return ($n % 2) === 0;
+});
+// [0 =&gt; 1, 2 =&gt; 3]
+</code></pre>
+<h2><a class="header" href="#rotate" id="rotate">rotate</a></h2>
+<hr />
+<ul>
+<li>title:  rotate</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Rotates the array (in left direction) by the number of shifts.</p>
+<ul>
+<li>Given the <code>$shift</code> index, merge the array values after <code>$shift</code> with the values before <code>$shift</code>.</li>
+</ul>
+<pre><code class="language-php">function rotate($array, $shift = 1)
+{
+  for ($i = 0; $i &lt; $shift; $i++) {
+    array_push($array, array_shift($array));
+  }
+
+  return $array;
+}
+</code></pre>
+<pre><code class="language-php">rotate([1, 3, 5, 2, 4]); // [3, 5, 2, 4, 1]
+rotate([1, 3, 5, 2, 4], 2); // [5, 2, 4, 1, 3]
+</code></pre>
+<h2><a class="header" href="#shorten" id="shorten">shorten</a></h2>
+<hr />
+<ul>
+<li>title: shorten</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Returns a shortened string.</p>
+<ul>
+<li>Use <code>mb_strlen()</code>, <code>mb_substr()</code> and <code>rtrim()</code> to shorten a string to a give number of characters.</li>
+</ul>
+<pre><code class="language-php">function shorten($input, $length = 100, $end = '...')
+{
+  if (mb_strlen($input) &lt;= $length) {
+    return $input;
+  }
+
+  return rtrim(mb_substr($input, 0, $length, 'UTF-8')) . $end;
+}
+</code></pre>
+<pre><code class="language-php">shorten('The quick brown fox jumped over the lazy dog', 15); // The quick brown...
+</code></pre>
+<h2><a class="header" href="#slugify" id="slugify">slugify</a></h2>
+<hr />
+<ul>
+<li>title:  slugify</li>
+<li>tags: string,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to a URL-friendly slug.</p>
+<ul>
+<li>Uses <code>preg_replace()</code> to replace invalid chars with dashes, <code>iconv()</code> to convert the text to ASCII, <code>strtolower()</code> and <code>trim()</code> to convert to lowercase and remove extra whitespace.</li>
+</ul>
+<pre><code class="language-php">function slugify($text) {
+  $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+  $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+  $text = preg_replace('~[^-\w]+~', '', $text);
+  $text = preg_replace('~-+~', '-', $text);
+  $text = strtolower($text);
+  $text = trim($text, &quot; \t\n\r\0\x0B-&quot;);
+  if (empty($text)) {
+    return 'n-a';
+  }
+  return $text;
+}
+</code></pre>
+<pre><code class="language-php">slugify('Hello World'); // 'hello-world'
+</code></pre>
+<h2><a class="header" href="#startswith" id="startswith">startsWith</a></h2>
+<hr />
+<ul>
+<li>title:  startsWith</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Check if a string starts with a given substring.</p>
+<ul>
+<li>Use <code>strpos()</code> to find the position of <code>$needle</code> in <code>$haystack</code>.</li>
+</ul>
+<pre><code class="language-php">function startsWith($haystack, $needle)
+{
+  return strpos($haystack, $needle) === 0;
+}
+</code></pre>
+<pre><code class="language-php">startsWith('Hi, this is me', 'Hi'); // true
+</code></pre>
+<h2><a class="header" href="#tail" id="tail">tail</a></h2>
+<hr />
+<ul>
+<li>title:  tail</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns all elements in an array except for the first one.</p>
+<ul>
+<li>Use <code>array_slice()</code> and <code>count()</code> to return all the items in the array except for the first one.</li>
+</ul>
+<pre><code class="language-php">function tail($items)
+{
+  return count($items) &gt; 1 ? array_slice($items, 1) : $items;
+}
+</code></pre>
+<pre><code class="language-php">tail([1, 2, 3]); // [2, 3]
+</code></pre>
+<h2><a class="header" href="#take" id="take">take</a></h2>
+<hr />
+<ul>
+<li>title:  take</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Returns an array with <code>$n</code> elements removed from the beginning.</p>
+<ul>
+<li>Use <code>array_slice()</code> to remove <code>$n</code> items from the beginning of the array.</li>
+</ul>
+<pre><code class="language-php">function take($items, $n = 1)
+{
+  return array_slice($items, 0, $n);
+}
+</code></pre>
+<pre><code class="language-php">take([1, 2, 3], 5); // [1, 2, 3]
+take([1, 2, 3, 4, 5], 2); // [1, 2]
+</code></pre>
+<h2><a class="header" href="#without" id="without">without</a></h2>
+<hr />
+<ul>
+<li>title:  without</li>
+<li>tags: array,beginner</li>
+</ul>
+<hr />
+<p>Filters out the elements of an array, that have one of the specified values.</p>
+<ul>
+<li>Use <code>array_values()</code> and <code>array_diff()</code> to remove any values in <code>$params</code> from <code>$items</code>.</li>
+</ul>
+<pre><code class="language-php">function without($items, ...$params)
+{
+  return array_values(array_diff($items, $params));
+}
+</code></pre>
+<pre><code class="language-php">without([2, 1, 2, 3], 1, 2); // [3]
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="reactall.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="pythonall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="reactall.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="pythonall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

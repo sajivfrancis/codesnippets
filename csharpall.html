@@ -1,0 +1,2481 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Csharp - CodeSnippets</title>
+        <meta name="description" content="Csharp">
+        <meta name="og:title" property="og:title" content="Csharp">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://codesnippets.sajivfrancis.com/csharpall.html" />
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.ico">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html5all.html"><strong aria-hidden="true">1.</strong> HTML5</a></li><li class="chapter-item expanded "><a href="cssall.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li class="chapter-item expanded "><a href="javascriptall.html"><strong aria-hidden="true">3.</strong> JAVASCRIPT</a></li><li class="chapter-item expanded "><a href="reactall.html"><strong aria-hidden="true">4.</strong> REACT</a></li><li class="chapter-item expanded "><a href="phpall.html"><strong aria-hidden="true">5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="pythonall.html"><strong aria-hidden="true">6.</strong> PYTHON</a></li><li class="chapter-item expanded "><a href="csharpall.html" class="active"><strong aria-hidden="true">7.</strong> CSHARP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title" style="text-align:center">CSHARP</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                      <ul>
+                        <p align="center">
+                            <a href="https://sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-HOME-red"></a>
+                            <a href="https://docs.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-DOCS-brightgreen"></a>
+                            <a href="https://sajivfrancis.github.io/blog/"><img alt="npm" src="https://img.shields.io/badge/-BLOG-orange"></a>
+                            <a href="https://codesnippets.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-CODESNIPPETS-greenOh"></a>
+                            </p>
+                    </ul>
+                        <h2><a class="header" href="#all" id="all">All</a></h2>
+<hr />
+<ul>
+<li>title: All</li>
+<li>tags: array,list,lambda,overload,intermediate</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the provided predicate function returns <code>true</code> for all elements in a collection, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>IEnumerable.ToArray()</code>, <code>Array.TrueForAll()</code> to test if all elements in the collection return <code>true</code> based on the predicate function, <code>match</code>.</li>
+<li>Omit the predicate function, <code>match</code>, to use the overload that checks if each value is different from <code>null</code> by default.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static bool All&lt;T&gt;(IEnumerable&lt;T&gt; data, Predicate&lt;T&gt; match) 
+  {
+    return Array.TrueForAll(data.ToArray(), match);
+  }
+  public static bool All&lt;T&gt;(IEnumerable&lt;T&gt; data) 
+  {
+    return Array.TrueForAll(data.ToArray(), val =&gt; val != null);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = { 4, 2, 3 };
+
+_30s.All(nums, x =&gt; x &gt; 1); // true
+_30s.All(nums); // true
+</code></pre>
+<h2><a class="header" href="#averageby" id="averageby">AverageBy</a></h2>
+<hr />
+<ul>
+<li>title: AverageBy</li>
+<li>tags: math,list,array,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the average of a collection, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element to the value returned by the provided selector function, <code>fn</code>.</li>
+<li>Use <code>IEnumerable.Average()</code> to get the average of the resulting values.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static double AverageBy&lt;T&gt;(IEnumerable&lt;T&gt; values, Func&lt;T,int&gt; fn) 
+  {
+    return values.Select(fn).Average();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new [] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+
+_30s.AverageBy(p, v =&gt; v.a); // 2.5
+_30s.AverageBy(p, v =&gt; v.b); // 1.5
+</code></pre>
+<h2><a class="header" href="#bifurcate" id="bifurcate">Bifurcate</a></h2>
+<hr />
+<ul>
+<li>title: Bifurcate</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Splits values into two groups. 
+If an element in <code>filter</code> is <code>true</code>, the corresponding element in the collection belongs to the first group; otherwise, it belongs to the second group.</p>
+<ul>
+<li>Use <code>IEnumerable.Where()</code> to separate values into two groups and assign them to the two passed <code>out</code> arrays.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static void Bifurcate&lt;T&gt;(IEnumerable&lt;T&gt; items, IList&lt;bool&gt; filter, out T[] filteredTrue, out T[] filteredFalse)
+  {
+    filteredTrue = items.Where((val, i) =&gt; filter[i] == true).ToArray();
+    filteredFalse = items.Where((val, i) =&gt; filter[i] == false).ToArray();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 3, 4};
+bool[] filter = {true, true, false, true};
+int[] n1;
+int[] n2;
+
+_30s.Bifurcate(nums, filter, out n1, out n2); // // n1 = {1, 2, 4}, n2 = {3}
+</code></pre>
+<h2><a class="header" href="#bifurcateby" id="bifurcateby">BifurcateBy</a></h2>
+<hr />
+<ul>
+<li>title: BifurcateBy</li>
+<li>tags: array,list,lambda,advanced</li>
+</ul>
+<hr />
+<p>Splits values into two groups according to a predicate function, which specifies which group an element in the input collection belongs to. 
+If the predicate function returns a truthy value, the collection element belongs to the first group; otherwise, it belongs to the second group.</p>
+<ul>
+<li>Use <code>IEnumerable.Where()</code> to separate values into two groups and assign them to the two passed <code>out</code> arrays.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static void BifurcateBy&lt;T&gt;(IEnumerable&lt;T&gt; items, Predicate&lt;T&gt; filter, out T[] filteredTrue, out T[] filteredFalse)
+  {
+    filteredTrue = items.Where(i =&gt; filter(i) == true).ToArray();
+    filteredFalse = items.Where(i =&gt; filter(i) == false).ToArray();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 3, 4};
+int[] n1;
+int[] n2;
+
+_30s.BifurcateBy(nums, x =&gt; x % 2 == 0, out n1, out n2); // n1 = {2, 4}, n2 = {1, 3}
+</code></pre>
+<h2><a class="header" href="#bytearraytohex" id="bytearraytohex">ByteArrayToHex</a></h2>
+<hr />
+<ul>
+<li>title: ByteArrayToHex</li>
+<li>tags: array,utility,beginner</li>
+</ul>
+<hr />
+<p>Converts a <code>byte</code> array to its hexadecimal string representation.</p>
+<ul>
+<li>Use <code>BitConverter.ToString()</code> to convert the <code>byte</code> array to a string.</li>
+<li>Use <code>string.Replace()</code> to remove dashes in the produced string.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string ByteArrayToHex(byte[] bytes) 
+  {
+    return BitConverter.ToString(bytes).Replace(&quot;-&quot;, &quot;&quot;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">byte[] data = { 241, 89, 54 };
+
+_30s.ByteArrayToHex(data); // &quot;F15936&quot;
+</code></pre>
+<h2><a class="header" href="#capitalize" id="capitalize">Capitalize</a></h2>
+<hr />
+<ul>
+<li>title: Capitalize</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Capitalizes the first letter of a string.</p>
+<ul>
+<li>Use <code>string.ToCharArray()</code> to convert the string to an array of <code>char</code>, <code>chars</code>.</li>
+<li>Use <code>char.ToUpper(chars[0])</code> to capitalize the first letter.</li>
+<li>Finally, return a <code>new string()</code> from the <code>chars</code> array.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string Capitalize(string str) 
+  {
+    char[] chars = str.ToCharArray();
+    chars[0] = char.ToUpper(chars[0]);
+    return new string(chars);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;fooBar&quot;;
+
+_30s.Capitalize(s); // &quot;FooBar&quot;
+</code></pre>
+<h2><a class="header" href="#chunk" id="chunk">Chunk</a></h2>
+<hr />
+<ul>
+<li>title: Chunk</li>
+<li>tags: array,list,lambda,advanced</li>
+</ul>
+<hr />
+<p>Chunks a collection into smaller lists of a specified size.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to convert the given list to index-value pairs.</li>
+<li>Use <code>IEnumerable.GroupBy()</code> to split elements into groups based on their index.</li>
+<li>Use <code>IEnumerable.Select()</code> a second time to map each group's elements to their values and <code>IEnumerable.ToList()</code> to convert the result to a list.</li>
+<li>Finally, use <code>IEnumerable.ToList()</code> on the result to convert everything to a list and return it.</li>
+<li>If the original list can't be split evenly, the final chunk will contain the remaining elements.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static List&lt;List&lt;T&gt;&gt; Chunk&lt;T&gt;(IEnumerable&lt;T&gt; data, int size)
+  {
+    return data
+      .Select((x, i) =&gt; new { Index = i, Value = x })
+      .GroupBy(x =&gt; x.Index / size)
+      .Select(x =&gt; x.Select(v =&gt; v.Value).ToList())
+      .ToList();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5 };
+
+_30s.Chunk(nums, 2); // { {1, 2}, {3, 4}, {5} }
+</code></pre>
+<h2><a class="header" href="#compactwhitespace" id="compactwhitespace">CompactWhitespace</a></h2>
+<hr />
+<ul>
+<li>title: CompactWhitespace</li>
+<li>tags: string,regex,intermediate</li>
+</ul>
+<hr />
+<p>Returns a string with whitespaces compacted.</p>
+<ul>
+<li>Use <code>Regex.Replace()</code> with a regular expression to replace all occurences of 2 or more subsequent whitespace characters with a single space.</li>
+</ul>
+<pre><code class="language-csharp">using System.Text.RegularExpressions;
+
+public static partial class _30s 
+{
+  public static string CompactWhitespace(string str) 
+  {
+    return Regex.Replace(str, @&quot;\s{2,}&quot;, &quot; &quot;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;Lorem    ipsum\n   dolor sit   amet&quot;;
+
+_30s.CompactWhitespace(s); // &quot;Lorem ipsum dolor sit amet&quot;
+</code></pre>
+<h2><a class="header" href="#countby" id="countby">CountBy</a></h2>
+<hr />
+<ul>
+<li>title: CountBy</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Groups the elements of a collection based on the given function and returns the count of elements in each group.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each distinct value in the collection, after applying the provided function.</li>
+<li>Use <code>IEnumerable.ToDictionary()</code> to convert the result of the previous operation to a <code>Dictionary</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static Dictionary&lt;R,int&gt; CountBy&lt;T,R&gt;(IEnumerable&lt;T&gt; values, Func&lt;T,R&gt; map)
+  {
+    return values
+      .GroupBy(map)
+      .ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new[] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+
+_30s.CountBy(p, x =&gt; x.a); // { [3, 1], [2, 1] }
+</code></pre>
+<h2><a class="header" href="#countoccurences" id="countoccurences">CountOccurences</a></h2>
+<hr />
+<ul>
+<li>title: CountOccurences</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Counts the occurences of a value in a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Count()</code> in combination with <code>EqualityComparer&lt;T&gt;.Default.Equals()</code> to compare each value in the <code>IEnumerable</code> with <code>el</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static int CountOccurences&lt;T&gt;(IEnumerable&lt;T&gt; obj, T el) 
+  {
+    return obj.Count(f =&gt; EqualityComparer&lt;T&gt;.Default.Equals(f, el));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;fooBar&quot;;
+List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 3, 3, 4, 5, 6 };
+
+_30s.CountOccurences(s,'o'); // 2
+_30s.CountOccurences(nums,3); // 3
+</code></pre>
+<h2><a class="header" href="#dayoftheweek" id="dayoftheweek">DayOfTheWeek</a></h2>
+<hr />
+<ul>
+<li>title: DayOfTheWeek</li>
+<li>tags: date,utility,beginner</li>
+</ul>
+<hr />
+<p>Returns the string representation of the weekday for the given <code>DateTime</code>.</p>
+<ul>
+<li>Use <code>DateTime.ToString()</code> with an appropriate format modifier to return the day of the week.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string DayOfTheWeek(DateTime date) 
+  {
+    return date.ToString(&quot;dddd&quot;);  
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.DayOfTheWeek(new DateTime(2020, 1, 15)); // &quot;Wednesday&quot;
+</code></pre>
+<h2><a class="header" href="#decapitalize" id="decapitalize">Decapitalize</a></h2>
+<hr />
+<ul>
+<li>title: Decapitalize</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Decapitalizes the first letter of a string.</p>
+<ul>
+<li>Use <code>string.ToCharArray()</code> to convert the string to an array of <code>char</code>, <code>chars</code>.</li>
+<li>Use <code>char.ToLower(chars[0])</code> to decapitalize the first letter.</li>
+<li>Finally, return a <code>new string()</code> from the <code>chars</code> array.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string Decapitalize(string str) 
+  {
+    char[] chars = str.ToCharArray();
+    chars[0] = char.ToLower(chars[0]);
+    return new string(chars);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;FooBar&quot;;
+
+_30s.Decapitalize(s); // &quot;fooBar&quot;
+</code></pre>
+<h2><a class="header" href="#difference" id="difference">Difference</a></h2>
+<hr />
+<ul>
+<li>title: Difference</li>
+<li>tags: array,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the difference betweend two collections.</p>
+<ul>
+<li>Use <code>IEnumerable.Except()</code> to only return elements in the second enumerable object and not the first one.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; Difference&lt;T&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b) 
+  {
+    return a.Except(b);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] a = { 1, 2, 3, 5 };
+int[] b = { 1, 2, 4 };
+
+_30s.Difference(a, b); // { 3, 5 }
+</code></pre>
+<h2><a class="header" href="#differenceby" id="differenceby">DifferenceBy</a></h2>
+<hr />
+<ul>
+<li>title: DifferenceBy</li>
+<li>tags: array,list,lambda,advanced</li>
+</ul>
+<hr />
+<p>Returns the difference between two collections, after applying the provided function to each element of both.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element of either collection to the desired type.</li>
+<li>Use <code>IEnumerable.Except()</code> to only return elements in the second enumerable object and not the first one.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;R&gt; DifferenceBy&lt;T,R&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b, Func&lt;T,R&gt; map)
+  {
+    return a.Select(map).Except(b.Select(map));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new[] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+var q = new[] {
+  new { a = 6, b = 2}
+};
+
+_30s.DifferenceBy(p, q, x =&gt; x.b); // { 1 }
+</code></pre>
+<h2><a class="header" href="#distinctvalues" id="distinctvalues">DistinctValues</a></h2>
+<hr />
+<ul>
+<li>title: DistinctValues</li>
+<li>tags: array,list,beginner</li>
+</ul>
+<hr />
+<p>Returns all distinct values in a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Distinct()</code> to get the distinct values in the given collection.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; DistinctValues&lt;T&gt;(IEnumerable&lt;T&gt; data) 
+  {
+    return data.Distinct();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums =  { 1, 2, 1, 3, 3, 4, 5 };
+
+_30s.DistinctValues(nums); // { 1, 2, 3, 4, 5 }
+</code></pre>
+<h2><a class="header" href="#duplicatevalues" id="duplicatevalues">DuplicateValues</a></h2>
+<hr />
+<ul>
+<li>title: DuplicateValues</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns all distinct values in a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each distinct value in the enumerable.</li>
+<li>Use <code>IEnumerable.Where()</code> to create select only the groups with a count greater than <code>1</code>.</li>
+<li>Use <code>IEnumerable.Select()</code> to return the <code>Key</code> property of each group.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; DuplicateValues&lt;T&gt;(IEnumerable&lt;T&gt; items)
+  {
+    return items
+      .GroupBy(c =&gt; c)
+      .Where(g =&gt; g.Count() &gt; 1)
+      .Select(i =&gt; i.Key);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] arr = {1, 2, 1, 3, 2, 4};
+
+_30s.DuplicateValues(arr); // {1, 2}
+</code></pre>
+<h2><a class="header" href="#fibonacci" id="fibonacci">Fibonacci</a></h2>
+<hr />
+<ul>
+<li>title: Fibonacci</li>
+<li>tags: math,array,intermediate</li>
+</ul>
+<hr />
+<p>Generates an array, containing the Fibonacci sequence, up until the nth term.</p>
+<ul>
+<li>Starting with <code>0</code> and <code>1</code>, loop from <code>2</code> through <code>n</code> adding the sum of the last two numbers and appending to the sequence.</li>
+<li>If <code>n</code> is less or equal to <code>0</code>, return a list containing <code>0</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static int[] Fibonacci(int n)
+  {
+    if (n &lt;= 0 )  return new [] { 0 };
+    int[] fib = new int[n + 1];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (int i = 2; i &lt;= n; i ++)
+    {
+      fib[i] = fib[i - 1] + fib[i - 2];
+    }
+    return fib;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.Fibonacci(7); // { 0, 1, 1, 2, 3, 5, 8, 13 }
+</code></pre>
+<h2><a class="header" href="#filterstring" id="filterstring">FilterString</a></h2>
+<hr />
+<ul>
+<li>title: FilterString</li>
+<li>tags: string,utility,intermediate</li>
+</ul>
+<hr />
+<p>Filter a string's contents to include only alphanumeric and allowed characters.</p>
+<ul>
+<li>Use <code>string.ToCharArray()</code> in combination with <code>Array.FindAll()</code> to check if each character in the string is alphanumeric or contained in the <code>filter</code>.</li>
+<li>Omit the second argument, <code>filter</code>, to only allow alphanumeric characters.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s 
+{
+  public static string FilterString(string s, string filter = &quot;&quot;)
+  {
+    return new string(
+      Array.FindAll(s.ToCharArray(), c =&gt; char.IsLetterOrDigit(c) || filter.Contains(c))
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;@30_seconds_of_code##-$&quot;;
+
+_30s.FilterString(s); // &quot;30secondsofcode&quot;
+_30s.FilterString(s,&quot;_&quot;); // &quot;30_seconds_of_code&quot;
+_30s.FilterString(s,&quot;_@&quot;); // &quot;@30_seconds_of_code&quot;
+</code></pre>
+<h2><a class="header" href="#findfirstby" id="findfirstby">FindFirstBy</a></h2>
+<hr />
+<ul>
+<li>title: FindFirstBy</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the first element in a collection that matches the given predicate function, <code>match</code>.</p>
+<ul>
+<li>Use <code>IEnumerable.Where()</code> to filter out all values in <code>data</code> for which <code>match</code> returns <code>false</code>.</li>
+<li>Use <code>IEnumerable.First()</code> to return only the first matching element.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static T FindFirstBy&lt;T&gt;(IEnumerable&lt;T&gt; data, Predicate&lt;T&gt; match)
+  {
+    return data.Where(i =&gt; match(i)).First();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.FindFirstBy(nums, x =&gt; x % 2 == 0); // 2
+</code></pre>
+<h2><a class="header" href="#findindexofall" id="findindexofall">FindIndexOfAll</a></h2>
+<hr />
+<ul>
+<li>title: FindIndexOfAll</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns all indices in an <code>IList</code> that match the given predicate function, <code>match</code>.</p>
+<ul>
+<li>Use <code>Enumerable.Range()</code> to iterate over all indices in <code>data</code>.</li>
+<li>Use <code>IEnumerable.Where()</code> to filter out all values in <code>data</code> for which <code>match</code> returns <code>false</code> and return only matching indices.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;int&gt; FindIndexOfAll&lt;T&gt;(IList&lt;T&gt; data, Predicate&lt;T&gt; match)
+  {
+    return Enumerable
+      .Range(0, data.Count())
+      .Where(i =&gt; match(data[i]));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.FindIndexOfAll(nums, x =&gt; x % 2 != 0); // {0, 3}
+</code></pre>
+<h2><a class="header" href="#findindexoffirstby" id="findindexoffirstby">FindIndexOfFirstBy</a></h2>
+<hr />
+<ul>
+<li>title: FindIndexOfFirstBy</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the first index in an <code>IList</code> that matches the given predicate function, <code>match</code>.</p>
+<ul>
+<li>Use <code>Enumerable.Range()</code> to iterate over all indices in <code>data</code>.</li>
+<li>Use <code>IEnumerable.Where()</code> to filter out all values in <code>data</code> for which <code>match</code> returns <code>false</code>.</li>
+<li>Use <code>IEnumerable.First()</code> to return only the first matching index.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static int FindIndexOfFirstBy&lt;T&gt;(IList&lt;T&gt; data, Predicate&lt;T&gt; match)
+  {
+    return Enumerable
+      .Range(0, data.Count())
+      .Where(i =&gt; match(data[i]))
+      .First();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.FindIndexOfFirstBy(nums, x =&gt; x % 2 == 0); // 1
+</code></pre>
+<h2><a class="header" href="#findindexoflastby" id="findindexoflastby">FindIndexOfLastBy</a></h2>
+<hr />
+<ul>
+<li>title: FindIndexOfLastBy</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the last index in an <code>IList</code> that matches the given predicate function, <code>match</code>.</p>
+<ul>
+<li>Use <code>Enumerable.Range()</code> to iterate over all indices in <code>data</code>.</li>
+<li>Use <code>IEnumerable.Where()</code> to filter out all values in <code>data</code> for which <code>match</code> returns <code>false</code>.</li>
+<li>Use <code>IEnumerable.Last()</code> to return only the last matching index.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static int FindIndexOfLastBy&lt;T&gt;(IList&lt;T&gt; data, Predicate&lt;T&gt; match)
+  {
+    return Enumerable
+      .Range(0, data.Count())
+      .Where(i =&gt; match(data[i]))
+      .Last();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.FindIndexOfLastBy(nums, x =&gt; x % 2 == 0); // 6
+</code></pre>
+<h2><a class="header" href="#findlastby" id="findlastby">FindLastBy</a></h2>
+<hr />
+<ul>
+<li>title: FindLastBy</li>
+<li>tags: array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the last element in a collection that matches the given predicate function, <code>match</code>.</p>
+<ul>
+<li>Use <code>IEnumerable.Where()</code> to filter out all values in <code>data</code> for which <code>match</code> returns <code>false</code>.</li>
+<li>Use <code>IEnumerable.Last()</code> to return only the last matching element.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static T FindLastBy&lt;T&gt;(IEnumerable&lt;T&gt; data, Predicate&lt;T&gt; match)
+  {
+    return data.Where(i =&gt; match(i)).Last();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.FindLastBy(nums, x =&gt; x % 2 == 0); // 4
+</code></pre>
+<h2><a class="header" href="#findparityoutliers" id="findparityoutliers">FindParityOutliers</a></h2>
+<hr />
+<ul>
+<li>title: FindParityOutliers</li>
+<li>tags: array,list,math,advanced</li>
+</ul>
+<hr />
+<p>Given a collection, returns the items that are parity outliers.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each parity (<code>0</code> and <code>1</code>).</li>
+<li>Use <code>IEnumerable.OrderBy()</code> in combination with <code>IEnumerable.Count()</code> to order the two groups in ascending order based on frequency.</li>
+<li>Use <code>IEnumerable.First()</code> to get the first element and return its <code>Key</code> property, which corresponds to the least common parity value.</li>
+<li>Finally, use <code>IEnumerable.Where()</code> to get all elements with the least common parity value.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;int&gt; FindParityOutliers(IEnumerable&lt;int&gt; items)
+  {
+    return items.Where(
+      i =&gt; i % 2 == items
+        .GroupBy(i =&gt; i % 2)
+        .OrderBy(i =&gt; i.Count())
+        .First()
+        .Key
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 3, 4, 6};
+
+_30s.FindParityOutliers(nums); // {1, 3}
+</code></pre>
+<h2><a class="header" href="#flatten" id="flatten">Flatten</a></h2>
+<hr />
+<ul>
+<li>title: Flatten</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Flattens a 2D collection into a single dimension.</p>
+<ul>
+<li>Use <code>IEnumerable.SelectMany()</code> to flatten the 2D enumerable object.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; Flatten&lt;T&gt;(IEnumerable&lt;IEnumerable&lt;T&gt;&gt; obj) 
+  {
+    return obj.SelectMany(v =&gt; v);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[][] x = {
+  new [] {1, 2, 3},
+  new [] {4, 5, 6}
+};
+
+_30s.Flatten(x); // {1, 2, 3, 4, 5, 6}
+</code></pre>
+<h2><a class="header" href="#formatduration" id="formatduration">FormatDuration</a></h2>
+<hr />
+<ul>
+<li>title: FormatDuration</li>
+<li>tags: date,utility,beginner</li>
+</ul>
+<hr />
+<p>Returns the human readable format of the given number of seconds.</p>
+<ul>
+<li>Use <code>TimeSpan.FromSeconds()</code> to convert the number of <code>seconds</code> to a <code>TimeSpan</code> object.</li>
+<li>Use <code>TimeSpan.ToString()</code> with an appropriate format specifier to return a human readable string of the value.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string FormatDuration(double seconds) 
+  {
+    return TimeSpan.FromSeconds(seconds).ToString(@&quot;d\.hh\:mm\:ss\.fff&quot;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.FormatDuration(34325055.574); // 397.06:44:15.574
+</code></pre>
+<h2><a class="header" href="#frequencies" id="frequencies">Frequencies</a></h2>
+<hr />
+<ul>
+<li>title: Frequencies</li>
+<li>tags: array,list,dictionary,intermediate</li>
+</ul>
+<hr />
+<p>Returns a <code>Dictionary</code> with the unique values of a collection as keys and their frequencies as the values.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each distinct value in the collection.</li>
+<li>Use <code>IEnumerable.ToDictionary()</code> to convert the result of the previous operation to a <code>Dictionary</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static Dictionary&lt;T,int&gt; Frequencies&lt;T&gt;(IEnumerable&lt;T&gt; values)
+  {
+    return values
+      .GroupBy(v =&gt; v)
+      .ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">char[] c = {'a', 'b', 'a', 'c', 'a', 'a', 'b'}; 
+
+_30s.Frequencies(c); // { [a, 4], [b, 2], [c, 1] }
+</code></pre>
+<h2><a class="header" href="#gcd" id="gcd">GCD</a></h2>
+<hr />
+<ul>
+<li>title: GCD</li>
+<li>tags: math,recursion,overload,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the greatest common divisor of the given numbers.</p>
+<ul>
+<li>Define a <code>GCD()</code> function for two numbers, which uses recursion.</li>
+<li>Base case is when <code>y</code> equals <code>0</code>, which returns <code>x</code>.</li>
+<li>Otherwise the GCD of <code>y</code> and the remainder of the division <code>x/y</code> is returned.</li>
+<li>Define an overload that accepts multiple numbers or an array and use <code>IEnumerable.Aggregate()</code> to apply <code>GCD()</code> to them.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static int GCD(params int[] nums)
+  {
+    return nums.Aggregate(GCD);
+  }
+  public static int GCD(int x, int y)
+  {
+    return y == 0 ? x : GCD(y, x % y);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.GCD(8, 36, 28); // 4
+</code></pre>
+<h2><a class="header" href="#getfirstn" id="getfirstn">GetFirstN</a></h2>
+<hr />
+<ul>
+<li>title: GetFirstN</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the first <code>n</code> elements in a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Count()</code> to check if the enumerable is non-empty.</li>
+<li>Use <code>IEnumerable.Take(n)</code> to get the first <code>n</code> elements.</li>
+<li>If the enumerable object is empty, return the <code>default()</code> value for the given enumerable.</li>
+<li>Omit the second argument, <code>n</code>, to use a default value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; GetFirstN&lt;T&gt;(IEnumerable&lt;T&gt; list, int n = 1)
+  {
+    return list.Count() != 0 ? list.Take(n) : default(IEnumerable&lt;T&gt;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5 };
+
+_30s.GetFirstN(nums); // { 1 }
+_30s.GetFirstN(nums, 3); // { 1, 2, 3 }
+</code></pre>
+<h2><a class="header" href="#getlastn" id="getlastn">GetLastN</a></h2>
+<hr />
+<ul>
+<li>title: GetLastN</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the last <code>n</code> elements in a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Count()</code> to check if the enumerable is non-empty.</li>
+<li>Use <code>IEnumerable.Skip(list.Count() - n)</code> to get the last <code>n</code> elements.</li>
+<li>If the enumerable object is empty, return the <code>default()</code> value for the given enumerable.</li>
+<li>Omit the second argument, <code>n</code>, to use a default value of <code>1</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; GetLastN&lt;T&gt;(IEnumerable&lt;T&gt; list, int n = 1)
+  {
+    return list.Count() != 0 ? list.Skip(list.Count() - n) : default(IEnumerable&lt;T&gt;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5 };
+
+_30s.GetLastN(nums); // { 5 }
+_30s.GetLastN(nums, 3); // { 3, 4, 5 }
+</code></pre>
+<h2><a class="header" href="#gettype" id="gettype">GetType</a></h2>
+<hr />
+<ul>
+<li>title: GetType</li>
+<li>tags: utility,type,beginner</li>
+</ul>
+<hr />
+<p>Returns the type of the given object.</p>
+<ul>
+<li>Use <code>typeof()</code> on the given object's type.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static Type GetType&lt;T&gt;(T obj) 
+  {
+    return typeof(T);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;fooBar&quot;;
+List&lt;string&gt; list = new List&lt;string&gt; { &quot;a&quot;, &quot;b&quot;, &quot;c&quot; };
+
+_30s.GetType(s); // System.String
+_30s.GetType(list); // System.Collections.Generic.List`1[System.String]
+</code></pre>
+<h2><a class="header" href="#havesamecontents" id="havesamecontents">HaveSameContents</a></h2>
+<hr />
+<ul>
+<li>title: HaveSameContents</li>
+<li>tags: array,list,dictionary,advanced</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if two collections contain the same elements regardless of order, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each distinct value in each collection, <code>IEnumerable.ToDictionary()</code> to convert the result to a <code>Dictionary</code>.</li>
+<li>Use <code>IEnumerable.Union()</code> and <code>IEnumerable.Distinct()</code> to find the distinct values from both collections and loop over them using a <code>foreach</code> loop.</li>
+<li>Use <code>Dictionary.ContainsKey()</code> to check that each distinct value exists in both collections and compare the count for each one.</li>
+<li>Return <code>false</code> if any value is not found in either collection or if any count does not match, <code>true</code> otherwise.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static bool HaveSameContents&lt;T&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b)
+  {
+    Dictionary&lt;T,int&gt; dA = a.GroupBy(v =&gt; v).ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+    Dictionary&lt;T,int&gt; dB = b.GroupBy(v =&gt; v).ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+    foreach (T val in a.Union(b).Distinct()) {
+      if (!dA.ContainsKey(val) || !dB.ContainsKey(val)) return false;
+      if (dA[val] != dB[val]) return false;
+    }
+    return true;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] a = {1, 2, 4};
+int[] b = {2, 4, 1};
+
+_30s.HaveSameContents(a, b); // true
+</code></pre>
+<h2><a class="header" href="#head" id="head">Head</a></h2>
+<hr />
+<ul>
+<li>title: Head</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the head of a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Count()</code> to check if the enumerable is non-empty.</li>
+<li>Use <code>IEnumerable.Take(1)</code> to get the first element, <code>IEnumerable.ToArray()[0]</code> to convert to array and return the element.</li>
+<li>If the enumerable object is empty, return the <code>default()</code> value for the given type.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static T Head&lt;T&gt;(IEnumerable&lt;T&gt; list) 
+  {
+    return list.Count() != 0 ? list.Take(1).ToArray()[0] : default(T);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5 };
+List&lt;int&gt; empty = new List&lt;int&gt; { };
+char[] chars = {'A','B','C'};
+
+_30s.Head(nums); // 1
+_30s.Head(empty); // 0
+_30s.Head(chars); // 'A'
+</code></pre>
+<h2><a class="header" href="#hextobytearray" id="hextobytearray">HexToByteArray</a></h2>
+<hr />
+<ul>
+<li>title: HexToByteArray</li>
+<li>tags: string,utility,advanced</li>
+</ul>
+<hr />
+<p>Converts a hexadecimal string to a <code>byte</code> array.</p>
+<ul>
+<li>Use <code>Enumerable.Range()</code> in combination with <code>string.Length</code> to get the indices of the given string in an array.</li>
+<li>Use <code>Enumerable.Where()</code> to get only the even indices in the previous range.</li>
+<li>Use <code>Enumerable.Select()</code> in combination with <code>Convert.ToByte()</code> and <code>string.Substring()</code> to convert each byte's hex code to a <code>byte</code>.</li>
+<li>Finally, use <code>Enumerable.ToArray()</code> to return a <code>byte[]</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static byte[] HexToByteArray(string hex)
+  {
+    return Enumerable.Range(0, hex.Length)
+      .Where(x =&gt; x % 2 == 0)
+      .Select(x =&gt; Convert.ToByte(hex.Substring(x, 2), 16))
+      .ToArray();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.HexToByteArray(&quot;F15936&quot;); // { 241, 89, 54 }
+</code></pre>
+<h2><a class="header" href="#indexofall" id="indexofall">IndexOfAll</a></h2>
+<hr />
+<ul>
+<li>title: IndexOfAll</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns all indices of <code>n</code> in an <code>IList</code>.</p>
+<ul>
+<li>Use <code>Enumerable.Range()</code> to iterate over all indices in <code>data</code>.</li>
+<li>Use <code>Enumerable.Where()</code> in combination with <code>object.Equals()</code> to compare each value in <code>data</code> to <code>n</code> and return only matching indices.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;int&gt; IndexOfAll&lt;T&gt;(IList&lt;T&gt; data, T n)
+  {
+    return Enumerable
+      .Range(0, data.Count())
+      .Where(i =&gt; object.Equals(n, data[i]));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 2, 4, 5, 2, 2, 4};
+
+_30s.IndexOfAll(_30s.IndexOfAll(nums, 2)); // {1, 4, 5}
+</code></pre>
+<h2><a class="header" href="#initialize2darray" id="initialize2darray">Initialize2DArray</a></h2>
+<hr />
+<ul>
+<li>title: Initialize2DArray</li>
+<li>tags: array,utility,advanced</li>
+</ul>
+<hr />
+<p>Initializes a 2D array of the given width, height and value.</p>
+<ul>
+<li>Use <code>Enumerable.Repeat()</code> to repeat <code>value</code> <code>width</code> times, convert to an array and repeat <code>height</code> times using the same method.</li>
+<li>Use <code>IEnumerable.Select()</code> and <code>IEnumerable.First()</code> to convert the jagged array to a 2D array.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static T[,] Initialize2DArray&lt;T&gt;(int width, int height, T value) 
+  {
+    return new [] { new T [height, width] }
+      .Select(_ =&gt; new { x = _, y = Enumerable.Repeat(
+          Enumerable.Repeat(value, width).ToArray(), height
+        )
+        .ToArray()
+        .Select((a, ia) =&gt; a.Select((b, ib) =&gt; _[ia, ib] = b).Count()).Count() }
+      )
+      .Select(_ =&gt; _.x)
+      .First();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.Initialize2DArray(2, 3, 5); // { {5, 5}, {5, 5}, {5, 5} }
+</code></pre>
+<h2><a class="header" href="#isa" id="isa">IsA</a></h2>
+<hr />
+<ul>
+<li>title: IsA</li>
+<li>tags: utility,type,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given object is of the specified type, <code>false</code> otherwise.</p>
+<ul>
+<li>Use the <code>is</code> operator to check if <code>obj</code> is of the given type, <code>T</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsA&lt;T&gt;(object obj) 
+  {
+    return obj is T;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;fooBar&quot;;
+
+_30s.IsA&lt;string&gt;(s); // true
+_30s.IsA&lt;int&gt;(s); // false
+</code></pre>
+<h2><a class="header" href="#iscontainedin" id="iscontainedin">IsContainedIn</a></h2>
+<hr />
+<ul>
+<li>title: IsContainedIn</li>
+<li>tags: array,list,dictionary,advanced</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the elements of the first collection are contained in the second one regardless of order, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to create groups for each distinct value in each collection, <code>IEnumerable.ToDictionary()</code> to convert the result to a <code>Dictionary</code>.</li>
+<li>Use <code>IEnumerable.Distinct()</code> to find the distinct values from the first collection and loop over them using a <code>foreach</code> loop.</li>
+<li>Use <code>Dictionary.ContainsKey()</code> to check that each distinct value exists in the second collection and compare the count for each one.</li>
+<li>Return <code>false</code> if any value is not found in the second collection or if any count in it is lower than in the first one, <code>true</code> otherwise.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static bool IsContainedIn&lt;T&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b) 
+  {
+    Dictionary&lt;T,int&gt; dA = a.GroupBy(v =&gt; v).ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+    Dictionary&lt;T,int&gt; dB = b.GroupBy(v =&gt; v).ToDictionary(v =&gt; v.Key, v =&gt; v.Count());
+    foreach(T val in a.Distinct()) {
+      if (!dB.ContainsKey(val)) return false;
+      if (dA[val] &gt; dB[val]) return false;
+    }
+    return true;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] a = {1, 4};
+int[] b = {2, 4, 1};
+
+_30s.IsContainedIn(a, b); // true
+</code></pre>
+<h2><a class="header" href="#isdivisible" id="isdivisible">IsDivisible</a></h2>
+<hr />
+<ul>
+<li>title: IsDivisible</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Checks if the first numeric argument is divisible by the second one.</p>
+<ul>
+<li>Use the modulo operator (<code>%</code>) to check if the remainder is equal to <code>0</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsDivisible(long dividend, long divisor) 
+  {
+    return dividend % divisor == 0;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsDivisible(6, 3); // true
+</code></pre>
+<h2><a class="header" href="#isdouble" id="isdouble">IsDouble</a></h2>
+<hr />
+<ul>
+<li>title: IsDouble</li>
+<li>tags: math,type,intermediate</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given string can be parsed into a double, <code>false</code> otherwise.</p>
+<ul>
+<li>Return the result of calling <code>Double.TryParse()</code> with <code>NymberStyles.Float</code> for the given <code>num</code> string.</li>
+</ul>
+<pre><code class="language-csharp">using System.Globalization;
+
+public static partial class _30s 
+{
+  public static bool IsDouble(string num) 
+  {
+    Double _ = 0.0;
+    return Double.TryParse(num, NumberStyles.Float, NumberFormatInfo.CurrentInfo, out _);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsDouble(&quot;2&quot;); // true
+_30s.IsDouble(&quot;hi&quot;); // false
+</code></pre>
+<h2><a class="header" href="#iseven" id="iseven">IsEven</a></h2>
+<hr />
+<ul>
+<li>title: IsEven</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given number is even, <code>false</code> otherwise.</p>
+<ul>
+<li>Check whether a number is odd or even using the modulo (<code>%</code>) operator.</li>
+<li>Return <code>true</code> if the number is even, <code>false</code> if the number is odd.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsEven(int n) 
+  {
+    return n % 2 == 0;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsEven(2); // true
+_30s.IsEven(3); // false
+</code></pre>
+<h2><a class="header" href="#isinteger" id="isinteger">IsInteger</a></h2>
+<hr />
+<ul>
+<li>title: IsInteger</li>
+<li>tags: math,type,intermediate</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given string can be parsed into an integer, <code>false</code> otherwise.</p>
+<ul>
+<li>Return the result of calling <code>Double.TryParse()</code> with <code>NymberStyles.Integer</code> for the given <code>num</code> string.</li>
+<li>Use <code>Double.TryParse()</code> to allow handling of values larger than <code>Int64</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Globalization;
+
+public static partial class _30s 
+{
+  public static bool IsInteger(string num) 
+  {
+    Double _ = 0.0;
+    return Double.TryParse(num, NumberStyles.Integer, NumberFormatInfo.CurrentInfo, out _);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsInteger(&quot;2&quot;); // true
+_30s.IsInteger(&quot;3.1&quot;); // false
+</code></pre>
+<h2><a class="header" href="#islower" id="islower">IsLower</a></h2>
+<hr />
+<ul>
+<li>title: IsLower</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Checks if a string is lower case.</p>
+<ul>
+<li>Convert the given string to lower case, using  <code>string.ToLower()</code>  and compare it to the original.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsLower(string str) 
+  {
+    return str.ToLower() == str;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s1 = &quot;abc&quot;;
+string s2 = &quot;cDe&quot;;
+
+_30s.IsLower(s1); // true
+_30s.IsLower(s2); // false
+</code></pre>
+<h2><a class="header" href="#isnota" id="isnota">IsNotA</a></h2>
+<hr />
+<ul>
+<li>title: IsNotA</li>
+<li>tags: utility,type,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given object is not of the specified type, <code>false</code> otherwise.</p>
+<ul>
+<li>Use the <code>is</code> operator to check if <code>obj</code> is not of the given type, <code>T</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsNotA&lt;T&gt;(object obj) 
+  {
+    return !(obj is T);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;fooBar&quot;;
+
+_30s.IsNotA&lt;string&gt;(s); // false
+_30s.IsNotA&lt;int&gt;(s); // true
+</code></pre>
+<h2><a class="header" href="#isodd" id="isodd">IsOdd</a></h2>
+<hr />
+<ul>
+<li>title: IsOdd</li>
+<li>tags: math,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given number is odd, <code>false</code> otherwise.</p>
+<ul>
+<li>Check whether a number is odd or even using the modulo (<code>%</code>) operator.</li>
+<li>Return <code>true</code> if the number is odd, <code>false</code> if the number is even.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsOdd(int n) 
+  {
+    return n % 2 != 0;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsOdd(3); // true
+_30s.IsOdd(4); // false
+</code></pre>
+<h2><a class="header" href="#ispoweroftwo" id="ispoweroftwo">IsPowerOfTwo</a></h2>
+<hr />
+<ul>
+<li>title: IsPowerOfTwo</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given number is a power of <code>2</code>, <code>false</code> otherwise.</p>
+<ul>
+<li>Use the bitwise binary AND operator (<code>&amp;</code>) to determine if <code>n</code> is a power of <code>2</code>.</li>
+<li>Additionally, check that <code>n</code> is different from <code>0</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsPowerOfTwo(ulong n) 
+  {
+    return (n != 0) &amp;&amp; ((n &amp; (n - 1)) == 0);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsPowerOfTwo(0); // false
+_30s.IsPowerOfTwo(1); // true
+_30s.IsPowerOfTwo(8); // true
+</code></pre>
+<h2><a class="header" href="#isupper" id="isupper">IsUpper</a></h2>
+<hr />
+<ul>
+<li>title: IsUpper</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Checks if a string is upper case.</p>
+<ul>
+<li>Convert the given string to upper case, using  <code>string.ToUpper()</code>  and compare it to the original.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsUpper(string str) 
+  {
+    return str.ToUpper() == str;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s1 = &quot;ABC&quot;;
+string s2 = &quot;cDe&quot;;
+
+_30s.IsUpper(s1); // true
+_30s.IsUpper(s2); // false
+</code></pre>
+<h2><a class="header" href="#isweekday" id="isweekday">IsWeekday</a></h2>
+<hr />
+<ul>
+<li>title: IsWeekday</li>
+<li>tags: date,utility,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given <code>DateTime</code> is a weekday, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>DateTime.DayOfWeek</code> to check if the given <code>DateTime</code> is not a Saturday or Sunday.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsWeekday(DateTime date) 
+  {
+    return date.DayOfWeek != DayOfWeek.Saturday &amp;&amp; date.DayOfWeek != DayOfWeek.Sunday;
+    }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsWeekday(new DateTime(2020, 1, 15)); // true
+_30s.IsWeekday(new DateTime(2020, 1, 19)); // false
+</code></pre>
+<h2><a class="header" href="#isweekend" id="isweekend">IsWeekend</a></h2>
+<hr />
+<ul>
+<li>title: IsWeekend</li>
+<li>tags: date,utility,beginner</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the given <code>DateTime</code> is a not weekday, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>DateTime.DayOfWeek</code> to check if the given <code>DateTime</code> is a Saturday or Sunday.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static bool IsWeekend(DateTime date) 
+  {
+    return date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.IsWeekend(new DateTime(2020, 1, 15)); // false
+_30s.IsWeekend(new DateTime(2020, 1, 19)); // true
+</code></pre>
+<h2><a class="header" href="#keepupton" id="keepupton">KeepUpToN</a></h2>
+<hr />
+<ul>
+<li>title: KeepUpToN</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Filters a collection keeping up to <code>n</code> occurences of each value.</p>
+<ul>
+<li>Use <code>IEnumerable.Distinct()</code> in combination with <code>IEnumerable.ToDictionary()</code> to create a dictionary with an initial count of <code>0</code> for each distinct value in <code>data</code>.</li>
+<li>Use <code>IEnumerable.Where()</code> to filter out occurences after the <code>n</code>th one for each element, using the previously created dictionary.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; KeepUpToN&lt;T&gt;(IEnumerable&lt;T&gt; data, int n)
+  {
+    var occurences = data.Distinct().ToDictionary(i =&gt; i, value =&gt; 0);
+    return data.Where(i =&gt; occurences[i]++ &lt; n);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = {1, 1, 2, 3, 3, 3, 1};
+
+_30s.KeepUpToN(nums, 2); // {1, 1, 2, 3, 3}
+</code></pre>
+<h2><a class="header" href="#lcm" id="lcm">LCM</a></h2>
+<hr />
+<ul>
+<li>title: LCM</li>
+<li>tags: math,recursion,intermediate</li>
+</ul>
+<hr />
+<p>Calculates the least common multiple of the given numbers.</p>
+<ul>
+<li>Define a <code>_GCD()</code> method that determines the greatest common divisor, using recursion.</li>
+<li>Use <code>_GCD()</code> and the fact that <code>LCM(x, y) = x * y / GCD(x,y)</code> to determine the least common multiple.</li>
+<li>Use <code>IEnumerable.Aggregate()</code> to apply <code>LCM()</code> to all the given arguments.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static int LCM(params int[] nums)
+  {
+    return nums.Aggregate((x,y) =&gt; (x * y) / _GCD(x, y));
+  }
+  private static int _GCD(int x, int y)
+  {
+    return y == 0 ? x : _GCD(y, x % y);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.LCM(1, 3, 4, 5); // 60
+_30s.LCM(new [] {12, 7}); // 84
+</code></pre>
+<h2><a class="header" href="#mask" id="mask">Mask</a></h2>
+<hr />
+<ul>
+<li>title: Mask</li>
+<li>tags: string,utility,intermediate</li>
+</ul>
+<hr />
+<p>Replaces all but the last <code>n</code> characters in a string with the specified <code>mask</code> character.</p>
+<ul>
+<li>Use <code>string.Substring()</code> to get the last <code>n</code> characters of the passed string, <code>str</code>.</li>
+<li>Use <code>string.PadLeft()</code> to add as many <code>mask</code> characters as necessary to the start of the string to return a string of the same length.</li>
+<li>Omit the third argument, <code>mask</code>, to use a default character of <code>'*'</code>.</li>
+<li>Omit the second argument, <code>n</code>, to keep a default of <code>4</code> characters unmasked.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string Mask(string str, int n = 4, char mask = '*') 
+  {
+    return str.Substring(str.Length - n).PadLeft(str.Length, mask);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;1234567890&quot;;
+
+_30s.Mask(s); // &quot;******7890&quot;
+_30s.Mask(s, 3); // &quot;*******890&quot;
+_30s.Mask(s, 2, '/$'); // &quot;$$$$$$$$90&quot;
+</code></pre>
+<h2><a class="header" href="#maxby" id="maxby">MaxBy</a></h2>
+<hr />
+<ul>
+<li>title: MaxBy</li>
+<li>tags: math,list,array,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the maximum of a collection, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element to the value returned by the provided selector function, <code>fn</code>.</li>
+<li>Use <code>IEnumerable.Max()</code> to get the maximum of the resulting values.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s
+{
+  public static double MaxBy&lt;T&gt;(IEnumerable&lt;T&gt; values, Func&lt;T,int&gt; fn)
+  {
+    return values.Select(fn).Max();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new [] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+
+_30s.MaxBy(p, v =&gt; v.a); // 3
+_30s.MaxBy(p, v =&gt; v.b); // 2
+</code></pre>
+<h2><a class="header" href="#maxdatetime" id="maxdatetime">MaxDateTime</a></h2>
+<hr />
+<ul>
+<li>title: MaxDateTime</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Returns the maximum of two <code>DateTime</code> values.</p>
+<ul>
+<li>Use the conditional operator (<code>?:</code>) to return the maximum of the two values.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static DateTime MaxDateTime(DateTime d1, DateTime d2) 
+  {
+    return (d1 &gt; d2) ? d1 : d2;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">DateTime d1 = new DateTime(DateTime.MaxValue.Ticks);
+DateTime d2 = new DateTime(DateTime.MinValue.Ticks);
+
+_30s.MaxDateTime(d1, d2); // 12/31/9999 11:59:59 PM
+</code></pre>
+<h2><a class="header" href="#median" id="median">Median</a></h2>
+<hr />
+<ul>
+<li>title: Median</li>
+<li>tags: math,intermediate</li>
+</ul>
+<hr />
+<p>Finds the median of a list of numbers.</p>
+<ul>
+<li>Use the <code>params</code> keyword to accept either an array or a variable number of arguments.</li>
+<li>Sort the array using <code>Array.sort()</code> and find the median.</li>
+<li>Which is either the middle element of the list, if the list length is odd or the average of the two middle elements, if the list length is even.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static double Median(params double[] values)
+  {
+    Array.Sort(values);
+    if (values.Length % 2 == 0)
+      return (values[values.Length / 2 - 1] + values[values.Length / 2]) / 2;
+    return (double)values[values.Length / 2];
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">double[] nums = { 5, 6, 7, 8 };
+
+_30s.Median(4, 8, 1); // 4
+_30s.Median(nums); // 6.5
+</code></pre>
+<h2><a class="header" href="#minby" id="minby">MinBy</a></h2>
+<hr />
+<ul>
+<li>title: MinBy</li>
+<li>tags: math,list,array,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the minimum of a collection, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element to the value returned by the provided selector function, <code>fn</code>.</li>
+<li>Use <code>IEnumerable.Min()</code> to get the minimum of the resulting values.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static double MinBy&lt;T&gt;(IEnumerable&lt;T&gt; values, Func&lt;T,int&gt; fn)
+  {
+    return values.Select(fn).Min();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new [] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+
+_30s.MinBy(p, v =&gt; v.a); // 2
+_30s.MinBy(p, v =&gt; v.b); // 1
+</code></pre>
+<h2><a class="header" href="#mindatetime" id="mindatetime">MinDateTime</a></h2>
+<hr />
+<ul>
+<li>title: MinDateTime</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Returns the minimum of two <code>DateTime</code> values.</p>
+<ul>
+<li>Use the conditional operator (<code>?:</code>) to return the minimum of the two values.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static DateTime MinDateTime(DateTime d1, DateTime d2) 
+  {
+    return (d1 &lt; d2) ? d1 : d2;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">DateTime d1 = new DateTime(DateTime.MaxValue.Ticks);
+DateTime d2 = new DateTime(DateTime.MinValue.Ticks);
+
+_30s.MinDateTime(d1, d2); // 1/1/0001 12:00:00 AM
+</code></pre>
+<h2><a class="header" href="#mostfrequent" id="mostfrequent">MostFrequent</a></h2>
+<hr />
+<ul>
+<li>title: MostFrequent</li>
+<li>tags: array,list,intermediate</li>
+</ul>
+<hr />
+<p>Returns the most frequent element of a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.GroupBy()</code> to group <code>values</code> by value.</li>
+<li>Use <code>IEnumerable.OrderByDescending()</code> in combination with <code>IEnumerable.Count()</code> to order the results in descending order based on frequency.</li>
+<li>Use <code>IEnumerable.First()</code> to get the first element and return its <code>Key</code> property, which corresponds to the element's value.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static T MostFrequent&lt;T&gt;(IEnumerable&lt;T&gt; values)
+  {
+    return values
+      .GroupBy(v =&gt; v)
+      .OrderByDescending(v =&gt; v.Count())
+      .First()
+      .Key;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = { 1, 2, 3, 3, 2, 3 };
+List&lt;string&gt; str = new List&lt;string&gt; { &quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;c&quot; };
+
+_30s.MostFrequent(nums); // 3
+_30s.MostFrequent(str); // &quot;b&quot;
+</code></pre>
+<h2><a class="header" href="#none" id="none">None</a></h2>
+<hr />
+<ul>
+<li>title: None</li>
+<li>tags: array,list,lambda,overload,intermediate</li>
+</ul>
+<hr />
+<p>Returns <code>true</code> if the provided predicate function returns <code>false</code> for all elements in a collection, <code>false</code> otherwise.</p>
+<ul>
+<li>Use <code>IEnumerable.ToArray()</code>, <code>Array.Exists()</code> to test if all elements in the collection return <code>false</code> based on the predicate function, <code>match</code>.</li>
+<li>Omit the predicate function, <code>match</code>, to use the overload that checks if each value is <code>null</code> by default.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static bool None&lt;T&gt;(IEnumerable&lt;T&gt; data, Predicate&lt;T&gt; match) 
+  {
+    return !Array.Exists(data.ToArray(), match);
+  }
+  public static bool None&lt;T&gt;(IEnumerable&lt;T&gt; data) 
+  {
+    return Array.Exists(data.ToArray(), val =&gt; val == null);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = { 4, 2, 3 };
+
+_30s.None(nums, x =&gt; x &lt; 0); // true
+_30s.None(nums); // false
+</code></pre>
+<h2><a class="header" href="#padnumber" id="padnumber">PadNumber</a></h2>
+<hr />
+<ul>
+<li>title: PadNumber</li>
+<li>tags: string,utility,beginner</li>
+</ul>
+<hr />
+<p>Pads a given number to the specified <code>length</code>.</p>
+<ul>
+<li>Use <code>Int32.ToString()</code> with an appropriate format specifier, produced using string interpolation.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static string PadNumber(int n, int length)
+  {
+    return n.ToString($&quot;D{length}&quot;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.PadNumber(1234,6); // &quot;001234&quot;
+</code></pre>
+<h2><a class="header" href="#randoubleinrange" id="randoubleinrange">RandoubleInRange</a></h2>
+<hr />
+<ul>
+<li>title: RandoubleInRange</li>
+<li>tags: math,utility,random,beginner</li>
+</ul>
+<hr />
+<p>Returns a random double in the specified range.</p>
+<ul>
+<li>Use <code>Random.NextDouble()</code> to generate a random value and map it to the desired range using multiplication.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static double RandoubleInRange(double min, double max) 
+  {
+    return (new Random().NextDouble() * (max - min)) + min;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.RandoubleInRange(0.5, 5); // 2.20486941011849
+</code></pre>
+<h2><a class="header" href="#randomintegerinrange" id="randomintegerinrange">RandomIntegerInRange</a></h2>
+<hr />
+<ul>
+<li>title: RandomIntegerInRange</li>
+<li>tags: math,utility,random,beginner</li>
+</ul>
+<hr />
+<p>Returns a random integer in the specified range.</p>
+<ul>
+<li>Use <code>Random.Next()</code> to generate an integer in the desired range.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static int RandomIntegerInRange(int min, int max) 
+  {
+    return new Random().Next(min, max);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.RandomIntegerInRange(0, 5); // 2
+</code></pre>
+<h2><a class="header" href="#repeat" id="repeat">Repeat</a></h2>
+<hr />
+<ul>
+<li>title: Repeat</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Creates a new string by repeating the given string <code>n</code> times.</p>
+<ul>
+<li>Use <code>Enumerable.Repeat()</code> to repeat <code>s</code> <code>n</code> times, <code>string.Concat()</code> to convert the result to a <code>string</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static string Repeat(string s, int n)
+  {
+    return string.Concat(Enumerable.Repeat(s, n));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.Repeat(&quot;Ha&quot;,5); // &quot;HaHaHaHaHa&quot;
+</code></pre>
+<h2><a class="header" href="#reverse" id="reverse">Reverse</a></h2>
+<hr />
+<ul>
+<li>title: Reverse</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Reverses a string.</p>
+<ul>
+<li>Use <code>string.ToCharArray()</code> to convert the string to an array of <code>char</code>, <code>Array.Reverse()</code> to reverse the array.</li>
+<li>Use <code>IEnumerable.ToArray()</code> to create an array of <code>char</code> and pass it to a <code>new string()</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Linq;
+
+public static partial class _30s 
+{
+  public static void Reverse(string s) 
+  {
+    return new string(s.ToCharArray().Reverse().ToArray());
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;Hello World&quot;;
+
+_30s.Reverse(s); // &quot;dlroW olleH&quot;
+</code></pre>
+<h2><a class="header" href="#shuffle" id="shuffle">Shuffle</a></h2>
+<hr />
+<ul>
+<li>title: Shuffle</li>
+<li>tags: array,list,random,intermediate</li>
+</ul>
+<hr />
+<p>Randomizes the order of the values of an <code>IList</code>, updating the original <code>IList</code> object.</p>
+<ul>
+<li>Use the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle##Fisher_and_Yates%27_original_method">Fisher-Yates algorithm</a> to reorder the elements of the given <code>IList</code> object.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s
+{
+  public static void Shuffle&lt;T&gt;(IList&lt;T&gt; list)
+  {
+    Random rand = new Random();
+    for (int n = list.Count() - 1 ; n &gt; 0 ; n--)
+    {
+      int k = rand.Next(n + 1);
+      T value = list[k];
+      list[k] = list[n];
+      list[n] = value;
+    }
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5, 6 };
+int[] arr = { 1, 2, 3, 4, 5, 6 };
+
+_30s.Shuffle(nums); // nums = { 3, 5, 2, 1, 4, 6 }
+_30s.Shuffle(arr); // arr = { 6, 2, 5, 1, 4, 3 }
+</code></pre>
+<h2><a class="header" href="#splitlines" id="splitlines">SplitLines</a></h2>
+<hr />
+<ul>
+<li>title: SplitLines</li>
+<li>tags: string,beginner</li>
+</ul>
+<hr />
+<p>Splits a multiline string into an array of lines.</p>
+<ul>
+<li>Use <code>string.Split()</code> with all forms of the newline separator to split the string into an array of strings.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s 
+{
+  public static string[] SplitLines(string s)
+  {
+    return s.Split(new [] { &quot;\r\n&quot;, &quot;\r&quot;, &quot;\n&quot; }, StringSplitOptions.None);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;This\nis a\nmultiline\nstring.\n&quot;;
+
+_30s.SplitLines(s); // {&quot;This&quot;, &quot;is a&quot;, &quot;multiline&quot;, &quot;string.&quot; , &quot;&quot;}
+</code></pre>
+<h2><a class="header" href="#splitstringby" id="splitstringby">SplitStringBy</a></h2>
+<hr />
+<ul>
+<li>title: SplitStringBy</li>
+<li>tags: string,utility,beginner</li>
+</ul>
+<hr />
+<p>Splits a string into an array of strings using a multicharacter (string) separator.</p>
+<ul>
+<li>Use <code>string.Split()</code> with the given <code>separator</code> to split the string into an array of strings.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s 
+{
+  public static string[] SplitStringBy(string s, string separator) 
+  {
+    return s.Split(new [] {separator}, StringSplitOptions.None);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string s = &quot;Apples--oranges--pears&quot;;
+
+_30s.SplitStringBy(s,&quot;--&quot;); // {Apples, oranges, pears}
+</code></pre>
+<h2><a class="header" href="#stringify" id="stringify">Stringify</a></h2>
+<hr />
+<ul>
+<li>title: Stringify</li>
+<li>tags: utility,array,list,string,beginner</li>
+</ul>
+<hr />
+<p>Combines the elements of an enumerable object into a string.</p>
+<ul>
+<li>Use <code>string.Join()</code> to combine all elements in the <code>IEnumerable</code> into a <code>string</code>, using <code>delimiter</code>.</li>
+<li>Omit the second argument, <code>delimiter</code>, to use the default delimiter of <code>&quot;,&quot;</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s 
+{
+  public static string Stringify&lt;T&gt;(IEnumerable&lt;T&gt; elements, string delimiter = &quot;,&quot;) 
+  {
+    return string.Join(delimiter, elements);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">IList&lt;string&gt; s = new List&lt;string&gt; {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;};
+int[] n = {1, 2, 3};
+
+_30s.Stringify(s); // &quot;a,b,c&quot;
+_30s.Stringify(n, &quot; &quot;); // &quot;1 2 3&quot;
+</code></pre>
+<h2><a class="header" href="#subarray" id="subarray">Subarray</a></h2>
+<hr />
+<ul>
+<li>title: Subarray</li>
+<li>tags: array,intermediate</li>
+</ul>
+<hr />
+<p>Returns a subarray of the given array starting at the given index and having the specified length.</p>
+<ul>
+<li>Use <code>ArraySegment()</code> with the given array, <code>arr</code>, <code>start</code> and <code>length</code> to get the subarray.</li>
+<li>Convert the result to an array, using <code>ArraySegment.ToArray()</code>.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+
+public static partial class _30s 
+{
+  public static T[] Subarray&lt;T&gt;(T[] arr, int start, int length) 
+  {
+    return new ArraySegment&lt;T&gt;( arr, start, length ).ToArray();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+_30s.Subarray(nums,3,6); // {3, 4, 5, 6, 7, 8}
+</code></pre>
+<h2><a class="header" href="#sumby" id="sumby">SumBy</a></h2>
+<hr />
+<ul>
+<li>title: SumBy</li>
+<li>tags: math,array,list,lambda,intermediate</li>
+</ul>
+<hr />
+<p>Returns the sum of a collection, after mapping each element to a value using the provided function.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element of either collection to a <code>double</code>, <code>IEnumerable.Sum()</code> to sum the values.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static double SumBy&lt;T&gt;(IEnumerable&lt;T&gt; data, Func&lt;T,double&gt; map)
+  {
+    return data.Select(map).Sum();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new[] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+
+_30s.SumBy(p, x =&gt; x.a); // 5
+</code></pre>
+<h2><a class="header" href="#swap" id="swap">Swap</a></h2>
+<hr />
+<ul>
+<li>title: Swap</li>
+<li>tags: utility,intermediate</li>
+</ul>
+<hr />
+<p>Swaps the values of two variables of the same type.</p>
+<ul>
+<li>Pass both values by reference using the <code>ref</code> keyword, then use a <code>temp</code> variable to swap their values.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static void Swap&lt;T&gt;(ref T val1, ref T val2) 
+  {
+    var temp = val1;
+    val1 = val2;
+    val2 = temp;
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">string a = &quot;Ipsum&quot;;
+string b = &quot;Lorem&quot;;
+
+_30s.Swap(ref a, ref b); // a = &quot;Lorem&quot;, b = &quot;Ipsum&quot;
+</code></pre>
+<h2><a class="header" href="#symmetricdifference" id="symmetricdifference">SymmetricDifference</a></h2>
+<hr />
+<ul>
+<li>title: SymmetricDifference</li>
+<li>tags: array,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the symmetric difference betweend two collections.</p>
+<ul>
+<li>Use <code>IEnumerable.Except()</code> to only return elements in one enumerable object and not the other.</li>
+<li>Use <code>IEnumerable.Union()</code> to combine the result of applying that to each object.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; SymmetricDifference&lt;T&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b) 
+  {
+    return a.Except(b).Union(b.Except(a));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">int[] a = { 1, 2, 3, 5 };
+int[] b = { 1, 2, 4 };
+
+_30s.SymmetricDifference(a, b); // { 3, 5, 4 }
+</code></pre>
+<h2><a class="header" href="#symmetricdifferenceby" id="symmetricdifferenceby">SymmetricDifferenceBy</a></h2>
+<hr />
+<ul>
+<li>title: SymmetricDifferenceBy</li>
+<li>tags: array,list,lambda,advanced</li>
+</ul>
+<hr />
+<p>Returns the symmetric difference betweend two collections, after applying the provided function to each element of both.</p>
+<ul>
+<li>Use <code>IEnumerable.Select()</code> to map each element of either collection to the desired type.</li>
+<li>Use <code>IEnumerable.Except()</code> to only return elements in one enumerable object and not the other.</li>
+<li>Use <code>IEnumerable.Union()</code> to combine the result of applying that to each object.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;R&gt; SymmetricDifferenceBy&lt;T,R&gt;(IEnumerable&lt;T&gt; a, IEnumerable&lt;T&gt; b, Func&lt;T,R&gt; map) 
+  {
+    IEnumerable&lt;R&gt; mapA = a.Select(map);
+    IEnumerable&lt;R&gt; mapB = b.Select(map);
+    return mapA.Except(mapB).Union(mapB.Except(mapA));
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">var p = new[] {
+  new { a = 3, b = 2},
+  new { a = 2, b = 1}
+};
+var q = new[] {
+  new { a = 6, b = 2},
+  new { a = 6, b = 3}
+};
+
+_30s.SymmetricDifferenceBy(p, q, x =&gt; x.b); // { 1, 3 }
+</code></pre>
+<h2><a class="header" href="#tail" id="tail">Tail</a></h2>
+<hr />
+<ul>
+<li>title: Tail</li>
+<li>tags: array,list,beginner</li>
+</ul>
+<hr />
+<p>Returns the tail of a collection.</p>
+<ul>
+<li>Use <code>IEnumerable.Count()</code> to check if the enumerable is non-empty.</li>
+<li>Use <code>IEnumerable.Skip(1)</code> to get the whole object except for the first element.</li>
+<li>If the enumerable object is empty, return the <code>default()</code> value for the given enumerable.</li>
+</ul>
+<pre><code class="language-csharp">using System.Collections.Generic;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static IEnumerable&lt;T&gt; Tail&lt;T&gt;(IEnumerable&lt;T&gt; list) 
+  {
+    return list.Count() != 0 ? list.Skip(1) : default(IEnumerable&lt;T&gt;);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">List&lt;int&gt; nums = new List&lt;int&gt; { 1, 2, 3, 4, 5 };
+char[] chars = {'A','B','C'};
+
+_30s.Tail(nums); // { 2, 3, 4, 5 }
+_30s.Tail(chars); // {'B','C'}
+</code></pre>
+<h2><a class="header" href="#tocamelcase" id="tocamelcase">ToCamelCase</a></h2>
+<hr />
+<ul>
+<li>title: ToCamelCase</li>
+<li>tags: string,regex,advanced</li>
+</ul>
+<hr />
+<p>Converts a string to camel case.</p>
+<ul>
+<li>Use <code>Regex.Matches()</code> with an appropriate regular expression to break the string into words.</li>
+<li>Use <code>string.Join()</code> and <code>string.ToLower()</code> to convert the words to lowercase and combine them adding <code> </code> as a separator.</li>
+<li>Use <code>CultureInfo.TextInfo.ToTitleCase()</code> on the result to convert it to title case, <code>string.Replace()</code> with a regular expression to remove spaces afterwards.</li>
+<li>Finally, use <code>IEnumerable.Select()</code> on the result to convert the first character to lowercase and return a string from the result.</li>
+</ul>
+<pre><code class="language-csharp">using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Linq;
+
+public static partial class _30s 
+{
+  public static string ToCamelCase(string str) 
+  {
+    Regex pattern = new Regex(@&quot;[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+&quot;);
+    return new string(
+      new CultureInfo(&quot;en-US&quot;, false)
+        .TextInfo
+        .ToTitleCase(
+          string.Join(&quot; &quot;, pattern.Matches(str)).ToLower()
+        )
+        .Replace(@&quot; &quot;, &quot;&quot;)
+        .Select((x, i) =&gt; i == 0 ? char.ToLower(x) : x)
+        .ToArray()
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.ToCamelCase(&quot;some_database_field_name&quot;); // &quot;someDatabaseFieldName&quot;
+_30s.ToCamelCase(&quot;Some label that needs to be title-cased&quot;); // &quot;someLabelThatNeedsToBeCamelized&quot;
+_30s.ToCamelCase(&quot;some-package-name&quot;); // &quot;somePackageName&quot;
+_30s.ToCamelCase(&quot;some-mixed_string with spaces_underscores-and-hyphens&quot;); // &quot;someMixedStringWithSpacesUnderscoresAndHyphens&quot;
+</code></pre>
+<h2><a class="header" href="#tokebabcase" id="tokebabcase">ToKebabCase</a></h2>
+<hr />
+<ul>
+<li>title: ToKebabCase</li>
+<li>tags: string,regex,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to kebab case.</p>
+<ul>
+<li>Use <code>Regex.Matches()</code> with an appropriate regular expression to break the string into words.</li>
+<li>Use <code>string.Join()</code> and <code>string.ToLower()</code> to convert the words to lowercase and combine them adding <code>-</code> as a separator.</li>
+</ul>
+<pre><code class="language-csharp">using System.Text.RegularExpressions;
+
+public static partial class _30s 
+{
+  public static string ToKebabCase(string str) 
+  {
+    Regex pattern = new Regex(@&quot;[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+&quot;);
+    return string.Join(&quot;-&quot;, pattern.Matches(str)).ToLower();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.ToKebabCase(&quot;camelCase&quot;); // &quot;camel-case&quot;
+_30s.ToKebabCase(&quot;some text&quot;); // &quot;some-text&quot;
+_30s.ToKebabCase(&quot;some-mixed_string With spaces_underscores-and-hyphens&quot;); // &quot;some-mixed-string-with-spaces-underscores-and-hyphens&quot;
+_30s.ToKebabCase(&quot;AllThe-small Things&quot;); // &quot;all-the-small-things&quot;
+</code></pre>
+<h2><a class="header" href="#tosnakecase" id="tosnakecase">ToSnakeCase</a></h2>
+<hr />
+<ul>
+<li>title: ToSnakeCase</li>
+<li>tags: string,regex,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to snake case.</p>
+<ul>
+<li>Use <code>Regex.Matches()</code> with an appropriate regular expression to break the string into words.</li>
+<li>Use <code>string.Join()</code> and <code>string.ToLower()</code> to convert the words to lowercase and combine them adding <code>_</code> as a separator.</li>
+</ul>
+<pre><code class="language-csharp">using System.Text.RegularExpressions;
+
+public static partial class _30s 
+{
+  public static string ToSnakeCase(string str) 
+  {
+    Regex pattern = new Regex(@&quot;[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+&quot;);
+    return string.Join(&quot;_&quot;, pattern.Matches(str)).ToLower();
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.ToSnakeCase(&quot;camelCase&quot;); // &quot;camel_case&quot;
+_30s.ToSnakeCase(&quot;some text&quot;); // &quot;some_text&quot;
+_30s.ToSnakeCase(&quot;some-mixed_string With spaces_underscores-and-hyphens&quot;); // &quot;some_mixed_string_with_spaces_underscores_and_hyphens&quot;
+_30s.ToSnakeCase(&quot;AllThe-small Things&quot;); // &quot;all_the_small_things&quot;
+</code></pre>
+<h2><a class="header" href="#totitlecase" id="totitlecase">ToTitleCase</a></h2>
+<hr />
+<ul>
+<li>title: ToTitleCase</li>
+<li>tags: string,regex,intermediate</li>
+</ul>
+<hr />
+<p>Converts a string to title case.</p>
+<ul>
+<li>Use <code>Regex.Matches()</code> with an appropriate regular expression to break the string into words.</li>
+<li>Use <code>string.Join()</code> and <code>string.ToLower()</code> to convert the words to lowercase and combine them adding <code> </code> as a separator.</li>
+<li>Use <code>CultureInfo.TextInfo.ToTitleCase()</code> on the result to convert it to title case.</li>
+</ul>
+<pre><code class="language-csharp">using System.Globalization;
+using System.Text.RegularExpressions;
+
+public static partial class _30s 
+{
+  public static string ToTitleCase(string str) 
+  {
+    Regex pattern = new Regex(@&quot;[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+&quot;);
+    return new CultureInfo(&quot;en-US&quot;, false)
+      .TextInfo
+      .ToTitleCase(
+        string.Join(&quot; &quot;, pattern.Matches(str)).ToLower()
+      );
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.ToTitleCase(&quot;some_database_field_name&quot;); // &quot;Some Database Field Name&quot;
+_30s.ToTitleCase(&quot;Some label that needs to be title-cased&quot;); // &quot;Some Label That Needs To Be Title Cased&quot;
+_30s.ToTitleCase(&quot;some-package-name&quot;); // &quot;Some Package Name&quot;
+_30s.ToTitleCase(&quot;some-mixed_string with spaces_underscores-and-hyphens&quot;); // &quot;Some Mixed String With Spaces Underscores And Hyphens&quot;
+</code></pre>
+<h2><a class="header" href="#tomorrow" id="tomorrow">Tomorrow</a></h2>
+<hr />
+<ul>
+<li>title: Tomorrow</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Returns tomorrow's <code>DateTime</code> value.</p>
+<ul>
+<li>Use <code>DateTime.Now</code> to get the current date, then use <code>DateTime.AddDays(1)</code> to increment by <code>1</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static DateTime Tomorrow() 
+  {
+    return DateTime.Now.AddDays(1);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.Tomorrow(); // 12/22/2019 11:00:49 AM (if it's 12/21/2019 11:00:49 AM)
+</code></pre>
+<h2><a class="header" href="#yesterday" id="yesterday">Yesterday</a></h2>
+<hr />
+<ul>
+<li>title: Yesterday</li>
+<li>tags: date,beginner</li>
+</ul>
+<hr />
+<p>Returns yesterday's <code>DateTime</code> value.</p>
+<ul>
+<li>Use <code>DateTime.Now</code> to get the current date, then use <code>DateTime.AddDays(-1)</code> to decrement by <code>1</code>.</li>
+</ul>
+<pre><code class="language-csharp">public static partial class _30s 
+{
+  public static DateTime Yesterday() 
+  {
+    return DateTime.Now.AddDays(-1);
+  }
+}
+</code></pre>
+<pre><code class="language-csharp">_30s.Yesterday(); // 12/20/2019 11:00:49 AM (if it's 12/21/2019 11:00:49 AM)
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="pythonall.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="pythonall.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

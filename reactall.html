@@ -1,0 +1,2916 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>React - CodeSnippets</title>
+        <meta name="description" content="React">
+        <meta name="og:title" property="og:title" content="React">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://codesnippets.sajivfrancis.com/reactall.html" />
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.ico">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="html5all.html"><strong aria-hidden="true">1.</strong> HTML5</a></li><li class="chapter-item expanded "><a href="cssall.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li class="chapter-item expanded "><a href="javascriptall.html"><strong aria-hidden="true">3.</strong> JAVASCRIPT</a></li><li class="chapter-item expanded "><a href="reactall.html" class="active"><strong aria-hidden="true">4.</strong> REACT</a></li><li class="chapter-item expanded "><a href="phpall.html"><strong aria-hidden="true">5.</strong> PHP</a></li><li class="chapter-item expanded "><a href="pythonall.html"><strong aria-hidden="true">6.</strong> PYTHON</a></li><li class="chapter-item expanded "><a href="csharpall.html"><strong aria-hidden="true">7.</strong> CSHARP</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title" style="text-align:center">REACT</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                      <ul>
+                        <p align="center">
+                            <a href="https://sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-HOME-red"></a>
+                            <a href="https://docs.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-DOCS-brightgreen"></a>
+                            <a href="https://sajivfrancis.github.io/blog/"><img alt="npm" src="https://img.shields.io/badge/-BLOG-orange"></a>
+                            <a href="https://codesnippets.sajivfrancis.com/"><img alt="npm" src="https://img.shields.io/badge/-CODESNIPPETS-greenOh"></a>
+                            </p>
+                    </ul>
+                        <h2><a class="header" href="#accordion" id="accordion">Accordion</a></h2>
+<hr />
+<ul>
+<li>title: Accordion</li>
+<li>tags: components,children,state,advanced</li>
+</ul>
+<hr />
+<p>Renders an accordion menu with multiple collapsible content elements.</p>
+<ul>
+<li>Define an <code>AccordionItem</code> component, that renders a <code>&lt;button&gt;</code> which is used to update the component and notify its parent via the <code>handleClick</code> callback.</li>
+<li>Use the <code>isCollapsed</code> prop in <code>AccordionItem</code> to determine its appearance and set an appropriate <code>className</code>.</li>
+<li>Define an <code>Accordion</code> component that uses the <code>useState()</code> hook to initialize the value of the <code>bindIndex</code> state variable to <code>defaultIndex</code>.</li>
+<li>Filter <code>children</code> to remove unnecessary nodes except for <code>AccordionItem</code> by identifying the function's name.</li>
+<li>Use <code>Array.prototype.map()</code> on the collected nodes to render the individual collapsible elements.</li>
+<li>Define <code>changeItem</code>, which will be executed when clicking an <code>AccordionItem</code>'s <code>&lt;button&gt;</code>.</li>
+<li><code>changeItem</code> executes the passed callback, <code>onItemClick</code>, and updates <code>bindIndex</code> based on the clicked element.</li>
+</ul>
+<pre><code class="language-css">.accordion-item.collapsed {
+  display: none;
+}
+
+.accordion-item.expanded {
+  display: block;
+}
+
+.accordion-button {
+  display: block;
+  width: 100%;
+}
+</code></pre>
+<pre><code class="language-jsx">const AccordionItem = ({ label, isCollapsed, handleClick, children }) =&gt; {
+  return (
+    &lt;&gt;
+      &lt;button className=&quot;accordion-button&quot; onClick={handleClick}&gt;
+        {label}
+      &lt;/button&gt;
+      &lt;div
+        className={`accordion-item ${isCollapsed ? 'collapsed' : 'expanded'}`}
+        aria-expanded={isCollapsed}
+      &gt;
+        {children}
+      &lt;/div&gt;
+    &lt;/&gt;
+  );
+};
+
+const Accordion = ({ defaultIndex, onItemClick, children }) =&gt; {
+  const [bindIndex, setBindIndex] = React.useState(defaultIndex);
+
+  const changeItem = itemIndex =&gt; {
+    if (typeof onItemClick === 'function') onItemClick(itemIndex);
+    if (itemIndex !== bindIndex) setBindIndex(itemIndex);
+  };
+  const items = children.filter(item =&gt; item.type.name === 'AccordionItem');
+
+  return (
+    &lt;&gt;
+      {items.map(({ props }) =&gt; (
+        &lt;AccordionItem
+          isCollapsed={bindIndex !== props.index}
+          label={props.label}
+          handleClick={() =&gt; changeItem(props.index)}
+          children={props.children}
+        /&gt;
+      ))}
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Accordion defaultIndex=&quot;1&quot; onItemClick={console.log}&gt;
+    &lt;AccordionItem label=&quot;A&quot; index=&quot;1&quot;&gt;
+      Lorem ipsum
+    &lt;/AccordionItem&gt;
+    &lt;AccordionItem label=&quot;B&quot; index=&quot;2&quot;&gt;
+      Dolor sit amet
+    &lt;/AccordionItem&gt;
+  &lt;/Accordion&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#alert" id="alert">Alert</a></h2>
+<hr />
+<ul>
+<li>title: Alert</li>
+<li>tags: components,state,effect,beginner</li>
+</ul>
+<hr />
+<p>Renders an alert component with <code>type</code> prop.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>isShown</code> and <code>isLeaving</code> state variables and set both to <code>false</code> initially.</li>
+<li>Define <code>timeoutId</code> to keep the timer instance for clearing on component unmount.</li>
+<li>Use the <code>useEffect()</code> hook to update the value of <code>isShown</code> to <code>true</code> and clear the interval by using <code>timeoutId</code> when the component is unmounted.</li>
+<li>Define a <code>closeAlert</code> function to set the component as removed from the DOM by displaying a fading out animation and set <code>isShown</code> to <code>false</code> via <code>setTimeout()</code>.</li>
+</ul>
+<pre><code class="language-css">@keyframes leave {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.alert {
+  padding: 0.75rem 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding-right: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+}
+
+.alert.warning {
+  color: ##856404;
+  background-color: ##fff3cd;
+  border-color: ##ffeeba;
+}
+
+.alert.error {
+  color: ##721c24;
+  background-color: ##f8d7da;
+  border-color: ##f5c6cb;
+}
+
+.alert.leaving {
+  animation: leave 0.5s forwards;
+}
+
+.alert .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0.75rem;
+  color: ##333;
+  border: 0;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.alert .close:after {
+  content: 'x';
+}
+</code></pre>
+<pre><code class="language-jsx">const Alert = ({ isDefaultShown = false, timeout = 250, type, message }) =&gt; {
+  const [isShown, setIsShown] = React.useState(isDefaultShown);
+  const [isLeaving, setIsLeaving] = React.useState(false);
+
+  let timeoutId = null;
+
+  React.useEffect(() =&gt; {
+    setIsShown(true);
+    return () =&gt; {
+      clearTimeout(timeoutId);
+    };
+  }, [isDefaultShown, timeout, timeoutId]);
+
+  const closeAlert = () =&gt; {
+    setIsLeaving(true);
+    timeoutId = setTimeout(() =&gt; {
+      setIsLeaving(false);
+      setIsShown(false);
+    }, timeout);
+  };
+
+  return (
+    isShown &amp;&amp; (
+      &lt;div
+        className={`alert ${type} ${isLeaving ? 'leaving' : ''}`}
+        role=&quot;alert&quot;
+      &gt;
+        &lt;button className=&quot;close&quot; onClick={closeAlert} /&gt;
+        {message}
+      &lt;/div&gt;
+    )
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Alert type=&quot;info&quot; message=&quot;This is info&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#autolink" id="autolink">AutoLink</a></h2>
+<hr />
+<ul>
+<li>title: AutoLink</li>
+<li>tags: components,fragment,regexp,intermediate</li>
+</ul>
+<hr />
+<p>Renders a string as plaintext, with URLs converted to appropriate link elements.</p>
+<ul>
+<li>Use <code>String.prototype.split()</code> and <code>String.prototype.match()</code> with a regular expression to find URLs in a string.</li>
+<li>Return matched URLs rendered as <code>&lt;a&gt;</code> elements, dealing with missing protocol prefixes if necessary.</li>
+<li>Render the rest of the string as plaintext.</li>
+</ul>
+<pre><code class="language-jsx">const AutoLink = ({ text }) =&gt; {
+  const delimiter = /((?:https?:\/\/)?(?:(?:[a-z0-9]?(?:[a-z0-9\-]{1,61}[a-z0-9])?\.[^\.|\s])+[a-z\.]*[a-z]+|(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3})(?::\d{1,5})*[a-z0-9.,_\/~##&amp;=;%+?\-\\(\\)]*)/gi;
+
+  return (
+    &lt;&gt;
+      {text.split(delimiter).map(word =&gt; {
+        const match = word.match(delimiter);
+        if (match) {
+          const url = match[0];
+          return (
+            &lt;a href={url.startsWith('http') ? url : `http://${url}`}&gt;{url}&lt;/a&gt;
+          );
+        }
+        return word;
+      })}
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;AutoLink text=&quot;foo bar baz http://example.org bar&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#callto" id="callto">Callto</a></h2>
+<hr />
+<ul>
+<li>title: Callto</li>
+<li>tags: components,beginner
+unlisted: true</li>
+</ul>
+<hr />
+<p>Renders a link formatted to call a phone number (<code>tel:</code> link).</p>
+<ul>
+<li>Use <code>phone</code> to create a <code>&lt;a&gt;</code> element with an appropriate <code>href</code> attribute.</li>
+<li>Render the link with <code>children</code> as its content.</li>
+</ul>
+<pre><code class="language-jsx">const Callto = ({ phone, children }) =&gt; {
+  return &lt;a href={`tel:${phone}`}&gt;{children}&lt;/a&gt;;
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Callto phone=&quot;+302101234567&quot;&gt;Call me!&lt;/Callto&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#carousel" id="carousel">Carousel</a></h2>
+<hr />
+<ul>
+<li>title: Carousel</li>
+<li>tags: components,children,state,effect,advanced</li>
+</ul>
+<hr />
+<p>Renders a carousel component.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>active</code> state variable and give it a value of <code>0</code> (index of the first item).</li>
+<li>Use the <code>useEffect()</code> hook to update the value of <code>active</code> to the index of the next item, using <code>setTimeout</code>.</li>
+<li>Compute the <code>className</code> for each carousel item while mapping over them and applying it accordingly.</li>
+<li>Render the carousel items using <code>React.cloneElement()</code> and pass down <code>...rest</code> along with the computed <code>className</code>.</li>
+</ul>
+<pre><code class="language-css">.carousel {
+  position: relative;
+}
+
+.carousel-item {
+  position: absolute;
+  visibility: hidden;
+}
+
+.carousel-item.visible {
+  visibility: visible;
+}
+</code></pre>
+<pre><code class="language-jsx">const Carousel = ({ carouselItems, ...rest }) =&gt; {
+  const [active, setActive] = React.useState(0);
+  let scrollInterval = null;
+
+  React.useEffect(() =&gt; {
+    scrollInterval = setTimeout(() =&gt; {
+      setActive((active + 1) % carouselItems.length);
+    }, 2000);
+    return () =&gt; clearTimeout(scrollInterval);
+  });
+
+  return (
+    &lt;div className=&quot;carousel&quot;&gt;
+      {carouselItems.map((item, index) =&gt; {
+        const activeClass = active === index ? ' visible' : '';
+        return React.cloneElement(item, {
+          ...rest,
+          className: `carousel-item${activeClass}`
+        });
+      })}
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Carousel
+    carouselItems={[
+      &lt;div&gt;carousel item 1&lt;/div&gt;,
+      &lt;div&gt;carousel item 2&lt;/div&gt;,
+      &lt;div&gt;carousel item 3&lt;/div&gt;
+    ]}
+  /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#collapse" id="collapse">Collapse</a></h2>
+<hr />
+<ul>
+<li>title: Collapse</li>
+<li>tags: components,children,state,beginner</li>
+</ul>
+<hr />
+<p>Renders a component with collapsible content.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>isCollapsed</code> state variable with an initial value of <code>collapsed</code>.</li>
+<li>Use the <code>&lt;button&gt;</code> to change the component's <code>isCollapsed</code> state and the content of the component, passed down via <code>children</code>.</li>
+<li>Determine the appearance of the content, based on <code>isCollapsed</code> and apply the appropriate <code>className</code>.</li>
+<li>Update the value of the <code>aria-expanded</code> attribute based on <code>isCollapsed</code> to make the component accessible.</li>
+</ul>
+<pre><code class="language-css">.collapse-button {
+  display: block;
+  width: 100%;
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+
+.collapsed-content.expanded {
+  display: block;
+}
+</code></pre>
+<pre><code class="language-jsx">const Collapse = ({ collapsed, children }) =&gt; {
+  const [isCollapsed, setIsCollapsed] = React.useState(collapsed);
+
+  return (
+    &lt;&gt;
+      &lt;button
+        className=&quot;collapse-button&quot;
+        onClick={() =&gt; setIsCollapsed(!isCollapsed)}
+      &gt;
+        {isCollapsed ? 'Show' : 'Hide'} content
+      &lt;/button&gt;
+      &lt;div
+        className={`collapse-content ${isCollapsed ? 'collapsed' : 'expanded'}`}
+        aria-expanded={isCollapsed}
+      &gt;
+        {children}
+      &lt;/div&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Collapse&gt;
+    &lt;h1&gt;This is a collapse&lt;/h1&gt;
+    &lt;p&gt;Hello world!&lt;/p&gt;
+  &lt;/Collapse&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#controlledinput" id="controlledinput">ControlledInput</a></h2>
+<hr />
+<ul>
+<li>title: ControlledInput</li>
+<li>tags: components,input,intermediate</li>
+</ul>
+<hr />
+<p>Renders a controlled <code>&lt;input&gt;</code> element that uses a callback function to inform its parent about value updates.</p>
+<ul>
+<li>Use the <code>value</code> passed down from the parent as the controlled input field's value.</li>
+<li>Use the <code>onChange</code> event to fire the <code>onValueChange</code> callback and send the new value to the parent.</li>
+<li>The parent must update the input field's <code>value</code> prop in order for its value to change on user input.</li>
+</ul>
+<pre><code class="language-jsx">const ControlledInput = ({ value, onValueChange, ...rest }) =&gt; {
+  return (
+    &lt;input
+      value={value}
+      onChange={({ target: { value } }) =&gt; onValueChange(value)}
+      {...rest}
+    /&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const Form = () =&gt; {
+  const [value, setValue] = React.useState('');
+
+  return (
+    &lt;ControlledInput
+      type=&quot;text&quot;
+      placeholder=&quot;Insert some text here...&quot;
+      value={value}
+      onValueChange={setValue}
+    /&gt;
+  );
+};
+
+ReactDOM.render(&lt;Form /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#countdown" id="countdown">CountDown</a></h2>
+<hr />
+<ul>
+<li>title: CountDown</li>
+<li>tags: components,state,advanced</li>
+</ul>
+<hr />
+<p>Renders a countdown timer that prints a message when it reaches zero.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create a state variable to hold the time value, initialize it from the props and destructure it into its components.</li>
+<li>Use the <code>useState()</code> hook to create the <code>paused</code> and <code>over</code> state variables, used to prevent the timer from ticking if it's paused or the time has run out.</li>
+<li>Create a method <code>tick</code>, that updates the time values based on the current value (i.e. decreasing the time by one second).</li>
+<li>Create a method <code>reset</code>, that resets all state variables to their initial states.</li>
+<li>Use the the <code>useEffect()</code> hook to call the <code>tick</code> method every second via the use of <code>setInterval()</code> and use <code>clearInterval()</code> to clean up when the component is unmounted.</li>
+<li>Use <code>String.prototype.padStart()</code> to pad each part of the time array to two characters to create the visual representation of the timer.</li>
+</ul>
+<pre><code class="language-jsx">const CountDown = ({ hours = 0, minutes = 0, seconds = 0 }) =&gt; {
+  const [paused, setPaused] = React.useState(false);
+  const [over, setOver] = React.useState(false);
+  const [[h, m, s], setTime] = React.useState([hours, minutes, seconds]);
+
+  const tick = () =&gt; {
+    if (paused || over) return;
+    if (h === 0 &amp;&amp; m === 0 &amp;&amp; s === 0) setOver(true);
+    else if (m === 0 &amp;&amp; s === 0) {
+      setTime([h - 1, 59, 59]);
+    } else if (s == 0) {
+      setTime([h, m - 1, 59]);
+    } else {
+      setTime([h, m, s - 1]);
+    }
+  };
+
+  const reset = () =&gt; {
+    setTime([parseInt(hours), parseInt(minutes), parseInt(seconds)]);
+    setPaused(false);
+    setOver(false);
+  };
+
+  React.useEffect(() =&gt; {
+    const timerID = setInterval(() =&gt; tick(), 1000);
+    return () =&gt; clearInterval(timerID);
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{`${h.toString().padStart(2, '0')}:${m
+        .toString()
+        .padStart(2, '0')}:${s.toString().padStart(2, '0')}`}&lt;/p&gt;
+      &lt;div&gt;{over ? &quot;Time's up!&quot; : ''}&lt;/div&gt;
+      &lt;button onClick={() =&gt; setPaused(!paused)}&gt;
+        {paused ? 'Resume' : 'Pause'}
+      &lt;/button&gt;
+      &lt;button onClick={() =&gt; reset()}&gt;Restart&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;CountDown hours={1} minutes={45} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#datalist" id="datalist">DataList</a></h2>
+<hr />
+<ul>
+<li>title: DataList</li>
+<li>tags: components,beginner</li>
+</ul>
+<hr />
+<p>Renders a list of elements from an array of primitives.</p>
+<ul>
+<li>Use the value of the <code>isOrdered</code> prop to conditionally render an <code>&lt;ol&gt;</code> or a <code>&lt;ul&gt;</code> list.</li>
+<li>Use <code>Array.prototype.map()</code> to render every item in <code>data</code> as a <code>&lt;li&gt;</code> element with an appropriate <code>key</code>.</li>
+</ul>
+<pre><code class="language-jsx">const DataList = ({ isOrdered = false, data }) =&gt; {
+  const list = data.map((val, i) =&gt; &lt;li key={`${i}_${val}`}&gt;{val}&lt;/li&gt;);
+  return isOrdered ? &lt;ol&gt;{list}&lt;/ol&gt; : &lt;ul&gt;{list}&lt;/ul&gt;;
+};
+</code></pre>
+<pre><code class="language-jsx">const names = ['John', 'Paul', 'Mary'];
+ReactDOM.render(&lt;DataList data={names} /&gt;, document.getElementById('root'));
+ReactDOM.render(
+  &lt;DataList data={names} isOrdered /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#datatable" id="datatable">DataTable</a></h2>
+<hr />
+<ul>
+<li>title: DataTable</li>
+<li>tags: components,beginner</li>
+</ul>
+<hr />
+<p>Renders a table with rows dynamically created from an array of primitives.</p>
+<ul>
+<li>Render a <code>&lt;table&gt;</code> element with two columns (<code>ID</code> and <code>Value</code>).</li>
+<li>Use <code>Array.prototype.map()</code> to render every item in <code>data</code> as a <code>&lt;tr&gt;</code> element with an appropriate <code>key</code>.</li>
+</ul>
+<pre><code class="language-jsx">const DataTable = ({ data }) =&gt; {
+  return (
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;ID&lt;/th&gt;
+          &lt;th&gt;Value&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        {data.map((val, i) =&gt; (
+          &lt;tr key={`${i}_${val}`}&gt;
+            &lt;td&gt;{i}&lt;/td&gt;
+            &lt;td&gt;{val}&lt;/td&gt;
+          &lt;/tr&gt;
+        ))}
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const people = ['John', 'Jesse'];
+ReactDOM.render(&lt;DataTable data={people} /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#filedrop" id="filedrop">FileDrop</a></h2>
+<hr />
+<ul>
+<li>title: FileDrop</li>
+<li>tags: components,input,state,effect,event,advanced</li>
+</ul>
+<hr />
+<p>Renders a file drag and drop component for a single file.</p>
+<ul>
+<li>Create a ref, called <code>dropRef</code> and bind it to the component's wrapper.</li>
+<li>Use the <code>useState()</code> hook to create the <code>drag</code> and <code>filename</code> variables, initialized to <code>false</code> and <code>''</code> respectively.</li>
+<li>The variables <code>dragCounter</code> and <code>drag</code> are used to determine if a file is being dragged, while <code>filename</code> is used to store the dropped file's name.</li>
+<li>Create the <code>handleDrag</code>, <code>handleDragIn</code>, <code>handleDragOut</code> and <code>handleDrop</code> methods to handle drag and drop functionality.</li>
+<li><code>handleDrag</code> prevents the browser from opening the dragged file, <code>handleDragIn</code> and <code>handleDragOut</code> handle the dragged file entering and exiting the component, while <code>handleDrop</code> handles the file being dropped and passes it to <code>onDrop</code>.</li>
+<li>Use the <code>useEffect()</code> hook to handle each of the drag and drop events using the previously created methods.</li>
+</ul>
+<pre><code class="language-css">.filedrop {
+  min-height: 120px;
+  border: 3px solid ##d3d3d3;
+  text-align: center;
+  font-size: 24px;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.filedrop.drag {
+  border: 3px dashed ##1e90ff;
+}
+
+.filedrop.ready {
+  border: 3px solid ##32cd32;
+}
+</code></pre>
+<pre><code class="language-jsx">const FileDrop = ({ onDrop }) =&gt; {
+  const [drag, setDrag] = React.useState(false);
+  const [filename, setFilename] = React.useState('');
+  let dropRef = React.createRef();
+  let dragCounter = 0;
+
+  const handleDrag = e =&gt; {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleDragIn = e =&gt; {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter++;
+    if (e.dataTransfer.items &amp;&amp; e.dataTransfer.items.length &gt; 0) setDrag(true);
+  };
+
+  const handleDragOut = e =&gt; {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter--;
+    if (dragCounter === 0) setDrag(false);
+  };
+
+  const handleDrop = e =&gt; {
+    e.preventDefault();
+    e.stopPropagation();
+    setDrag(false);
+    if (e.dataTransfer.files &amp;&amp; e.dataTransfer.files.length &gt; 0) {
+      onDrop(e.dataTransfer.files[0]);
+      setFilename(e.dataTransfer.files[0].name);
+      e.dataTransfer.clearData();
+      dragCounter = 0;
+    }
+  };
+
+  React.useEffect(() =&gt; {
+    let div = dropRef.current;
+    div.addEventListener('dragenter', handleDragIn);
+    div.addEventListener('dragleave', handleDragOut);
+    div.addEventListener('dragover', handleDrag);
+    div.addEventListener('drop', handleDrop);
+    return () =&gt; {
+      div.removeEventListener('dragenter', handleDragIn);
+      div.removeEventListener('dragleave', handleDragOut);
+      div.removeEventListener('dragover', handleDrag);
+      div.removeEventListener('drop', handleDrop);
+    };
+  });
+
+  return (
+    &lt;div
+      ref={dropRef}
+      className={
+        drag ? 'filedrop drag' : filename ? 'filedrop ready' : 'filedrop'
+      }
+    &gt;
+      {filename &amp;&amp; !drag ? &lt;div&gt;{filename}&lt;/div&gt; : &lt;div&gt;Drop a file here!&lt;/div&gt;}
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;FileDrop onDrop={console.log} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#limitedtextarea" id="limitedtextarea">LimitedTextarea</a></h2>
+<hr />
+<ul>
+<li>title: LimitedTextarea</li>
+<li>tags: components,state,callback,event,beginner</li>
+</ul>
+<hr />
+<p>Renders a textarea component with a character limit.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>content</code> state variable and set its value to that of <code>value</code> prop, trimmed down to <code>limit</code> characters.</li>
+<li>Create a method <code>setFormattedContent</code>, which trims the content down to <code>limit</code> characters and memoize it, using the <code>useCallback()</code> hook.</li>
+<li>Bind the <code>onChange</code> event of the <code>&lt;textarea&gt;</code> to call <code>setFormattedContent</code> with the value of the fired event.</li>
+</ul>
+<pre><code class="language-jsx">const LimitedTextarea = ({ rows, cols, value, limit }) =&gt; {
+  const [content, setContent] = React.useState(value.slice(0, limit));
+
+  const setFormattedContent = React.useCallback(
+    text =&gt; {
+      setContent(text.slice(0, limit));
+    },
+    [limit, setContent]
+  );
+
+  return (
+    &lt;&gt;
+      &lt;textarea
+        rows={rows}
+        cols={cols}
+        onChange={event =&gt; setFormattedContent(event.target.value)}
+        value={content}
+      /&gt;
+      &lt;p&gt;
+        {content.length}/{limit}
+      &lt;/p&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;LimitedTextarea limit={32} value=&quot;Hello!&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#limitedwordtextarea" id="limitedwordtextarea">LimitedWordTextarea</a></h2>
+<hr />
+<ul>
+<li>title: LimitedWordTextarea</li>
+<li>tags: components,input,state,callback,effect,event,intermediate</li>
+</ul>
+<hr />
+<p>Renders a textarea component with a word limit.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create a state variable, containing <code>content</code> and <code>wordCount</code>, using the <code>value</code> prop and <code>0</code> as the initial values respectively.</li>
+<li>Use the <code>useCallback()</code> hooks to create a memoized function, <code>setFormattedContent</code>, that uses <code>String.prototype.split()</code> to turn the input into an array of words.</li>
+<li>Check if the result of applying <code>Array.prototype.filter()</code> combined with <code>Boolean</code> has a <code>length</code> longer than <code>limit</code> and, if so, trim the input, otherwise return the raw input, updating state accordingly in both cases.</li>
+<li>Use the <code>useEffect()</code> hook to call the <code>setFormattedContent</code> method on the value of the <code>content</code> state variable during the initial render.</li>
+<li>Bind the <code>onChange</code> event of the <code>&lt;textarea&gt;</code> to call <code>setFormattedContent</code> with the value of <code>event.target.value</code>.</li>
+</ul>
+<pre><code class="language-jsx">const LimitedWordTextarea = ({ rows, cols, value, limit }) =&gt; {
+  const [{ content, wordCount }, setContent] = React.useState({
+    content: value,
+    wordCount: 0
+  });
+
+  const setFormattedContent = React.useCallback(
+    text =&gt; {
+      let words = text.split(' ').filter(Boolean);
+      if (words.length &gt; limit) {
+        setContent({
+          content: words.slice(0, limit).join(' '),
+          wordCount: limit
+        });
+      } else {
+        setContent({ content: text, wordCount: words.length });
+      }
+    },
+    [limit, setContent]
+  );
+
+  React.useEffect(() =&gt; {
+    setFormattedContent(content);
+  }, []);
+
+  return (
+    &lt;&gt;
+      &lt;textarea
+        rows={rows}
+        cols={cols}
+        onChange={event =&gt; setFormattedContent(event.target.value)}
+        value={content}
+      /&gt;
+      &lt;p&gt;
+        {wordCount}/{limit}
+      &lt;/p&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;LimitedWordTextarea limit={5} value=&quot;Hello there!&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#loader" id="loader">Loader</a></h2>
+<hr />
+<ul>
+<li>title: Loader</li>
+<li>tags: components,beginner</li>
+</ul>
+<hr />
+<p>Renders a spinning loader component.</p>
+<ul>
+<li>Render an SVG, whose <code>height</code> and <code>width</code> are determined by the <code>size</code> prop.</li>
+<li>Use CSS to animate the SVG, creating a spinning animation.</li>
+</ul>
+<pre><code class="language-css">.loader {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader circle {
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+</code></pre>
+<pre><code class="language-jsx">const Loader = ({ size }) =&gt; {
+  return (
+    &lt;svg
+      className=&quot;loader&quot;
+      xmlns=&quot;http://www.w3.org/2000/svg&quot;
+      width={size}
+      height={size}
+      viewBox=&quot;0 0 24 24&quot;
+      fill=&quot;none&quot;
+      stroke=&quot;currentColor&quot;
+      strokeWidth=&quot;2&quot;
+      strokeLinecap=&quot;round&quot;
+      strokeLinejoin=&quot;round&quot;
+    &gt;
+      &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; /&gt;
+    &lt;/svg&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(&lt;Loader size={24} /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#mailto" id="mailto">Mailto</a></h2>
+<hr />
+<ul>
+<li>title: Mailto</li>
+<li>tags: components,beginner</li>
+</ul>
+<hr />
+<p>Renders a link formatted to send an email (<code>mailto:</code> link).</p>
+<ul>
+<li>Use the <code>email</code>, <code>subject</code> and <code>body</code> props to create a <code>&lt;a&gt;</code> element with an appropriate <code>href</code> attribute.</li>
+<li>Use <code>encodeURIcomponent</code> to safely encode the <code>subject</code> and <code>body</code> into the link URL.</li>
+<li>Render the link with <code>children</code> as its content.</li>
+</ul>
+<pre><code class="language-jsx">const Mailto = ({ email, subject = '', body = '', children }) =&gt; {
+  let params = subject || body ? '?' : '';
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? '&amp;' : ''}body=${encodeURIComponent(body)}`;
+
+  return &lt;a href={`mailto:${email}${params}`}&gt;{children}&lt;/a&gt;;
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Mailto email=&quot;foo@bar.baz&quot; subject=&quot;Hello &amp; Welcome&quot; body=&quot;Hello world!&quot;&gt;
+    Mail me!
+  &lt;/Mailto&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#mappedtable" id="mappedtable">MappedTable</a></h2>
+<hr />
+<ul>
+<li>title: MappedTable</li>
+<li>tags: components,array,object,intermediate</li>
+</ul>
+<hr />
+<p>Renders a table with rows dynamically created from an array of objects and a list of property names.</p>
+<ul>
+<li>Use <code>Object.keys()</code>, <code>Array.prototype.filter()</code>, <code>Array.prototype.includes()</code> and <code>Array.prototype.reduce()</code> to produce a <code>filteredData</code> array, containing all objects with the keys specified in <code>propertyNames</code>.</li>
+<li>Render a <code>&lt;table&gt;</code> element with a set of columns equal to the amount of values in <code>propertyNames</code>.</li>
+<li>Use <code>Array.prototype.map()</code> to render each value in the <code>propertyNames</code> array as a <code>&lt;th&gt;</code> element.</li>
+<li>Use <code>Array.prototype.map()</code> to render each object in the <code>filteredData</code> array as a <code>&lt;tr&gt;</code> element, containing a <code>&lt;td&gt;</code> for each key in the object.</li>
+</ul>
+<p><em>This component does not work with nested objects and will break if there are nested objects inside any of the properties specified in <code>propertyNames</code></em></p>
+<pre><code class="language-jsx">const MappedTable = ({ data, propertyNames }) =&gt; {
+  let filteredData = data.map(v =&gt;
+    Object.keys(v)
+      .filter(k =&gt; propertyNames.includes(k))
+      .reduce((acc, key) =&gt; ((acc[key] = v[key]), acc), {})
+  );
+  return (
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          {propertyNames.map(val =&gt; (
+            &lt;th key={`h_${val}`}&gt;{val}&lt;/th&gt;
+          ))}
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        {filteredData.map((val, i) =&gt; (
+          &lt;tr key={`i_${i}`}&gt;
+            {propertyNames.map(p =&gt; (
+              &lt;td key={`i_${i}_${p}`}&gt;{val[p]}&lt;/td&gt;
+            ))}
+          &lt;/tr&gt;
+        ))}
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const people = [
+  { name: 'John', surname: 'Smith', age: 42 },
+  { name: 'Adam', surname: 'Smith', gender: 'male' }
+];
+const propertyNames = ['name', 'surname', 'age'];
+ReactDOM.render(
+  &lt;MappedTable data={people} propertyNames={propertyNames} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#modal" id="modal">Modal</a></h2>
+<hr />
+<ul>
+<li>title: Modal</li>
+<li>tags: components,effect,intermediate</li>
+</ul>
+<hr />
+<p>Renders a Modal component, controllable through events.</p>
+<ul>
+<li>Define <code>keydownHandler</code>, a method which handles all keyboard events and is used to call <code>onClose</code> when the <code>Esc</code> key is pressed.</li>
+<li>Use the <code>useEffect()</code> hook to add or remove the <code>keydown</code> event listener to the <code>document</code>, calling <code>keydownHandler</code> for every event.</li>
+<li>Add a styled <code>&lt;span&gt;</code> element that acts as a close button, calling <code>onClose</code> when clicked.</li>
+<li>Use the <code>isVisible</code> prop passed down from the parent to determine if the modal should be displayed or not.</li>
+<li>To use the component, import <code>Modal</code> only once and then display it by passing a boolean value to the <code>isVisible</code> attribute.</li>
+</ul>
+<pre><code class="language-css">.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  position: relative;
+  margin: 0 20px;
+  max-height: calc(100vh - 40px);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+}
+
+.modal-header,
+.modal-footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid ##dbdbdb;
+  justify-content: space-between;
+}
+
+.modal-footer {
+  border-top: 1px solid ##dbdbdb;
+  justify-content: flex-end;
+}
+
+.modal-close {
+  cursor: pointer;
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-body {
+  overflow: auto;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+</code></pre>
+<pre><code class="language-jsx">const Modal = ({ isVisible = false, title, content, footer, onClose }) =&gt; {
+  const keydownHandler = ({ key }) =&gt; {
+    switch (key) {
+      case 'Escape':
+        onClose();
+        break;
+      default:
+    }
+  };
+
+  React.useEffect(() =&gt; {
+    document.addEventListener('keydown', keydownHandler);
+    return () =&gt; document.removeEventListener('keydown', keydownHandler);
+  });
+
+  return !isVisible ? null : (
+    &lt;div className=&quot;modal&quot; onClick={onClose}&gt;
+      &lt;div className=&quot;modal-dialog&quot; onClick={e =&gt; e.stopPropagation()}&gt;
+        &lt;div className=&quot;modal-header&quot;&gt;
+          &lt;h3 className=&quot;modal-title&quot;&gt;{title}&lt;/h3&gt;
+          &lt;span className=&quot;modal-close&quot; onClick={onClose}&gt;
+            &amp;times;
+          &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;modal-body&quot;&gt;
+          &lt;div className=&quot;modal-content&quot;&gt;{content}&lt;/div&gt;
+        &lt;/div&gt;
+        {footer &amp;&amp; &lt;div className=&quot;modal-footer&quot;&gt;{footer}&lt;/div&gt;}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const App = () =&gt; {
+  const [isModal, setModal] = React.useState(false);
+  return (
+    &lt;&gt;
+      &lt;button onClick={() =&gt; setModal(true)}&gt;Click Here&lt;/button&gt;
+      &lt;Modal
+        isVisible={isModal}
+        title=&quot;Modal Title&quot;
+        content={&lt;p&gt;Add your content here&lt;/p&gt;}
+        footer={&lt;button&gt;Cancel&lt;/button&gt;}
+        onClose={() =&gt; setModal(false)}
+      /&gt;
+    &lt;/&gt;
+  );
+};
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#multiselectcheckbox" id="multiselectcheckbox">MultiselectCheckbox</a></h2>
+<hr />
+<ul>
+<li>title: MultiselectCheckbox</li>
+<li>tags: components,input,state,array,intermediate</li>
+</ul>
+<hr />
+<p>Renders a checkbox list that uses a callback function to pass its selected value/values to the parent component.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>data</code> state variable and use the <code>options</code> prop to initialize its value.</li>
+<li>Create a <code>toggle</code> function that uses the spread operator (<code>...</code>) and <code>Array.prototype.splice()</code> to update the <code>data</code> state variable and call the <code>onChange</code> callback with any <code>checked</code> options.</li>
+<li>Use <code>Array.prototype.map()</code> to map the <code>data</code> state variable to individual <code>&lt;input type=&quot;checkbox&quot;&gt;</code> elements, each one wrapped in a <code>&lt;label&gt;</code>, binding the <code>onClick</code> handler to the <code>toggle</code> function.</li>
+</ul>
+<pre><code class="language-jsx">const MultiselectCheckbox = ({ options, onChange }) =&gt; {
+  const [data, setData] = React.useState(options);
+
+  const toggle = index =&gt; {
+    const newData = [...data];
+    newData.splice(index, 1, {
+      label: data[index].label,
+      checked: !data[index].checked
+    });
+    setData(newData);
+    onChange(newData.filter(x =&gt; x.checked));
+  };
+
+  return (
+    &lt;&gt;
+      {data.map((item, index) =&gt; (
+        &lt;label key={item.label}&gt;
+          &lt;input
+            readOnly
+            type=&quot;checkbox&quot;
+            checked={item.checked || false}
+            onClick={() =&gt; toggle(index)}
+          /&gt;
+          {item.label}
+        &lt;/label&gt;
+      ))}
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const options = [{ label: 'Item One' }, { label: 'Item Two' }];
+
+ReactDOM.render(
+  &lt;MultiselectCheckbox
+    options={options}
+    onChange={data =&gt; {
+      console.log(data);
+    }}
+  /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#passwordrevealer" id="passwordrevealer">PasswordRevealer</a></h2>
+<hr />
+<ul>
+<li>title: PasswordRevealer</li>
+<li>tags: components,input,state,beginner</li>
+</ul>
+<hr />
+<p>Renders a password input field with a reveal button.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>shown</code> state variable and set its value to <code>false</code>.</li>
+<li>When the <code>&lt;button&gt;</code> is clicked, execute <code>setShown</code>, toggling the <code>type</code> of the <code>&lt;input&gt;</code> between <code>&quot;text&quot;</code> and <code>&quot;password&quot;</code>.</li>
+</ul>
+<pre><code class="language-jsx">const PasswordRevealer = ({ value }) =&gt; {
+  const [shown, setShown] = React.useState(false);
+  return (
+    &lt;&gt;
+      &lt;input type={shown ? 'text' : 'password'} value={value} /&gt;
+      &lt;button onClick={() =&gt; setShown(!shown)}&gt;Show/Hide&lt;/button&gt;
+    &lt;/&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(&lt;PasswordRevealer /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#ripplebutton" id="ripplebutton">RippleButton</a></h2>
+<hr />
+<ul>
+<li>title: RippleButton</li>
+<li>tags: components,state,effect,intermediate</li>
+</ul>
+<hr />
+<p>Renders a button that animates a ripple effect when clicked.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>coords</code> and <code>isRippling</code> state variables for the pointer's coordinates and the animation state of the button respectively.</li>
+<li>Use a <code>useEffect()</code> hook to change the value of <code>isRippling</code> every time the <code>coords</code> state variable changes, starting the animation.</li>
+<li>Use <code>setTimeout()</code> in the previous hook to clear the animation after it's done playing.</li>
+<li>Use a <code>useEffect()</code> hook to reset <code>coords</code> whenever the <code>isRippling</code> state variable is <code>false.</code></li>
+<li>Handle the <code>onClick</code> event by updating the <code>coords</code> state variable and calling the passed callback.</li>
+</ul>
+<pre><code class="language-css">.ripple-button {
+  border-radius: 4px;
+  border: none;
+  margin: 8px;
+  padding: 14px 24px;
+  background: ##1976d2;
+  color: ##fff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.ripple-button &gt; .ripple {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: ##63a4ff;
+  display: block;
+  content: &quot;&quot;;
+  border-radius: 9999px;
+  opacity: 1;
+  animation: 0.9s ease 1 forwards ripple-effect;
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(10);
+    opacity: 0.375;
+  }
+  100% {
+    transform: scale(35);
+    opacity: 0;
+  }
+}
+
+.ripple-button &gt; .content {
+  position: relative;
+  z-index: 2;
+}
+</code></pre>
+<pre><code class="language-jsx">const RippleButton = ({ children, onClick }) =&gt; {
+  const [coords, setCoords] = React.useState({ x: -1, y: -1 });
+  const [isRippling, setIsRippling] = React.useState(false);
+
+  React.useEffect(() =&gt; {
+    if (coords.x !== -1 &amp;&amp; coords.y !== -1) {
+      setIsRippling(true);
+      setTimeout(() =&gt; setIsRippling(false), 300);
+    } else setIsRippling(false);
+  }, [coords]);
+
+  React.useEffect(() =&gt; {
+    if (!isRippling) setCoords({ x: -1, y: -1 });
+  }, [isRippling]);
+
+  return (
+    &lt;button
+      className=&quot;ripple-button&quot;
+      onClick={e =&gt; {
+        const rect = e.target.getBoundingClientRect();
+        setCoords({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        onClick &amp;&amp; onClick(e);
+      }}
+    &gt;
+      {isRippling ? (
+        &lt;span
+          className=&quot;ripple&quot;
+          style={{
+            left: coords.x,
+            top: coords.y
+          }}
+        /&gt;
+      ) : (
+        ''
+      )}
+      &lt;span className=&quot;content&quot;&gt;{children}&lt;/span&gt;
+    &lt;/button&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;RippleButton onClick={e =&gt; console.log(e)}&gt;Click me&lt;/RippleButton&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#select" id="select">Select</a></h2>
+<hr />
+<ul>
+<li>title: Select</li>
+<li>tags: components,input,beginner</li>
+</ul>
+<hr />
+<p>Renders an uncontrolled <code>&lt;select&gt;</code> element that uses a callback function to pass its value to the parent component.</p>
+<ul>
+<li>Use the the <code>selectedValue</code> prop as the <code>defaultValue</code> of the <code>&lt;select&gt;</code> element to set its initial value..</li>
+<li>Use the <code>onChange</code> event to fire the <code>onValueChange</code> callback and send the new value to the parent.</li>
+<li>Use <code>Array.prototype.map()</code> on the <code>values</code> array to create an <code>&lt;option&gt;</code> element for each passed value. </li>
+<li>Each item in <code>values</code> must be a 2-element array, where the first element is the <code>value</code> of the item and the second one is the displayed text for it.</li>
+</ul>
+<pre><code class="language-jsx">const Select = ({ values, onValueChange, selectedValue, ...rest }) =&gt; {
+  return (
+    &lt;select
+      defaultValue={selectedValue}
+      onChange={({ target: { value } }) =&gt; onValueChange(value)}
+      {...rest}
+    &gt;
+      {values.map(([value, text]) =&gt; (
+        &lt;option key={value} value={value}&gt;
+          {text}
+        &lt;/option&gt;
+      ))}
+    &lt;/select&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const choices = [
+  ['grapefruit', 'Grapefruit'],
+  ['lime', 'Lime'],
+  ['coconut', 'Coconut'],
+  ['mango', 'Mango'],
+];
+ReactDOM.render(
+  &lt;Select
+    values={choices}
+    selectedValue=&quot;lime&quot;
+    onValueChange={val =&gt; console.log(val)}
+  /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#slider" id="slider">Slider</a></h2>
+<hr />
+<ul>
+<li>title: Slider</li>
+<li>tags: components,input,beginner</li>
+</ul>
+<hr />
+<p>Renders an uncontrolled range input element that uses a callback function to pass its value to the parent component.</p>
+<ul>
+<li>Set the <code>type</code> of the <code>&lt;input&gt;</code> element to <code>&quot;range&quot;</code> to create a slider.</li>
+<li>Use the <code>defaultValue</code> passed down from the parent as the uncontrolled input field's initial value.</li>
+<li>Use the <code>onChange</code> event to fire the <code>onValueChange</code> callback and send the new value to the parent.</li>
+</ul>
+<pre><code class="language-jsx">const Slider = ({ 
+  min = 0,
+  max = 100,
+  defaultValue,
+  onValueChange,
+  ...rest
+}) =&gt; {
+  return (
+    &lt;input
+      type=&quot;range&quot;
+      min={min}
+      max={max}
+      defaultValue={defaultValue}
+      onChange={({ target: { value } }) =&gt; onValueChange(value)}
+      {...rest}
+    /&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Slider onValueChange={val =&gt; console.log(val)} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#starrating" id="starrating">StarRating</a></h2>
+<hr />
+<ul>
+<li>title: StarRating</li>
+<li>tags: components,children,input,state,intermediate</li>
+</ul>
+<hr />
+<p>Renders a star rating component.</p>
+<ul>
+<li>Define a component, called <code>Star</code> that will render each individual star with the appropriate appearance, based on the parent component's state.</li>
+<li>In the <code>StarRating</code> component, use the <code>useState()</code> hook to define the <code>rating</code> and <code>selection</code> state variables with the appropriate initial values.</li>
+<li>Create a method, <code>hoverOver</code>, that updates <code>selected</code> according to the provided <code>event</code>, using the .<code>data-star-id</code> attribute of the event's target or resets it to <code>0</code> if called with a <code>null</code> argument.</li>
+<li>Use <code>Array.from()</code> to create an array of <code>5</code> elements and <code>Array.prototype.map()</code> to create individual <code>&lt;Star&gt;</code> components.</li>
+<li>Handle the <code>onMouseOver</code> and <code>onMouseLeave</code> events of the wrapping element using <code>hoverOver</code> and the <code>onClick</code> event using <code>setRating</code>.</li>
+</ul>
+<pre><code class="language-css">.star {
+  color: ##ff9933;
+  cursor: pointer;
+}
+</code></pre>
+<pre><code class="language-jsx">const Star = ({ marked, starId }) =&gt; {
+  return (
+    &lt;span data-star-id={starId} className=&quot;star&quot; role=&quot;button&quot;&gt;
+      {marked ? '\u2605' : '\u2606'}
+    &lt;/span&gt;
+  );
+};
+
+const StarRating = ({ value }) =&gt; {
+  const [rating, setRating] = React.useState(parseInt(value) || 0);
+  const [selection, setSelection] = React.useState(0);
+
+  const hoverOver = event =&gt; {
+    let val = 0;
+    if (event &amp;&amp; event.target &amp;&amp; event.target.getAttribute('data-star-id'))
+      val = event.target.getAttribute('data-star-id');
+    setSelection(val);
+  };
+  return (
+    &lt;div
+      onMouseOut={() =&gt; hoverOver(null)}
+      onClick={e =&gt; setRating(e.target.getAttribute('data-star-id') || rating)}
+      onMouseOver={hoverOver}
+    &gt;
+      {Array.from({ length: 5 }, (v, i) =&gt; (
+        &lt;Star
+          starId={i + 1}
+          key={`star_${i + 1}`}
+          marked={selection ? selection &gt;= i + 1 : rating &gt;= i + 1}
+        /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(&lt;StarRating value={2} /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#tabs" id="tabs">Tabs</a></h2>
+<hr />
+<ul>
+<li>title: Tabs</li>
+<li>tags: components,state,children,intermediate</li>
+</ul>
+<hr />
+<p>Renders a tabbed menu and view component.</p>
+<ul>
+<li>Define a <code>Tabs</code> component that uses the <code>useState()</code> hook to initialize the value of the <code>bindIndex</code> state variable to <code>defaultIndex</code>.</li>
+<li>Define a <code>TabItem</code> component and filter <code>children</code> passed to the <code>Tabs</code> component to remove unnecessary nodes except for <code>TabItem</code> by identifying the function's name.</li>
+<li>Define <code>changeTab</code>, which will be executed when clicking a <code>&lt;button&gt;</code> from the menu.</li>
+<li><code>changeTab</code> executes the passed callback, <code>onTabClick</code>, and updates <code>bindIndex</code> based on the clicked element.</li>
+<li>Use <code>Array.prototype.map()</code> on the collected nodes to render the menu and view of the tabs, using the value of <code>binIndex</code> to determine the active tab and apply the correct <code>className</code>.</li>
+</ul>
+<pre><code class="language-css">.tab-menu &gt; button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+}
+
+.tab-menu &gt; button.focus {
+  border-bottom: 2px solid ##007bef;
+}
+
+.tab-menu &gt; button:hover {
+  border-bottom: 2px solid ##007bef;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.selected {
+  display: block;
+}
+</code></pre>
+<pre><code class="language-jsx">const TabItem = props =&gt; &lt;div {...props} /&gt;;
+
+const Tabs = ({ defaultIndex = 0, onTabClick, children }) =&gt; {
+  const [bindIndex, setBindIndex] = React.useState(defaultIndex);
+  const changeTab = newIndex =&gt; {
+    if (typeof onItemClick === 'function') onItemClick(itemIndex);
+    setBindIndex(newIndex);
+  };
+  const items = children.filter(item =&gt; item.type.name === 'TabItem');
+
+  return (
+    &lt;div className=&quot;wrapper&quot;&gt;
+      &lt;div className=&quot;tab-menu&quot;&gt;
+        {items.map(({ props: { index, label } }) =&gt; (
+          &lt;button
+            key={`tab-btn-${index}`}
+            onClick={() =&gt; changeTab(index)}
+            className={bindIndex === index ? 'focus' : ''}
+          &gt;
+            {label}
+          &lt;/button&gt;
+        ))}
+      &lt;/div&gt;
+      &lt;div className=&quot;tab-view&quot;&gt;
+        {items.map(({ props }) =&gt; (
+          &lt;div
+            {...props}
+            className={`tab-content ${
+              bindIndex === props.index ? 'selected' : ''
+            }`}
+            key={`tab-content-${props.index}`}
+          /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Tabs defaultIndex=&quot;1&quot; onTabClick={console.log}&gt;
+    &lt;TabItem label=&quot;A&quot; index=&quot;1&quot;&gt;
+      Lorem ipsum
+    &lt;/TabItem&gt;
+    &lt;TabItem label=&quot;B&quot; index=&quot;2&quot;&gt;
+      Dolor sit amet
+    &lt;/TabItem&gt;
+  &lt;/Tabs&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#taginput" id="taginput">TagInput</a></h2>
+<hr />
+<ul>
+<li>title: TagInput</li>
+<li>tags: components,input,state,intermediate</li>
+</ul>
+<hr />
+<p>Renders a tag input field.</p>
+<ul>
+<li>Define a <code>TagInput</code> component and use the <code>useState()</code> hook to initialize an array from <code>tags</code>.</li>
+<li>Use <code>Array.prototype.map()</code> on the collected nodes to render the list of tags.</li>
+<li>Define the <code>addTagData</code> method, which will be executed when pressing the <code>Enter</code> key.</li>
+<li>The <code>addTagData</code> method calls <code>setTagData</code> to add the new tag using the spread (<code>...</code>) operator to prepend the existing tags and add the new tag at the end of the <code>tagData</code> array.</li>
+<li>Define the <code>removeTagData</code> method, which will be executed on clicking the delete icon in the tag.</li>
+<li>Use <code>Array.prototype.filter()</code> in the <code>removeTagData</code> method to remove the tag using its <code>index</code> to filter it out from the <code>tagData</code> array.</li>
+</ul>
+<pre><code class="language-css">.tag-input {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 48px;
+  padding: 0 8px;
+  border: 1px solid ##d6d8da;
+  border-radius: 6px;
+}
+
+.tag-input input {
+  flex: 1;
+  border: none;
+  height: 46px;
+  font-size: 14px;
+  padding: 4px 0 0;
+}
+
+.tag-input input:focus {
+  outline: transparent;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.tag {
+  width: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ##fff;
+  padding: 0 8px;
+  font-size: 14px;
+  list-style: none;
+  border-radius: 6px;
+  margin: 0 8px 8px 0;
+  background: ##0052cc;
+}
+
+.tag-title {
+  margin-top: 3px;
+}
+
+.tag-close-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 8px;
+  color: ##0052cc;
+  border-radius: 50%;
+  background: ##fff;
+  cursor: pointer;
+}
+</code></pre>
+<pre><code class="language-jsx">const TagInput = ({ tags }) =&gt; {
+  const [tagData, setTagData] = React.useState(tags);
+  const removeTagData = indexToRemove =&gt; {
+    setTagData([...tagData.filter((_, index) =&gt; index !== indexToRemove)]);
+  };
+  const addTagData = event =&gt; {
+    if (event.target.value !== '') {
+      setTagData([...tagData, event.target.value]);
+      event.target.value = '';
+    }
+  };
+  return (
+    &lt;div className=&quot;tag-input&quot;&gt;
+      &lt;ul className=&quot;tags&quot;&gt;
+        {tagData.map((tag, index) =&gt; (
+          &lt;li key={index} className=&quot;tag&quot;&gt;
+            &lt;span className=&quot;tag-title&quot;&gt;{tag}&lt;/span&gt;
+            &lt;span
+              className=&quot;tag-close-icon&quot;
+              onClick={() =&gt; removeTagData(index)}
+            &gt;
+              x
+            &lt;/span&gt;
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+      &lt;input
+        type=&quot;text&quot;
+        onKeyUp={event =&gt; (event.key === 'Enter' ? addTagData(event) : null)}
+        placeholder=&quot;Press enter to add a tag&quot;
+      /&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;TagInput tags={['Nodejs', 'MongoDB']} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#textarea" id="textarea">TextArea</a></h2>
+<hr />
+<ul>
+<li>title: TextArea</li>
+<li>tags: components,input,beginner</li>
+</ul>
+<hr />
+<p>Renders an uncontrolled <code>&lt;textarea&gt;</code> element that uses a callback function to pass its value to the parent component.</p>
+<ul>
+<li>Use the <code>defaultValue</code> passed down from the parent as the uncontrolled input field's initial value.</li>
+<li>Use the <code>onChange</code> event to fire the <code>onValueChange</code> callback and send the new value to the parent.</li>
+</ul>
+<pre><code class="language-jsx">const TextArea = ({
+  cols = 20,
+  rows = 2,
+  defaultValue,
+  onValueChange,
+  ...rest
+}) =&gt; {
+  return (
+    &lt;textarea
+      cols={cols}
+      rows={rows}
+      defaultValue={defaultValue}
+      onChange={({ target: { value } }) =&gt; onValueChange(value)}
+      {...rest}
+    /&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;TextArea
+    placeholder=&quot;Insert some text here...&quot;
+    onValueChange={val =&gt; console.log(val)}
+  /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#toggle" id="toggle">Toggle</a></h2>
+<hr />
+<ul>
+<li>title: Toggle</li>
+<li>tags: components,state,beginner</li>
+</ul>
+<hr />
+<p>Renders a toggle component.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to initialize the <code>isToggleOn</code> state variable to <code>defaultToggled</code>.</li>
+<li>Render an <code>&lt;input&gt;</code> and bind its <code>onClick</code> event to update the <code>isToggledOn</code> state variable, applying the appropriate <code>className</code> to the wrapping <code>&lt;label&gt;</code>.</li>
+</ul>
+<pre><code class="language-css">.toggle input[type=&quot;checkbox&quot;] {
+  display: none;
+}
+
+.toggle.on {
+  background-color: green;
+}
+
+.toggle.off {
+  background-color: red;
+}
+</code></pre>
+<pre><code class="language-jsx">const Toggle = ({ defaultToggled = false }) =&gt; {
+  const [isToggleOn, setIsToggleOn] = React.useState(defaultToggled);
+
+  return (
+    &lt;label className={isToggleOn ? 'toggle on' : 'toggle off'}&gt;
+      &lt;input
+        type=&quot;checkbox&quot;
+        checked={isToggleOn}
+        onChange={() =&gt; setIsToggleOn(!isToggleOn)}
+      /&gt;
+      {isToggleOn ? 'ON' : 'OFF'}
+    &lt;/label&gt;
+  );
+};
+
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(&lt;Toggle /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#tooltip" id="tooltip">Tooltip</a></h2>
+<hr />
+<ul>
+<li>title: Tooltip</li>
+<li>tags: components,state,children,beginner</li>
+</ul>
+<hr />
+<p>Renders a tooltip component.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>show</code> variable and initialize it to <code>false</code>.</li>
+<li>Render a container element that contains the tooltip element and the <code>children</code> passed to the component.</li>
+<li>Handle the <code>onMouseEnter</code> and <code>onMouseLeave</code> methods, by altering the value of the <code>show</code> variable, toggling the <code>className</code> of the tooltip.</li>
+</ul>
+<pre><code class="language-css">.tooltip-container {
+  position: relative;
+}
+
+.tooltip-box {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: ##fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: calc(100% + 5px);
+  display: none;
+}
+
+.tooltip-box.visible {
+  display: block;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
+}
+</code></pre>
+<pre><code class="language-jsx">const Tooltip = ({ children, text, ...rest }) =&gt; {
+  const [show, setShow] = React.useState(false);
+
+  return (
+    &lt;div className=&quot;tooltip-container&quot;&gt;
+      &lt;div className={show ? 'tooltip-box visible' : 'tooltip-box'}&gt;
+        {text}
+        &lt;span className=&quot;tooltip-arrow&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div
+        onMouseEnter={() =&gt; setShow(true)}
+        onMouseLeave={() =&gt; setShow(false)}
+        {...rest}
+      &gt;
+        {children}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;Tooltip text=&quot;Simple tooltip&quot;&gt;
+    &lt;button&gt;Hover me!&lt;/button&gt;
+  &lt;/Tooltip&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#treeview" id="treeview">TreeView</a></h2>
+<hr />
+<ul>
+<li>title: TreeView</li>
+<li>tags: components,object,state,recursion,advanced</li>
+</ul>
+<hr />
+<p>Renders a tree view of a JSON object or array with collapsible content.</p>
+<ul>
+<li>Use the value of the <code>toggled</code> prop to determine the initial state of the content (collapsed/expanded).</li>
+<li>Use the <code>useState()</code> hook to create the <code>isToggled</code> state variable and give it the value of the <code>toggled</code> prop initially.</li>
+<li>Render a <code>&lt;span&gt;</code> element and bind its <code>onClick</code> event to alter the component's <code>isToggled</code> state.</li>
+<li>Determine the appearance of the component, based on <code>isParentToggled</code>, <code>isToggled</code>, <code>name</code> and checking for <code>Array.isArray()</code> on <code>data</code>.</li>
+<li>For each child in <code>data</code>, determine if it is an object or array and recursively render a sub-tree or a text element with the appropriate style.</li>
+</ul>
+<pre><code class="language-css">.tree-element {
+  margin: 0 0 0 4px;
+  position: relative;
+}
+
+.tree-element.is-child {
+  margin-left: 16px;
+}
+
+div.tree-element:before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 1px;
+  height: calc(100% - 48px);
+  border-left: 1px solid gray;
+}
+
+p.tree-element {
+  margin-left: 16px;
+}
+
+.toggler {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid gray;
+  cursor: pointer;
+}
+
+.toggler.closed {
+  transform: rotate(90deg);
+}
+
+.collapsed {
+  display: none;
+}
+</code></pre>
+<pre><code class="language-jsx">const TreeView = ({
+  data,
+  toggled = true,
+  name = null,
+  isLast = true,
+  isChildElement = false,
+  isParentToggled = true
+}) =&gt; {
+  const [isToggled, setIsToggled] = React.useState(toggled);
+  const isDataArray = Array.isArray(data);
+
+  return (
+    &lt;div
+      className={`tree-element ${isParentToggled &amp;&amp; 'collapsed'} ${
+        isChildElement &amp;&amp; 'is-child'
+      }`}
+    &gt;
+      &lt;span
+        className={isToggled ? 'toggler' : 'toggler closed'}
+        onClick={() =&gt; setIsToggled(!isToggled)}
+      /&gt;
+      {name ? &lt;strong&gt;&amp;nbsp;&amp;nbsp;{name}: &lt;/strong&gt; : &lt;span&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;}
+      {isDataArray ? '[' : '{'}
+      {!isToggled &amp;&amp; '...'}
+      {Object.keys(data).map((v, i, a) =&gt;
+        typeof data[v] === 'object' ? (
+          &lt;TreeView
+            key={`${name}-${v}-${i}`}
+            data={data[v]}
+            isLast={i === a.length - 1}
+            name={isDataArray ? null : v}
+            isChildElement
+            isParentToggled={isParentToggled &amp;&amp; isToggled}
+          /&gt;
+        ) : (
+          &lt;p
+            key={`${name}-${v}-${i}`}
+            className={isToggled ? 'tree-element' : 'tree-element collapsed'}
+          &gt;
+            {isDataArray ? '' : &lt;strong&gt;{v}: &lt;/strong&gt;}
+            {data[v]}
+            {i === a.length - 1 ? '' : ','}
+          &lt;/p&gt;
+        )
+      )}
+      {isDataArray ? ']' : '}'}
+      {!isLast ? ',' : ''}
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const data = {
+  lorem: {
+    ipsum: 'dolor sit',
+    amet: {
+      consectetur: 'adipiscing',
+      elit: [
+        'duis',
+        'vitae',
+        {
+          semper: 'orci'
+        },
+        {
+          est: 'sed ornare'
+        },
+        'etiam',
+        ['laoreet', 'tincidunt'],
+        ['vestibulum', 'ante']
+      ]
+    },
+    ipsum: 'primis'
+  }
+};
+ReactDOM.render(
+  &lt;TreeView data={data} name=&quot;data&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#uncontrolledinput" id="uncontrolledinput">UncontrolledInput</a></h2>
+<hr />
+<ul>
+<li>title: UncontrolledInput</li>
+<li>tags: components,input,intermediate</li>
+</ul>
+<hr />
+<p>Renders an uncontrolled <code>&lt;input&gt;</code> element that uses a callback function to inform its parent about value updates.</p>
+<ul>
+<li>Use the <code>defaultValue</code> passed down from the parent as the uncontrolled input field's initial value.</li>
+<li>Use the <code>onChange</code> event to fire the <code>onValueChange</code> callback and send the new value to the parent.</li>
+</ul>
+<pre><code class="language-jsx">const UncontrolledInput = ({ defaultValue, onValueChange, ...rest }) =&gt; {
+  return (
+    &lt;input
+      defaultValue={defaultValue}
+      onChange={({ target: { value } }) =&gt; onValueChange(value)}
+      {...rest}
+    /&gt;
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">ReactDOM.render(
+  &lt;UncontrolledInput
+    type=&quot;text&quot;
+    placeholder=&quot;Insert some text here...&quot;
+    onValueChange={console.log}
+  /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#useasync" id="useasync">useAsync</a></h2>
+<hr />
+<ul>
+<li>title: useAsync</li>
+<li>tags: hooks,state,reducer,advanced</li>
+</ul>
+<hr />
+<p>Handles asynchronous calls.</p>
+<ul>
+<li>Create a custom hook that takes a handler function, <code>fn</code>.</li>
+<li>Define a reducer function and an initial state for the custom hook's state.</li>
+<li>Use the <code>useReducer()</code> hook to initialize the <code>state</code> variable and the <code>dispatch</code> function.</li>
+<li>Define an asynchronous <code>run</code> function that will run the provided callback, <code>fn</code>, while using <code>dispatch</code> to update <code>state</code> as necessary.</li>
+<li>Return an object containing the properties of <code>state</code> (<code>value</code>, <code>error</code> and <code>loading</code>) and the <code>run</code> function.</li>
+</ul>
+<pre><code class="language-jsx">const useAsync = fn =&gt; {
+  const initialState = { loading: false, error: null, value: null };
+  const stateReducer = (_, action) =&gt; {
+    switch (action.type) {
+      case 'start':
+        return { loading: true, error: null, value: null };
+      case 'finish':
+        return { loading: false, error: null, value: action.value };
+      case 'error':
+        return { loading: false, error: action.error, value: null };
+    }
+  };
+
+  const [state, dispatch] = React.useReducer(stateReducer, initialState);
+
+  const run = async (args = null) =&gt; {
+    try {
+      dispatch({ type: 'start' });
+      const value = await fn(args);
+      dispatch({ type: 'finish', value });
+    } catch (error) {
+      dispatch({ type: 'error', error });
+    }
+  };
+
+  return { ...state, run };
+};
+</code></pre>
+<pre><code class="language-jsx">const RandomImage = props =&gt; {
+  const imgFetch = useAsync(url =&gt;
+    fetch(url).then(response =&gt; response.json())
+  );
+
+  return (
+    &lt;div&gt;
+      &lt;button
+        onClick={() =&gt; imgFetch.run('https://dog.ceo/api/breeds/image/random')}
+        disabled={imgFetch.isLoading}
+      &gt;
+        Load image
+      &lt;/button&gt;
+      &lt;br /&gt;
+      {imgFetch.loading &amp;&amp; &lt;div&gt;Loading...&lt;/div&gt;}
+      {imgFetch.error &amp;&amp; &lt;div&gt;Error {imgFetch.error}&lt;/div&gt;}
+      {imgFetch.value &amp;&amp; (
+        &lt;img
+          src={imgFetch.value.message}
+          alt=&quot;avatar&quot;
+          width={400}
+          height=&quot;auto&quot;
+        /&gt;
+      )}
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;RandomImage /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#useclickinside" id="useclickinside">useClickInside</a></h2>
+<hr />
+<ul>
+<li>title: useClickInside</li>
+<li>tags: hooks,effect,event,intermediate</li>
+</ul>
+<hr />
+<p>Handles the event of clicking inside the wrapped component.</p>
+<ul>
+<li>Create a custom hook that takes a <code>ref</code> and a <code>callback</code> to handle the <code>'click'</code> event.</li>
+<li>Use the <code>useEffect()</code> hook to append and clean up the <code>click</code> event.</li>
+<li>Use the <code>useRef()</code> hook to create a <code>ref</code> for your click component and pass it to the <code>useClickInside</code> hook.</li>
+</ul>
+<pre><code class="language-jsx">const useClickInside = (ref, callback) =&gt; {
+  const handleClick = e =&gt; {
+    if (ref.current &amp;&amp; ref.current.contains(e.target)) {
+      callback();
+    }
+  };
+  React.useEffect(() =&gt; {
+    document.addEventListener('click', handleClick);
+    return () =&gt; {
+      document.removeEventListener('click', handleClick);
+    };
+  });
+};
+</code></pre>
+<pre><code class="language-jsx">const ClickBox = ({ onClickInside }) =&gt; {
+  const clickRef = React.useRef();
+  useClickInside(clickRef, onClickInside);
+  return (
+    &lt;div
+      className=&quot;click-box&quot;
+      ref={clickRef}
+      style={{
+        border: '2px dashed orangered',
+        height: 200,
+        width: 400,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    &gt;
+      &lt;p&gt;Click inside this element&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(
+  &lt;ClickBox onClickInside={() =&gt; alert('click inside')} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#useclickoutside" id="useclickoutside">useClickOutside</a></h2>
+<hr />
+<ul>
+<li>title: useClickOutside</li>
+<li>tags: hooks,effect,event,intermediate</li>
+</ul>
+<hr />
+<p>Handles the event of clicking outside of the wrapped component.</p>
+<ul>
+<li>Create a custom hook that takes a <code>ref</code> and a <code>callback</code> to handle the <code>click</code> event.</li>
+<li>Use the <code>useEffect()</code> hook to append and clean up the <code>click</code> event.</li>
+<li>Use the <code>useRef()</code> hook to create a <code>ref</code> for your click component and pass it to the <code>useClickOutside</code> hook.</li>
+</ul>
+<pre><code class="language-jsx">const useClickOutside = (ref, callback) =&gt; {
+  const handleClick = e =&gt; {
+    if (ref.current &amp;&amp; !ref.current.contains(e.target)) {
+      callback();
+    }
+  };
+  React.useEffect(() =&gt; {
+    document.addEventListener('click', handleClick);
+    return () =&gt; {
+      document.removeEventListener('click', handleClick);
+    };
+  });
+};
+</code></pre>
+<pre><code class="language-jsx">const ClickBox = ({ onClickOutside }) =&gt; {
+  const clickRef = React.useRef();
+  useClickOutside(clickRef, onClickOutside);
+  return (
+    &lt;div
+      className=&quot;click-box&quot;
+      ref={clickRef}
+      style={{
+        border: '2px dashed orangered',
+        height: 200,
+        width: 400,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    &gt;
+      &lt;p&gt;Click out of this element&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(
+  &lt;ClickBox onClickOutside={() =&gt; alert('click outside')} /&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+<h2><a class="header" href="#usecomponentdidmount" id="usecomponentdidmount">useComponentDidMount</a></h2>
+<hr />
+<ul>
+<li>title: useComponentDidMount</li>
+<li>tags: hooks,effect,beginner</li>
+</ul>
+<hr />
+<p>Executes a callback immediately after a component is mounted.</p>
+<ul>
+<li>Use <code>useEffect()</code> with an empty array as the second argument to execute the provided callback only once when the component is mounted.</li>
+<li>Behaves like the <code>componentDidMount()</code> lifecycle method of class components.</li>
+</ul>
+<pre><code class="language-jsx">const useComponentDidMount = onMountHandler =&gt; {
+  React.useEffect(() =&gt; {
+    onMountHandler();
+  }, []);
+};
+</code></pre>
+<pre><code class="language-jsx">const Mounter = () =&gt; {
+  useComponentDidMount(() =&gt; console.log('Component did mount'));
+
+  return &lt;div&gt;Check the console!&lt;/div&gt;;
+};
+
+ReactDOM.render(&lt;Mounter /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usecomponentwillunmount" id="usecomponentwillunmount">useComponentWillUnmount</a></h2>
+<hr />
+<ul>
+<li>title: useComponentWillUnmount</li>
+<li>tags: hooks,effect,beginner</li>
+</ul>
+<hr />
+<p>Executes a callback immediately before a component is unmounted and destroyed.</p>
+<ul>
+<li>Use <code>useEffect()</code> with an empty array as the second argument and return the provided callback to be executed only once before cleanup.</li>
+<li>Behaves like the <code>componentWillUnmount()</code> lifecycle method of class components.</li>
+</ul>
+<pre><code class="language-jsx">const useComponentWillUnmount = onUnmountHandler =&gt; {
+  React.useEffect(
+    () =&gt; () =&gt; {
+      onUnmountHandler();
+    },
+    []
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const Unmounter = () =&gt; {
+  useComponentWillUnmount(() =&gt; console.log('Component will unmount'));
+
+  return &lt;div&gt;Check the console!&lt;/div&gt;;
+};
+
+ReactDOM.render(&lt;Unmounter /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usecopytoclipboard" id="usecopytoclipboard">useCopyToClipboard</a></h2>
+<hr />
+<ul>
+<li>title: useCopyToClipboard</li>
+<li>tags: hooks,effect,state,callback,advanced</li>
+</ul>
+<hr />
+<p>Copies the given text to the clipboard.</p>
+<ul>
+<li>Use the <a href="/js/s/copy-to-clipboard/">copyToClipboard</a> snippet to copy the text to clipboard.</li>
+<li>Use the <code>useState()</code> hook to initialize the <code>copied</code> variable.</li>
+<li>Use the <code>useCallback()</code> hook to create a callback for the <code>copyToClipboard</code> method.</li>
+<li>Use the <code>useEffect()</code> hook to reset the <code>copied</code> state variable if the <code>text</code> changes.</li>
+<li>Return the <code>copied</code> state variable and the <code>copy</code> callback.</li>
+</ul>
+<pre><code class="language-jsx">const useCopyToClipboard = text =&gt; {
+  const copyToClipboard = str =&gt; {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected =
+      document.getSelection().rangeCount &gt; 0
+        ? document.getSelection().getRangeAt(0)
+        : false;
+    el.select();
+    const success = document.execCommand('copy');
+    document.body.removeChild(el);
+    if (selected) {
+      document.getSelection().removeAllRanges();
+      document.getSelection().addRange(selected);
+    }
+    return success;
+  };
+
+  const [copied, setCopied] = React.useState(false);
+
+  const copy = React.useCallback(() =&gt; {
+    if (!copied) setCopied(copyToClipboard(text));
+  }, [text]);
+  React.useEffect(() =&gt; () =&gt; setCopied(false), [text]);
+
+  return [copied, copy];
+};
+</code></pre>
+<pre><code class="language-jsx">const TextCopy = props =&gt; {
+  const [copied, copy] = useCopyToClipboard('Lorem ipsum');
+  return (
+    &lt;div&gt;
+      &lt;button onClick={copy}&gt;Click to copy&lt;/button&gt;
+      &lt;span&gt;{copied &amp;&amp; 'Copied!'}&lt;/span&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;TextCopy /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usedebounce" id="usedebounce">useDebounce</a></h2>
+<hr />
+<ul>
+<li>title: useDebounce</li>
+<li>tags: hooks,state,effect,intermediate</li>
+</ul>
+<hr />
+<p>Debounces the given value.</p>
+<ul>
+<li>Create a custom hook that takes a <code>value</code> and a <code>delay</code>.</li>
+<li>Use the <code>useState()</code> hook to store the debounced value.</li>
+<li>Use the <code>useEffect()</code> hook to update the debounced value every time <code>value</code> is updated.</li>
+<li>Use <code>setTimeout()</code> to create a timeout that delays invoking the setter of the previous state variable by <code>delay</code> ms.</li>
+<li>Use <code>clearTimeout()</code> to clean up when dismounting the component.</li>
+<li>This is particularly useful when dealing with user input.</li>
+</ul>
+<pre><code class="language-jsx">const useDebounce = (value, delay) =&gt; {
+  const [debouncedValue, setDebouncedValue] = React.useState(value);
+
+  React.useEffect(() =&gt; {
+    const handler = setTimeout(() =&gt; {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () =&gt; {
+      clearTimeout(handler);
+    };
+  }, [value]);
+
+  return debouncedValue;
+};
+</code></pre>
+<pre><code class="language-jsx">const Counter = () =&gt; {
+  const [value, setValue] = React.useState(0);
+  const lastValue = useDebounce(value, 500);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Current: {value} - Debounced: {lastValue}
+      &lt;/p&gt;
+      &lt;button onClick={() =&gt; setValue(value + 1)}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;Counter /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usefetch" id="usefetch">useFetch</a></h2>
+<hr />
+<ul>
+<li>title: useFetch</li>
+<li>tags: hooks,effect,state,intermediate</li>
+</ul>
+<hr />
+<p>Implements <code>fetch</code> in a declarative manner.</p>
+<ul>
+<li>Create a custom hook that takes a <code>url</code> and <code>options</code>.</li>
+<li>Use the <code>useState()</code> hook to initialize the <code>response</code> and <code>error</code> state variables.</li>
+<li>Use the <code>useEffect()</code> hook to asynchronously call <code>fetch()</code> and update the state variables accordingly.</li>
+<li>Return an object containing the <code>response</code> and <code>error</code> state variables.</li>
+</ul>
+<pre><code class="language-jsx">const useFetch = (url, options) =&gt; {
+  const [response, setResponse] = React.useState(null);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() =&gt; {
+    const fetchData = async () =&gt; {
+      try {
+        const res = await fetch(url, options);
+        const json = await res.json();
+        setResponse(json);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return { response, error };
+};
+</code></pre>
+<pre><code class="language-jsx">const ImageFetch = props =&gt; {
+  const res = useFetch('https://dog.ceo/api/breeds/image/random', {});
+  if (!res.response) {
+    return &lt;div&gt;Loading...&lt;/div&gt;;
+  }
+  const imageUrl = res.response.message;
+  return (
+    &lt;div&gt;
+      &lt;img src={imageUrl} alt=&quot;avatar&quot; width={400} height=&quot;auto&quot; /&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;ImageFetch /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#useinterval" id="useinterval">useInterval</a></h2>
+<hr />
+<ul>
+<li>title: useInterval</li>
+<li>tags: hooks,effect,intermediate</li>
+</ul>
+<hr />
+<p>Implements <code>setInterval</code> in a declarative manner.</p>
+<ul>
+<li>Create a custom hook that takes a <code>callback</code> and a <code>delay</code>.</li>
+<li>Use the <code>useRef()</code> hook to create a <code>ref</code> for the callback function.</li>
+<li>Use a <code>useEffect()</code> hook to remember the latest <code>callback</code> whenever it changes.</li>
+<li>Use a <code>useEffect()</code> hook dependent on <code>delay</code> to set up the interval and clean up.</li>
+</ul>
+<pre><code class="language-jsx">const useInterval = (callback, delay) =&gt; {
+  const savedCallback = React.useRef();
+
+  React.useEffect(() =&gt; {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  React.useEffect(() =&gt; {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () =&gt; clearInterval(id);
+    }
+  }, [delay]);
+};
+</code></pre>
+<pre><code class="language-jsx">const Timer = props =&gt; {
+  const [seconds, setSeconds] = React.useState(0);
+  useInterval(() =&gt; {
+    setSeconds(seconds + 1);
+  }, 1000);
+
+  return &lt;p&gt;{seconds}&lt;/p&gt;;
+};
+
+ReactDOM.render(&lt;Timer /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usemediaquery" id="usemediaquery">useMediaQuery</a></h2>
+<hr />
+<ul>
+<li>title: useMediaQuery</li>
+<li>tags: hooks,state,effect,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the current environment matches a given media query and returns the appropriate value.</p>
+<ul>
+<li>Check if <code>window</code> and <code>window.matchMedia</code> exist, return <code>whenFalse</code> if not (e.g. SSR environment or unsupported browser).</li>
+<li>Use <code>window.matchMedia()</code> to match the given <code>query</code>, cast its <code>matches</code> property to a boolean and store in a state variable, <code>match</code>, using the <code>useState()</code> hook.</li>
+<li>Use the <code>useEffect()</code> hook to add a listener for changes and to clean up the listeners after the hook is destroyed.</li>
+<li>Return either <code>whenTrue</code> or <code>whenFalse</code> based on the value of <code>match</code>.</li>
+</ul>
+<pre><code class="language-jsx">const useMediaQuery = (query, whenTrue, whenFalse) =&gt; {
+  if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined')
+    return whenFalse;
+
+  const mediaQuery = window.matchMedia(query);
+  const [match, setMatch] = React.useState(!!mediaQuery.matches);
+
+  React.useEffect(() =&gt; {
+    const handler = () =&gt; setMatch(!!mediaQuery.matches);
+    mediaQuery.addListener(handler);
+    return () =&gt; mediaQuery.removeListener(handler);
+  }, []);
+
+  return match ? whenTrue : whenFalse;
+};
+</code></pre>
+<pre><code class="language-jsx">const ResponsiveText = () =&gt; {
+  const text = useMediaQuery(
+    '(max-width: 400px)',
+    'Less than 400px wide',
+    'More than 400px wide'
+  );
+
+  return &lt;span&gt;{text}&lt;/span&gt;;
+};
+
+ReactDOM.render(&lt;ResponsiveText /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usenavigatoronline" id="usenavigatoronline">useNavigatorOnLine</a></h2>
+<hr />
+<ul>
+<li>title: useNavigatorOnLine</li>
+<li>tags: hooks,state,effect,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the client is online or offline.</p>
+<ul>
+<li>Create a function, <code>getOnLineStatus</code>, that uses the <code>NavigatorOnLine</code> web API to get the online status of the client.</li>
+<li>Use the <code>useState()</code> hook to create an appropriate state variable, <code>status</code>, and setter.</li>
+<li>Use the <code>useEffect()</code> hook to add listeners for appropriate events, updating state, and cleanup those listeners when unmounting.</li>
+<li>Finally return the <code>status</code> state variable.</li>
+</ul>
+<pre><code class="language-jsx">const getOnLineStatus = () =&gt;
+  typeof navigator !== 'undefined' &amp;&amp; typeof navigator.onLine === 'boolean'
+    ? navigator.onLine
+    : true;
+
+const useNavigatorOnLine = () =&gt; {
+  const [status, setStatus] = React.useState(getOnLineStatus());
+
+  const setOnline = () =&gt; setStatus(true);
+  const setOffline = () =&gt; setStatus(false);
+
+  React.useEffect(() =&gt; {
+    window.addEventListener('online', setOnline);
+    window.addEventListener('offline', setOffline);
+
+    return () =&gt; {
+      window.removeEventListener('online', setOnline);
+      window.removeEventListener('offline', setOffline);
+    };
+  }, []);
+
+  return status;
+};
+</code></pre>
+<pre><code class="language-jsx">const StatusIndicator = () =&gt; {
+  const isOnline = useNavigatorOnLine();
+
+  return &lt;span&gt;You are {isOnline ? 'online' : 'offline'}.&lt;/span&gt;;
+};
+
+ReactDOM.render(&lt;StatusIndicator /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usepersistedstate" id="usepersistedstate">usePersistedState</a></h2>
+<hr />
+<ul>
+<li>title: usePersistedState</li>
+<li>tags: hooks,state,effect,advanced</li>
+</ul>
+<hr />
+<p>Returns a stateful value, persisted in <code>localStorage</code>, and a function to update it.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to initialize the <code>value</code> to <code>defaultValue</code>.</li>
+<li>Use the <code>useRef()</code> hook to create a ref that will hold the <code>name</code> of the value in <code>localStorage</code>.</li>
+<li>Use 3 instances of the <code>useEffect()</code> hook for initialization, <code>value</code> change and <code>name</code> change respectively.</li>
+<li>When the component is first mounted, use <code>Storage.getItem()</code> to update <code>value</code> if there's a stored value or <code>Storage.setItem()</code> to persist the current value.</li>
+<li>When <code>value</code> is updated, use <code>Storage.setItem()</code> to store the new value.</li>
+<li>When <code>name</code> is updated, use <code>Storage.setItem()</code> to create the new key, update the <code>nameRef</code> and use <code>Storage.removeItem()</code> to remove the previous key from <code>localStorage</code>.</li>
+<li><strong>NOTE:</strong> The hook is meant for use with primitive values (i.e. not objects) and doesn't account for changes to <code>localStorage</code> due to other code. Both of these issues can be easily handled (e.g. JSON serialization and handling the <code>'storage'</code> event).</li>
+</ul>
+<pre><code class="language-jsx">const usePersistedState = (name, defaultValue) =&gt; {
+  const [value, setValue] = React.useState(defaultValue);
+  const nameRef = React.useRef(name);
+
+  React.useEffect(() =&gt; {
+    try {
+      const storedValue = localStorage.getItem(name);
+      if (storedValue !== null) setValue(storedValue);
+      else localStorage.setItem(name, defaultValue);
+    } catch {
+      setValue(defaultValue);
+    }
+  }, []);
+
+  React.useEffect(() =&gt; {
+    try {
+      localStorage.setItem(nameRef.current, value);
+    } catch {}
+  }, [value]);
+
+  React.useEffect(() =&gt; {
+    const lastName = nameRef.current;
+    if (name !== lastName) {
+      try {
+        localStorage.setItem(name, value);
+        nameRef.current = name;
+        localStorage.removeItem(lastName);
+      } catch {}
+    }
+  }, [name]);
+
+  return [value, setValue];
+};
+</code></pre>
+<pre><code class="language-jsx">const MyComponent = ({ name }) =&gt; {
+  const [val, setVal] = usePersistedState(name, 10);
+  return (
+    &lt;input
+      value={val}
+      onChange={e =&gt; {
+        setVal(e.target.value);
+      }}
+    /&gt;
+  );
+};
+
+const MyApp = () =&gt; {
+  const [name, setName] = React.useState('my-value');
+  return (
+    &lt;&gt;
+      &lt;MyComponent name={name} /&gt;
+      &lt;input
+        value={name}
+        onChange={e =&gt; {
+          setName(e.target.value);
+        }}
+      /&gt;
+    &lt;/&gt;
+  );
+};
+
+ReactDOM.render(&lt;MyApp /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#useprevious" id="useprevious">usePrevious</a></h2>
+<hr />
+<ul>
+<li>title: usePrevious</li>
+<li>tags: hooks,state,effect,beginner</li>
+</ul>
+<hr />
+<p>Stores the previous state or props.</p>
+<ul>
+<li>Create a custom hook that takes a <code>value</code>.</li>
+<li>Use the <code>useRef()</code> hook to create a <code>ref</code> for the <code>value</code>.</li>
+<li>Use the <code>useEffect()</code> hook to remember the latest <code>value</code>.</li>
+</ul>
+<pre><code class="language-jsx">const usePrevious = value =&gt; {
+  const ref = React.useRef();
+  React.useEffect(() =&gt; {
+    ref.current = value;
+  });
+  return ref.current;
+};
+</code></pre>
+<pre><code class="language-jsx">const Counter = () =&gt; {
+  const [value, setValue] = React.useState(0);
+  const lastValue = usePrevious(value);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;
+        Current: {value} - Previous: {lastValue}
+      &lt;/p&gt;
+      &lt;button onClick={() =&gt; setValue(value + 1)}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+ReactDOM.render(&lt;Counter /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usessr" id="usessr">useSSR</a></h2>
+<hr />
+<ul>
+<li>title: useSSR</li>
+<li>tags: hooks,effect,state,memo,intermediate</li>
+</ul>
+<hr />
+<p>Checks if the code is running on the browser or the server.</p>
+<ul>
+<li>Create a custom hook that returns an appropriate object.</li>
+<li>Use <code>typeof window</code>, <code>window.document</code> and <code>Document.createElement()</code> to check if the code is running on the browser.</li>
+<li>Use the <code>useState()</code> hook to define the <code>inBrowser</code> state variable.</li>
+<li>Use the <code>useEffect()</code> hook to update the <code>inBrowser</code> state variable and clean up at the end.</li>
+<li>Use the <code>useMemo()</code> hook to memoize the return values of the custom hook.</li>
+</ul>
+<pre><code class="language-jsx">const isDOMavailable = !!(
+  typeof window !== 'undefined' &amp;&amp;
+  window.document &amp;&amp;
+  window.document.createElement
+);
+
+const useSSR = (callback, delay) =&gt; {
+  const [inBrowser, setInBrowser] = React.useState(isDOMavailable);
+
+  React.useEffect(() =&gt; {
+    setInBrowser(isDOMavailable);
+    return () =&gt; {
+      setInBrowser(false);
+    };
+  }, []);
+
+  const useSSRObject = React.useMemo(
+    () =&gt; ({
+      isBrowser: inBrowser,
+      isServer: !inBrowser,
+      canUseWorkers: typeof Worker !== 'undefined',
+      canUseEventListeners: inBrowser &amp;&amp; !!window.addEventListener,
+      canUseViewport: inBrowser &amp;&amp; !!window.screen
+    }),
+    [inBrowser]
+  );
+
+  return React.useMemo(
+    () =&gt; Object.assign(Object.values(useSSRObject), useSSRObject),
+    [inBrowser]
+  );
+};
+</code></pre>
+<pre><code class="language-jsx">const SSRChecker = props =&gt; {
+  let { isBrowser, isServer } = useSSR();
+
+  return &lt;p&gt;{isBrowser ? 'Running on browser' : 'Running on server'}&lt;/p&gt;;
+};
+
+ReactDOM.render(&lt;SSRChecker /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usetimeout" id="usetimeout">useTimeout</a></h2>
+<hr />
+<ul>
+<li>title: useTimeout</li>
+<li>tags: hooks,effect,intermediate</li>
+</ul>
+<hr />
+<p>Implements <code>setTimeout</code> in a declarative manner.</p>
+<ul>
+<li>Create a custom hook that takes a <code>callback</code> and a <code>delay</code>.</li>
+<li>Use the <code>useRef()</code> hook to create a <code>ref</code> for the callback function.</li>
+<li>Use the <code>useEffect()</code> hook to remember the latest callback.</li>
+<li>Use the <code>useEffect()</code> hook to set up the timeout and clean up.</li>
+</ul>
+<pre><code class="language-jsx">const useTimeout = (callback, delay) =&gt; {
+  const savedCallback = React.useRef();
+
+  React.useEffect(() =&gt; {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  React.useEffect(() =&gt; {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setTimeout(tick, delay);
+      return () =&gt; clearTimeout(id);
+    }
+  }, [delay]);
+};
+</code></pre>
+<pre><code class="language-jsx">const OneSecondTimer = props =&gt; {
+  const [seconds, setSeconds] = React.useState(0);
+  useTimeout(() =&gt; {
+    setSeconds(seconds + 1);
+  }, 1000);
+
+  return &lt;p&gt;{seconds}&lt;/p&gt;;
+};
+
+ReactDOM.render(&lt;OneSecondTimer /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#usetoggler" id="usetoggler">useToggler</a></h2>
+<hr />
+<ul>
+<li>title: useToggler</li>
+<li>tags: hooks,state,callback,beginner</li>
+</ul>
+<hr />
+<p>Provides a boolean state variable that can be toggled between its two states.</p>
+<ul>
+<li>Use the <code>useState()</code> hook to create the <code>value</code> state variable and its setter.</li>
+<li>Create a function that toggles the value of the <code>value</code> state variable and memoize it, using the <code>useCallback()</code> hook.</li>
+<li>Return the <code>value</code> state variable and the memoized toggler function.</li>
+</ul>
+<pre><code class="language-jsx">const useToggler = initialState =&gt; {
+  const [value, setValue] = React.useState(initialState);
+
+  const toggleValue = React.useCallback(() =&gt; setValue(prev =&gt; !prev), []);
+
+  return [value, toggleValue];
+};
+</code></pre>
+<pre><code class="language-jsx">const Switch = () =&gt; {
+  const [val, toggleVal] = useToggler(false);
+  return &lt;button onClick={toggleVal}&gt;{val ? 'ON' : 'OFF'}&lt;/button&gt;;
+};
+ReactDOM.render(&lt;Switch /&gt;, document.getElementById('root'));
+</code></pre>
+<h2><a class="header" href="#useunload" id="useunload">useUnload</a></h2>
+<hr />
+<ul>
+<li>title: useUnload</li>
+<li>tags: hooks,effect,event,intermediate</li>
+</ul>
+<hr />
+<p>Handles the <code>beforeunload</code> window event.</p>
+<ul>
+<li>Use the <code>useRef()</code> hook to create a ref for the callback function, <code>fn</code>.</li>
+<li>Use the <code>useEffect()</code> hook and <code>EventTarget.addEventListener()</code> to handle the <code>'beforeunload'</code> (when the user is about to close the window).</li>
+<li>Use <code>EventTarget.removeEventListener()</code> to perform cleanup after the component is unmounted.</li>
+</ul>
+<pre><code class="language-jsx">const useUnload = fn =&gt; {
+  const cb = React.useRef(fn);
+
+  React.useEffect(() =&gt; {
+    const onUnload = cb.current;
+    window.addEventListener('beforeunload', onUnload);
+    return () =&gt; {
+      window.removeEventListener('beforeunload', onUnload);
+    };
+  }, [cb]);
+};
+</code></pre>
+<pre><code class="language-jsx">const App = () =&gt; {
+  useUnload(e =&gt; {
+    e.preventDefault();
+    const exit = confirm('Are you sure you want to leave?');
+    if (exit) window.close();
+  });
+  return &lt;div&gt;Try closing the window.&lt;/div&gt;;
+};
+ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="javascriptall.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="phpall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="javascriptall.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="phpall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
